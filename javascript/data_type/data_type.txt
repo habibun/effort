@@ -1,0 +1,9 @@
+there are three primitive data-type:
+1.number
+2.boolean
+3.string
+
+there are two trivial data-type:
+1.null
+2.undefined
+

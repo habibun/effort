@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>validation test</title>
+    <script type="text/javascript">
+        function validation() {
+            if(document.my_form.name.value.length < 3) {
+                alert("please insert at least 3 character");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+<form name="my_form" action="nothing.html" method="post" onsubmit="return validation()">
+    Name:
+    <input type="text" name="name">
+    <input type="submit" value="Submit me">
+    </form>
+</body>
+</html>

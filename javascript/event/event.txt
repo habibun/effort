@@ -1,0 +1,6 @@
+javascript event example:
+1.mouse click
+2.webpage load
+3.to put mouse cursor to specific place
+4.html form and input box select
+5.and a keystroke

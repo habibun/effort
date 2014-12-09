@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<!--#Tables inside tables! called layout:-->
+<table bgcolor="black" border="1" heigh="200" width="300">
+    <tr><td>
+        <table bgcolor="white" heigh="100" width="100">
+            <tr><td>Tables inside tables!</td></tr>
+        </table>
+    </td></tr>
+</table>
+
+
+Standard layout-1:
+<table cellspacing="1" cellpadding="0" border="0"
+       bgcolor="black" height="250" width="400">
+    <tr height="50"><td colspan="2" bgcolor="white">
+        <table title="Banner" id="banner" border="0">
+            <tr><td>Place a banner here</td></tr>
+        </table>
+    </td></tr>
+    <tr height="200"><td bgcolor="white">
+        <table title="Navigation" border="0">
+            <tr><td>Links!</td></tr>
+            <tr><td>Links!</td></tr>
+            <tr><td>Links!</td></tr>
+        </table>
+    </td><td bgcolor="white">
+        <table title="Content" id="content" border="0">
+            <tr><td>Content goes here</td></tr>
+        </table>
+    </td></tr></table>
+
+Standard layout-2:
+<table title="Shell" height="250" width="400"
+       border="0" bgcolor="black" cellspacing="1" cellpadding="0">
+    <tr height="50"><td bgcolor="white">
+        <table title="banner" id="banner">
+            <tr><td>Banner goes here</td></tr>
+        </table>
+    </td></tr>
+    <tr height="25"><td bgcolor="white">
+        <table title="Navigation" id="navigation">
+            <tr><td>Links!</td>
+                <td>Links!</td>
+                <td>Links!</td></tr>
+        </table>
+    </td></tr>
+    <tr><td bgcolor="white">
+        <table title="Content" id="content">
+            <tr><td>Content goes here</td></tr>
+        </table>
+    </td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Webcoachbd ToolTip tutorials</title>
+		<style type="text/css">
+			body{
+			font-family:Verdana;
+			font-size:13px;
+			}
+			#form_container{
+			width:400px;
+			margin:0 auto;
+			overflow:hidden;
+			border:1px solid #ccc;
+			border-radius:5px;
+			padding:10px;
+			}
+			h2{
+			text-align:center;
+			}
+			.error{
+			color:#f00;
+			}
+			#form_container span{
+			float:right;
+			display:block;
+			clear:both;
+			}
+			#form_container label{
+			display:block;
+			float:left;
+			margin:5px 0;
+			width:150px;
+			}
+			#form_container input{
+			float:right;
+			margin:5px 0;
+			}
+			#form_container input[type="submit"]{
+			float:left;
+			margin:8px 0 0 254px;
+			}
+			#form_container .tTip + span{
+			display:none;
+			}
+			.toolTip {
+			display: none;
+			position: absolute;
+			border: 1px solid #333;
+			background-color: yellow;
+			padding: 2px 6px;
+			border-radius:4px;
+			}
+		</style>
+		<script type="text/javascript" src="jquery_latest.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.tTip').hover(function(event){
+					//mouser over
+					var spanText = $(this).next().html();
+
+					$('<p class="toolTip"></p>').text(spanText).appendTo('body')
+					.css('top', (event.pageY - 40) + 'px')
+					.css('left', (event.pageX - 40) + 'px')
+					.fadeIn('show');
+				}, function(){
+					$('.toolTip').remove();
+				}).mousemove(function(event){
+					//when move mosue
+					$('.toolTip').css('top', (event.pageY - 40) + 'px')
+					.css('left', (event.pageX + 20) + 'px');
+				});
+			});
+		</script>
+	</head>
+<body>
+	<h2>Fill up form and hit submit</h2>
+	<div id="form_container">
+		<form id="reg_form" action="" method="post">
+		<label>First Name</label>
+		<input class="tTip" type="text" name="f_name" placeholder="First Name"/>
+		<span>Please Enter your name here.Remember text only</span>
+
+		<span id="fnameInfo"></span>
+		<label>Last Name</label>
+		<input class="tTip" type="text" name="l_name" placeholder="Last Name"/>
+		<span>Please Enter your Last name here.Remember text only</span>
+		<span id="lnameInfo"></span>
+
+		<label>Email</label>
+		<input class="tTip" type="text" name="email" placeholder="Email"/>
+		<span>Please Enter your Email here.Remember valid only</span>
+		<span id="mailInfo"></span>
+
+		<label>Phone Number</label>
+		<input class="tTip" type="text" name="phone" placeholder="Phone"/>
+		<span>Please Enter your Phone number here.Remember numbers only</span>
+		<span id="phoneInfo"></span>
+		
+		<input type="submit" value="Submit"/>
+		</form>
+	</div>
+</body>
+</html>

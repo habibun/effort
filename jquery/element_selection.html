@@ -1,0 +1,38 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script src="jquery_latest.js" type="text/javascript"></script>
+<script type="text/javascript">
+//select all paragraph
+$(document).ready(function(){
+	$('p').click(function(){
+	alert('You clicked on a paragraph');
+	});
+});
+
+//catch css property
+$(document).ready(function(){
+	$('#tutorial').click(function(){
+		var align = $("#tutorial").css("textAlign");
+		alert(align);
+	});
+});
+//to add new css property using css method
+$(document).ready(function(){
+	$('#first_para,.webcoachbd').click(function(){
+		//this capture recent selector
+		$(this).css("color","red");
+		$('#tutorial').css("color","red");
+		//$(this).css({'color : red', 'backgroundColor : yellow'});//not working
+	});
+});
+</script>
+</head>
+<body>
+<h1 id="tutorial">JQuery Tutorials</h1>
+<p id="first_para">Bangladesh is a country of natural beauty</p>
+<p class="webcoachbd">Webcoachbd DOT com is the largest bengali tutorial site</p>
+<p class="webcoachbd">There are 30 tutorial on JQuery in Webcoachbd</p>
+</body>
+</html>
+

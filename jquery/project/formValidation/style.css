@@ -1,0 +1,37 @@
+body{
+ font-family:Verdana;
+ font-size:13px;
+}
+#form_container{
+ width:400px;
+ margin:0 auto;
+ overflow:hidden;
+ border:1px solid #ccc;
+ border-radius:5px;
+ padding:10px;
+}
+h2{
+ text-align:center;
+}
+.error{
+ color:#f00;
+}
+#form_container span{
+ float:right;
+ display:block;
+ clear:both;
+}
+#form_container label{
+ display:block;
+ float:left;
+ margin:5px 0;
+ width:150px;
+}
+#form_container input{
+ float:right;
+ margin:5px 0;
+}
+#form_container input[type="submit"]{
+ float:left;
+ margin:8px 0 0 254px;
+}

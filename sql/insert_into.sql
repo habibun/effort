@@ -1,0 +1,1 @@
+insert into person(FirstName,LastName,Age) VALUES ('habibun','noby','25');

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+#basic structure:
+<select name="color">
+    <option  value="bl">Black</option>
+    <option value="wh">White</option>
+    <option value="mr">Maroon</option>
+</select>
+
+
+#selected attributes(select the default option to show the browser):
+<select name="color">
+    <option  value="black">Black</option>
+    <option value="white">White</option>
+    <option selected="selected" value="maroon">Maroon</option>
+</select>
+
+
+#size attributes:(size attributes show the number of value):
+<select name="color" size=2>
+    <option value="bl">Black</option>
+    <option value="wh">White</option>
+    <option selected="selected" value="mr">Maroon</option>
+</select>
+
+
+#multiple attributes allow to select multiple option by user:
+<select multiple="yes">
+    <option value="bl">Black</option>
+    <option value="wh">White</option>
+    <option selected="selected" value="mr">Maroon</option>
+</select>
+
+
+#optgroup attributes:(if list are bigger than you can use optgroup):
+<select name="selInformation" >
+    <optgroup label="Tutorials" >
+        <option value="html"> HTML Tutorial </option>
+        <option value="css"> CSS Tutorials </option>
+        <option value="javascript"> JavaScript </option>
+    </optgroup>
+    <optgroup label="PHP Tutorials" >
+        <option value="basicphp"> Basic PHP </option>
+        <option value="advancedphp"> Advanced PHP </option>
+    </optgroup >
+    <optgroup label="Database Tutorials">
+        <option value="sql"> SQL Tutorial </option>
+        <option value="phpdatabase"> PHP Database </option>
+    </optgroup>
+</select>
+
+
+</body>
+</html>

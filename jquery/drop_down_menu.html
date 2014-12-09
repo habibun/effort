@@ -1,0 +1,109 @@
+<!doctype html>
+<head>
+<title>Webcoachbd!</title>
+<style type="text/css">
+	body {
+font-family: "Lucida Sans Unicode","Lucida Grande",Sans-Serif;
+font-size: 12px;
+}
+
+
+#content{
+width:800px;
+margin:0 auto;
+background: green;
+padding: 15px;
+min-height:200px;
+}
+#menu li{
+float:left;
+list-style:none;
+position:relative;
+margin-right:4px;
+}
+.rem_radius a,.rem_radius a:hover{
+border-bottom-left-radius:0!important;border-bottom-right-radius:0!important;
+}
+#menu li ul{
+display:none;
+float:left;
+position:absolute;
+top:36px;
+padding:0;
+}
+#menu li ul li{
+width:150px;
+border-radius:0;
+}
+#menu li ul li a{
+width:130px;
+border-radius:0;
+}
+#menu li ul li:first-child a,#menu li ul li:first-child a:hover{
+border-top-right-radius:6px!important;
+}
+#menu li ul li:last-child a,#menu li ul li:last-child a:hover{
+border-bottom-left-radius:6px!important;    border-bottom-right-radius:6px!important;
+}
+#menu li a{
+display:block;
+float:left;
+color:#fff;
+background:#000;
+font-weight:bold;
+text-decoration:none;
+padding:10px;
+border-radius:6px;
+}
+#menu li a:hover{
+background:#333;
+border-radius:6px;
+}
+#menu li ul li a:hover{
+background:#333;
+border-radius:0;
+}
+
+
+</style>
+<script src="jquery_latest.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$('#menu li').hover(function(){
+$(this).find('ul').slideDown(200);
+},function(){
+$(this).find('ul').slideUp(200);
+});
+$('#menu li').hover(function(){
+if($(this).children('ul').length > 0){
+$(this).addClass('rem_radius');
+}
+}, function(){
+$(this).removeClass('rem_radius');
+});
+});
+
+
+</script>
+</head>
+<body>
+<div id="content">
+<ul id="menu">
+<li><a href="#">Reference</a>
+<ul>
+<li><a href="#">PHP</a></li>
+<li><a href="#">MySql</a></li>
+<li><a href="#">CakePHP</a></li>
+</ul>
+</li>
+<li><a href="#">Tutorials</a>
+<ul>
+<li><a href="#">HTML tutorials</a></li>
+<li><a href="#">JQuery drop down menu</a></li>
+</ul>
+</li>
+<li><a href="#">About Us</a></li>
+</ul>
+</div>
+</body>
+</html>

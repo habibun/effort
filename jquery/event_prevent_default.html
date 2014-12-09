@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery_latest.js"></script>
+<script>
+//normal preventDefault option
+/*$(document).ready(function(){
+  $("a").click(function(event){
+    event.preventDefault();
+  });
+});*/
+
+$(document).ready(function(){
+$( "a" ).click(function( event ) {
+  event.preventDefault();
+  $( "<div>" )
+    .append( "default " + event.type + " prevented" )
+    .appendTo( "#log" );
+});
+});
+</script>
+</head>
+<body>
+
+<!-- <a href="http://w3schools.com/">Go to W3Schools.com</a>
+<p>The preventDefault() method will prevent the link above from following the URL.</p> -->
+
+<a href="http://jquery.com">default click action is prevented</a>
+<div id="log"></div>
+
+</body>
+</html>

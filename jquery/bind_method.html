@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>
+bind method
+</title>
+<script src="jquery_latest.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+$('.myheader').bind('click mouseenter mouseleave',function(){
+$(this).toggleClass('changeColor');
+});
+});
+</script>
+
+<style type="text/css">
+.changeColor{
+background:#ddd;
+color:#000;
+font-weight:bold;
+}
+</style>
+</head>
+<body>	
+<h2 class="myheader">JQUERY tutorials</h2>
+<p>Webcoachbd is nice tutorial site</p>
+</body>
+</html>
