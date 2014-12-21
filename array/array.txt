@@ -38,3 +38,4 @@ only foreach loop is use in array.
 $name=array(0=>"jony",1=>"rony",2=>"sumon");//this array jony rony and sumon is called element
 print_r($name);
 ?>
+
