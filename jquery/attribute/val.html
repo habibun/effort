@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Val method</title>
+    <script src="../jquery_latest.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("input:text").val("Glenn Quagmire");
+            });
+        });
+    </script>
+</head>
+<body>
+<p>Name: <input type="text" name="user"></p>
+<button>Set the value of the input field</button>
+</body>
+</html>
+
+<!--Get the single value from a single select and an array of values from a multiple select and display their values.-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>val demo</title>
+    <style>
+        p {
+            color: red;
+            margin: 4px;
+        }
+        b {
+            color: blue;
+        }
+    </style>
+    <script src="../jquery_latest.js"></script>
+</head>
+<body>
+<p></p>
+<select id="single">
+    <option>Single</option>
+    <option>Single2</option>
+</select>
+<select id="multiple" multiple="multiple">
+    <option selected="selected">Multiple</option>
+    <option>Multiple2</option>
+    <option selected="selected">Multiple3</option>
+</select>
+<script>
+    function displayVals(){
+        var singleVals = $("#single").val();
+        var multipleVals = $("#multiple").val() || [];
+
+        $("p").html("<b>Single:</b> " + singleVals +
+        "<b>Multiple:</b> " + multipleVals.join(","));
+    }
+    $("select").change(displayVals);
+    displayVals();
+</script>
+</body>
+</html>
