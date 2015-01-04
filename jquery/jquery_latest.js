@@ -931,7 +931,7 @@ function assert( fn ) {
 
 /**
  * Adds the same handler for all of the specified attrs
- * @param {String} attrs Pipe-separated list of attributes
+ * @param {String} attrs Pipe-separated list of attribute
  * @param {Function} handler The method that will be applied
  */
 function addHandle( attrs, handler ) {
@@ -1079,11 +1079,11 @@ setDocument = Sizzle.setDocument = function( node ) {
 		}
 	}
 
-	/* Attributes
+	/* attribute
 	---------------------------------------------------------------------- */
 
 	// Support: IE<8
-	// Verify that getAttribute really returns attributes and not properties (excepting IE8 booleans)
+	// Verify that getAttribute really returns attribute and not properties (excepting IE8 booleans)
 	support.attributes = assert(function( div ) {
 		div.className = "i";
 		return !div.getAttribute("className");
@@ -1217,7 +1217,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 			}
 
 			// Support: IE8
-			// Boolean attributes and "value" are not treated correctly
+			// Boolean attribute and "value" are not treated correctly
 			if ( !div.querySelectorAll("[selected]").length ) {
 				rbuggyQSA.push( "\\[" + whitespace + "*(?:value|" + booleans + ")" );
 			}
@@ -1232,7 +1232,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 
 		assert(function( div ) {
 			// Support: Windows 8 Native Apps
-			// The type and name attributes are restricted during .innerHTML assignment
+			// The type and name attribute are restricted during .innerHTML assignment
 			var input = doc.createElement("input");
 			input.setAttribute( "type", "hidden" );
 			div.appendChild( input ).setAttribute( "name", "D" );
@@ -1923,7 +1923,7 @@ Expr = Sizzle.selectors = {
 			// http://www.w3.org/TR/selectors/#empty-pseudo
 			// :empty is negated by element (1) or content nodes (text: 3; cdata: 4; entity ref: 5),
 			//   but not by others (comment: 8; processing instruction: 7; etc.)
-			// nodeType < 6 works because attributes (2) do not appear as children
+			// nodeType < 6 works because attribute (2) do not appear as children
 			for ( elem = elem.firstChild; elem; elem = elem.nextSibling ) {
 				if ( elem.nodeType < 6 ) {
 					return false;
@@ -2784,7 +2784,7 @@ var rootjQuery,
 							if ( jQuery.isFunction( this[ match ] ) ) {
 								this[ match ]( context[ match ] );
 
-							// ...and otherwise set as attributes
+							// ...and otherwise set as attribute
 							} else {
 								this.attr( match, context[ match ] );
 							}
@@ -6184,7 +6184,7 @@ if ( window.getComputedStyle ) {
 
 		// If we're not dealing with a regular pixel number
 		// but a number that has a weird ending, we need to convert it to pixels
-		// but not position css attributes, as those are proportional to the parent element instead
+		// but not position css attribute, as those are proportional to the parent element instead
 		// and we can't measure the parent instead because it might trigger a "stacking dolls" problem
 		if ( rnumnonpx.test( ret ) && !rposition.test( name ) ) {
 
@@ -7138,7 +7138,7 @@ function defaultPrefilter( elem, props, opts ) {
 	// height/width overflow pass
 	if ( elem.nodeType === 1 && ( "height" in props || "width" in props ) ) {
 		// Make sure that nothing sneaks out
-		// Record all 3 overflow attributes because IE does not
+		// Record all 3 overflow attribute because IE does not
 		// change the overflow attribute when overflowX and
 		// overflowY are set to the same value
 		opts.overflow = [ style.overflow, style.overflowX, style.overflowY ];
@@ -7907,17 +7907,17 @@ jQuery.extend({
 		var hooks, ret,
 			nType = elem.nodeType;
 
-		// don't get/set attributes on text, comment and attribute nodes
+		// don't get/set attribute on text, comment and attribute nodes
 		if ( !elem || nType === 3 || nType === 8 || nType === 2 ) {
 			return;
 		}
 
-		// Fallback to prop when attributes are not supported
+		// Fallback to prop when attribute are not supported
 		if ( typeof elem.getAttribute === strundefined ) {
 			return jQuery.prop( elem, name, value );
 		}
 
-		// All attributes are lowercase
+		// All attribute are lowercase
 		// Grab necessary hook if one is defined
 		if ( nType !== 1 || !jQuery.isXMLDoc( elem ) ) {
 			name = name.toLowerCase();
@@ -7944,7 +7944,7 @@ jQuery.extend({
 		} else {
 			ret = jQuery.find.attr( elem, name );
 
-			// Non-existent attributes return null, we normalize to undefined
+			// Non-existent attribute return null, we normalize to undefined
 			return ret == null ?
 				undefined :
 				ret;
@@ -7960,7 +7960,7 @@ jQuery.extend({
 			while ( (name = attrNames[i++]) ) {
 				propName = jQuery.propFix[ name ] || name;
 
-				// Boolean attributes get special treatment (#10870)
+				// Boolean attribute get special treatment (#10870)
 				if ( jQuery.expr.match.bool.test( name ) ) {
 					// Set corresponding property to false
 					if ( getSetInput && getSetAttribute || !ruseDefault.test( name ) ) {
@@ -8000,11 +8000,11 @@ jQuery.extend({
 	}
 });
 
-// Hook for boolean attributes
+// Hook for boolean attribute
 boolHook = {
 	set: function( elem, value, name ) {
 		if ( value === false ) {
-			// Remove boolean attributes when set to false
+			// Remove boolean attribute when set to false
 			jQuery.removeAttr( elem, name );
 		} else if ( getSetInput && getSetAttribute || !ruseDefault.test( name ) ) {
 			// IE<8 needs the *property* name
@@ -8062,7 +8062,7 @@ if ( !getSetInput || !getSetAttribute ) {
 	};
 }
 
-// IE6/7 do not support getting/setting some attributes with get/setAttribute
+// IE6/7 do not support getting/setting some attribute with get/setAttribute
 if ( !getSetAttribute ) {
 
 	// Use this for any attribute in IE6/7
@@ -8086,7 +8086,7 @@ if ( !getSetAttribute ) {
 		}
 	};
 
-	// Some attributes are constructed with empty-string values when not defined
+	// Some attribute are constructed with empty-string values when not defined
 	attrHandle.id = attrHandle.name = attrHandle.coords =
 		function( elem, name, isXML ) {
 			var ret;
@@ -8220,7 +8220,7 @@ jQuery.extend({
 	}
 });
 
-// Some attributes require a special call on IE
+// Some attribute require a special call on IE
 // http://msdn.microsoft.com/en-us/library/ms536429%28VS.85%29.aspx
 if ( !support.hrefNormalized ) {
 	// href/src property should get the full normalized URL (#10299/#12915)
@@ -8429,7 +8429,7 @@ jQuery.fn.extend({
 
 
 
-// Return jQuery for attributes-only inclusion
+// Return jQuery for attribute-only inclusion
 
 
 jQuery.each( ("blur focus focusin focusout load resize scroll unload click dblclick " +
