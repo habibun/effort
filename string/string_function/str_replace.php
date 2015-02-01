@@ -11,3 +11,8 @@ $secondString = " jumped over the lazy dog.";
 $thirdString=$firstString.$secondString;
 echo str_replace("quick", "super-fast",$thirdString);
 ?>
+
+<?php
+//another str_replace example
+echo str_replace("world","Peter","Hello world!");
+?>
