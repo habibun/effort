@@ -1,0 +1,23 @@
+<script>
+var result = parseInt('123');
+var result = parseInt('abc123');
+var result = parseInt('1abc23');
+var result = parseInt('123abc');
+
+document.write(result);
+</script>
+
+
+the function accept an optional second parameter.which is the radix:
+<script>
+var result = parseInt('FF', 10);
+var result = parseInt('FF', 16);
+document.write(result);
+</script>
+
+Another example would be parsing a string with a base 10 (decimal) and base  8 (octal):
+<script>
+var result = parseInt('0377', 10);
+var result = parseInt('0377', 8);
+document.write(result);
+</script>
