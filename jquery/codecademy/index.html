@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simplify, Simplify</title>
+    <script type='text/javascript' src='../jquery_latest.js'></script>
+</head>
+<body>
+<div> Remember!
+    <ul>
+        <li>
+            <ol>
+                <li>Start with the function keyword</li>
+                <li>Inputs go between ()</li>
+                <li>Actions go between {}</li>
+                <li>jQuery is for chumps!</li>
+            </ol>
+        </li>
+        <li>Inputs are separated by commas.</li>
+        <li>Inputs can include other functions!</li>
+    </ul>
+
+    <script>
+        $(document).ready(function () {
+            var $target = $('ol li:nth-child(4)');
+            $target.fadeOut('slow');
+        });
+    </script>
+</div>
+</body>
+</html>
