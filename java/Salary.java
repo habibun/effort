@@ -33,4 +33,5 @@ public class Salary extends Employee
 		System.out.printIn("Computing salary pay for " + getName());
 		return salary/52;
 	}
+	
 }
