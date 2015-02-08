@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body>
+<div class="container">
+    <h2>Greetings</h2>
+
+    <div id="one">Div #1</div>
+    <div id="two">Div #2</div>
+</div>
+<script type="text/javascript" src="../jquery_latest.js"></script>
+<script>
+    //you can replace after to before
+    $(document).ready(function () {
+        $('#one').after('<p>This is a test</p>');
+    });
+</script>
+</body>
+</html>

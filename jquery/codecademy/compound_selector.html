@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        div {
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+            background-color: #FF9C5B;
+            display: inline-block;
+        }
+
+        .red {
+            background-color: #E84A5F;
+        }
+
+        .pink {
+            background-color: #FF847C;
+        }
+    </style>
+    <script type='text/javascript' src='../jquery_latest.js'></script>
+</head>
+<body>
+<div class='red'></div>
+<div></div>
+<div class='pink'></div>
+<div></div>
+
+<script>
+    $(document).ready(function () {
+        $('.red,.pink').fadeTo('slow', 0);
+    });
+</script>
+</body>
+</html>

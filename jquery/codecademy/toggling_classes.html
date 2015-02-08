@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Highlights</title>
+    <style>
+        #title {
+            background-color: #C02942;
+            border-radius: 5px;
+            text-align: center;
+            font-family: Verdana, Arial, Sans-Serif;
+            color: #FFFFFF;
+            width: 200px;
+            height: 25px;
+        }
+
+        #text {
+            background-color: #0B486B;
+            border-radius: 5px;
+            text-align: center;
+            font-family: Vivaldi, Cursive;
+            color: #FFFFFF;
+            width: 200px;
+            height: 25px;
+        }
+
+        .highlighted {
+            -webkit-box-shadow: 0 0 8px #FFD700;
+            -moz-box-shadow: 0 0 8px #FFD700;
+            box-shadow: 0 0 8px #FFD700;
+            cursor:pointer;
+        }
+    </style>
+    <script type='text/javascript' src='../jquery_latest.js'></script>
+</head>
+<body>
+<div id="title" class="highlighted">I'm highlighted!</div>
+<div id="text">Highlight me, too!</div>
+
+<script>
+    $(document).ready(function(){
+        $('#text').click(function(){
+            $(this).toggleClass('highlighted');
+        });
+    });
+</script>
+
+</body>
+</html>
