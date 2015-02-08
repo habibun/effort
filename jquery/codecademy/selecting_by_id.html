@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vanishing Act</title>
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            display: inline-block;
+            background-color: #F38630;
+            border-radius: 5px;
+        }
+
+        #blue {
+            background-color: #A7DBD8;
+        }
+    </style>
+</head>
+<body>
+<div id="blue"></div>
+<div></div>
+<div></div>
+<div></div>
+<br/>
+<button>Click Me!</button>
+
+<script type='text/javascript' src='../jquery_latest.js'></script>
+<script>
+    $(document).ready(function () {
+        $('button').click(function () {
+            $('#blue').fadeOut('slow');
+        });
+    });
+</script>
+</body>
+</html>

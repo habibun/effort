@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <script type='text/javascript'>
+        $(document).ready(function(){
+            $('#one').after('<p>this is a test</p>');
+            $('p').remove();
+            $('#two').after('p');
+        })
+    </script>
+</head>
+<body>
+<div class="container">
+    <h2>Greetings</h2>
+    <div id="one">Div #1</div>
+    <div id="two">Div #2</div>
+</div>
+</body>
+</html>
