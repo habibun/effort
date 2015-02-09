@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time to Focus!</title>
+    <style>
+        input {
+            font-family: Verdana, Arial, Sans-Serif;
+        }
+    </style>
+    <script type='text/javascript' src='../jquery_latest.js'></script>
+</head>
+<body>
+<form>
+    Name: <input type='text' name='name'></input>
+</form>
+
+<script>
+    $(document).ready(function(){
+        $('input').focus(function(){
+            $(this).css({
+                'outline-style' : 'solid',
+                'outline-color' : '#FF0000'
+            });
+        });
+    });
+</script>
+</body>
+</html>
