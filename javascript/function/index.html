@@ -1,23 +1,25 @@
 <script>
-var result = parseInt('123');
-var result = parseInt('abc123');
-var result = parseInt('1abc23');
-var result = parseInt('123abc');
+    function abs(x){
+        if(x >= 0 ){
+            return x;
+        }
+        else
+        {
+            return -x;
+        }
+    }
+    console.log(abs(2));
 
-document.write(result);
-</script>
+
+    function factorial(n) {
+        var product = 1;
+        while (n > 1) {
+            product *= n;
+            n--;
+        }
+        return product;
+    }
+    console.log(factorial(4));
 
 
-the function accept an optional second parameter.which is the radix:
-<script>
-var result = parseInt('FF', 10);
-var result = parseInt('FF', 16);
-document.write(result);
-</script>
-
-Another example would be parsing a string with a base 10 (decimal) and base  8 (octal):
-<script>
-var result = parseInt('0377', 10);
-var result = parseInt('0377', 8);
-document.write(result);
 </script>
