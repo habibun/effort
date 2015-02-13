@@ -3,15 +3,26 @@
     <title></title>
 </head>
 <body>
-    <input type="text" name="txt" value="value" onchange="myFunction(this.value)">
+    taka:<input type="text" name="taka" id="taka" />
+    <br>
+    percentage:<input type="text" name="percentage" id="percentage">
+    <br>
+    <input type="submit" id="getResult" name="button" value="Get Result" onclick="myFunction()">
+
+    <p id="result"></p>
 
 <script>
-    function myFunction(val){
-        if(!(val)){
-            alert('what are you doing man');
-            return false;
-        }
-        alert('the input value has changed. the new value is ' + val);
+
+
+
+
+
+    function myFunction(){
+        var taka = document.getElementById('taka').value;
+        var percentage = document.getElementById('percentage').value;
+        var result = taka / percentage;
+//        alert(taka);
+        document.getElementById("result").innerHTML = result;
     }
 </script>
 </body>
