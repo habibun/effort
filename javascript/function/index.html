@@ -1,3 +1,18 @@
-<script>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <input type="text" name="txt" value="value" onchange="myFunction(this.value)">
 
+<script>
+    function myFunction(val){
+        if(!(val)){
+            alert('what are you doing man');
+            return false;
+        }
+        alert('the input value has changed. the new value is ' + val);
+    }
 </script>
+</body>
+</html>
