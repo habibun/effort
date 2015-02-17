@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Div Racer</title>
+    <style>
+        div {
+            height: 50px;
+            width: 50px;
+            border-radius: 10px;
+            background-color: #FF0000;
+            position: relative;
+        }
+    </style>
+    <script type='text/javascript' src='../jquery_latest.js'></script>
+</head>
+<body>
+<div></div>
+
+<script>
+    $(document).ready(function () {
+        $(document).keydown(function () {
+            $('div').animate({left: '+=10px'}, 500);
+        });
+    });
+</script>
+</body>
+</html>
