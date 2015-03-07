@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numOfShoes = '2';
+        var numOfSocks = 4;
+        var totalItems = numOfShoes + numOfSocks;
+//        document.write(totalItems);
+
+        //fixing the above error
+        var totalItems2 = +numOfShoes + numOfSocks;
+//        document.write(totalItems2);
+
+        //another way to fix this error
+        var totalItems3 = Number(numOfShoes) + numOfSocks;
+        document.write(totalItems3);
+    </script>
+</body>
+</html>
