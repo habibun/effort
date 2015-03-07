@@ -6,6 +6,19 @@
 </head>
 <body>
 <script type="text/javascript">
+    //else if statement using prompt function
+    var fridayCash = prompt('How much money can you spend?', '');
+    if (fridayCash >= 50) {
+        alert('You should go out to a dinner and a movie.');
+    } else if (fridayCash >= 35) {
+        alert('You should go out to a fine meal.');
+    } else if (fridayCash >= 12) {
+        alert('You should go see a movie.');
+    } else {
+        alert('Looks like you will be watching TV.');
+    }
+
+    //basic example
     var myColor = "Red";
     if (myColor == "Blue") {
         document.write("Just like the sky!");
