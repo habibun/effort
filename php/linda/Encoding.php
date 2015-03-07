@@ -11,7 +11,7 @@ that they are suitable for use on a web page.
 $url_page = 'php/created/page/url.php' ; // <- page the link will request
 $param1 = 'this is a string' ; // <- parameter to be sent in the URL string
 $param2 = '"bad"/<>character$' ; // <- another parameter, with HTML unfriendly characters
-$linktext = "<Click> & you'll see" ; // <- text of the link, with HTML unfriendly characters
+$linktext = "<Click> & you'll see" ; // <- strings of the link, with HTML unfriendly characters
 ?>
 <?php
 // this gives you a clean link to use
@@ -31,7 +31,7 @@ Summary:
 - Use rawurlencode for parts that come before "?".
 - Use urlencode for all GET parameters (values that come after each "="). (POST
 parameters are automatically encoded)
-- Use htmlspecialchars for HTML tag parameters and HTML text content.
+- Use htmlspecialchars for HTML tag parameters and HTML strings content.
 */
 ?>
 </body>

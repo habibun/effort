@@ -206,7 +206,7 @@ function chart(principal, interest, monthly, payments) {
     g.fillStyle = "#f88";                          // Light red
     g.fill();                                      // Fill the triangle
     g.font = "bold 12px sans-serif";               // Define a font
-    g.fillText("Total Interest Payments", 20,20);  // Draw text in legend
+    g.fillText("Total Interest Payments", 20,20);  // Draw strings in legend
 
     // Cumulative equity is non-linear and trickier to chart
     var equity = 0;
@@ -235,11 +235,11 @@ function chart(principal, interest, monthly, payments) {
     }
     g.lineWidth = 3;                               // Use a thick line
     g.stroke();                                    // Draw the balance curve
-    g.fillStyle = "black";                         // Switch to black text
+    g.fillStyle = "black";                         // Switch to black strings
     g.fillText("Loan Balance", 20,50);             // Legend entry
 
     // Now make yearly tick marks and year numbers on X axis
-    g.textAlign="center";                          // Center text over ticks
+    g.textAlign="center";                          // Center strings over ticks
     var y = amountToY(0);                          // Y coordinate of X axis
     for(var year=1; year*12 <= payments; year++) { // For each year
         var x = paymentToX(year*12);               // Compute tick position
@@ -250,7 +250,7 @@ function chart(principal, interest, monthly, payments) {
     }
 
     // Mark payment amounts along the right edge
-    g.textAlign = "right";                         // Right-justify text
+    g.textAlign = "right";                         // Right-justify strings
     g.textBaseline = "middle";                     // Center it vertically
     var ticks = [monthly*payments, principal];     // The two points we'll mark
     var rightEdge = paymentToX(payments);          // X coordinate of Y axis

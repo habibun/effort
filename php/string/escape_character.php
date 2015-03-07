@@ -14,6 +14,6 @@ calculation();
 ?>
 
 <?php
-//if you use back slash in a text.it is also escaped by backslash(\)
+//if you use back slash in a strings.it is also escaped by backslash(\)
 echo 'C:\\windows';         // OUTPUT: C:\windows
 ?>

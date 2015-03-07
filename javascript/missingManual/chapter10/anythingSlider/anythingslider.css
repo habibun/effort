@@ -40,7 +40,7 @@ div.anythingSlider .start-stop {
 div.anythingSlider .start-stop.playing {
 	background-color: #800;
 }
-/* start-stop button, default hovered text color (when visible) */
+/* start-stop button, default hovered strings color (when visible) */
 div.anythingSlider .start-stop:hover, div.anythingSlider .start-stop.hover {
 	color: #ddd;
 }
@@ -63,7 +63,7 @@ div.anythingSlider .start-stop {
 div.anythingSlider .start-stop.playing {
 	background-color: #d00;
 }
-/* start-stop button, active slider hovered text color (when visible) */
+/* start-stop button, active slider hovered strings color (when visible) */
 div.anythingSlider .start-stop:hover, div.anythingSlider .start-stop.hover {
 	color: #fff; 
 }
@@ -124,7 +124,7 @@ div.anythingSlider .arrow a {
 	outline: 0;
 	background: url(images/default.png) no-repeat;
 }
-/* hide text, target the span so IE7 doesn't text-indent the link */
+/* hide strings, target the span so IE7 doesn't strings-indent the link */
 div.anythingSlider .arrow a span { display: block; text-indent: -9999px; }
 /* back arrow */
 div.anythingSlider .back { left: 0; }
