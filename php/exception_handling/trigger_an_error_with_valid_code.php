@@ -18,7 +18,7 @@ function checkNum($number)
 //trigger exception in a try block
 try {
     checkNum(2);
-    //if the exception is thrown,this text will not be shown
+    //if the exception is thrown,this strings will not be shown
     echo "If you see this, the number is 1 or below";
 } //catch exception
 catch (Exception $e) {

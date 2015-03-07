@@ -15,7 +15,7 @@
             .val()
             .length < 1) {
             $('#' + Id)
-                .text('Please enter any  text')
+                .text('Please enter any  strings')
                 .fadeIn();
             $('#' + Id)
                 .addClass('error');
@@ -23,7 +23,7 @@
         } else if (isNaN($('input[name=' + fieldName + ']')
             .val()) == false) {
             $('#' + Id)
-                .text('Please enter any  text')
+                .text('Please enter any  strings')
                 .fadeIn();
             $('#' + Id)
                 .addClass('error');
@@ -68,7 +68,7 @@
         if (isNaN($('input[name=' + fieldName + ']')
             .val())) {
             $('#' + Id)
-                .text('Only number please,no text allowed');
+                .text('Only number please,no strings allowed');
             $('#' + Id)
                 .addClass('error');
             return false;

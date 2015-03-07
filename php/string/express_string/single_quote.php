@@ -4,7 +4,7 @@ echo 'php book project';
 
 
 <?php
-//if you use single quote in a text.it is escaped by backslash(\)
+//if you use single quote in a strings.it is escaped by backslash(\)
 
 echo 'It\'s me';//OUTPUT: It's me
 ?>
