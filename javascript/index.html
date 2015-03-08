@@ -6,7 +6,10 @@
 </head>
 <body>
     <script>
-        docment.write();
+        var reverse = ['four','three','two','one'];
+        for(var i = reverse.length; i > 0; i--) {
+            document.write(reverse[i-1] + ', ');
+        }
     </script>
 </body>
 </html>
