@@ -5,11 +5,14 @@
 <title>Using Conditional Statements</title>
 <link href="../_css/site.css" rel="stylesheet">
 <script>
-    var luckyNumber = prompt('What is your lucky number?','');
-    luckyNumber = parseInt(luckyNumber, 10);
-    if (isNaN(luckyNumber)) {
+    do {
+        var luckyNumber = prompt('What is your lucky number?', '');
+        luckyNumber = parseInt(luckyNumber, 10);
+    }while(isNaN(luckyNumber));
+    /*if (isNaN(luckyNumber)) {
         luckyNumber = prompt('Please, tell me your lucky number.','');
-    }
+    }*/
+
 </script>
 </head>
 
