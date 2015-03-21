@@ -6,10 +6,11 @@
 </head>
 <body>
     <script>
-        var reverse = ['four','three','two','one'];
-        for(var i = reverse.length; i > 0; i--) {
-            document.write(reverse[i-1] + ', ');
+        function printToday(){
+        	var today = new Date();
+        	document.write(today);
         }
+        printToday();
     </script>
 </body>
 </html>
