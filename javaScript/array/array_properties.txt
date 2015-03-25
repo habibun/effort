@@ -1,0 +1,6 @@
+Property            Description
+constructor         Returns a reference to the array function that created the object.
+index               The property represents the zero-based index of the match in the string
+input               This property is only present in arrays created by regular expression matches.
+length              Reflects the number of elements in an array.
+prototype           The prototype property allows you to add properties and methods to an object.
