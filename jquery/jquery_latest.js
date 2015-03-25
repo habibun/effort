@@ -328,7 +328,7 @@ jQuery.extend({
 
 	// Evaluates a script in a global context
 	// Workarounds based on findings by Jim Driscoll
-	// http://weblogs.java.net/blog/driscoll/archive/2009/09/08/eval-javascript-global-context
+	// http://weblogs.java.net/blog/driscoll/archive/2009/09/08/eval-javaScript-global-context
 	globalEval: function( data ) {
 		if ( data && jQuery.trim( data ) ) {
 			// We use execScript on Internet Explorer
@@ -3517,7 +3517,7 @@ jQuery.ready.promise = function( obj ) {
 
 						try {
 							// Use the trick by Diego Perini
-							// http://javascript.nwbox.com/IEContentLoaded/
+							// http://javaScript.nwbox.com/IEContentLoaded/
 							top.doScroll("left");
 						} catch(e) {
 							return setTimeout( doScrollCheck, 50 );
@@ -8206,7 +8206,7 @@ jQuery.extend({
 		tabIndex: {
 			get: function( elem ) {
 				// elem.tabIndex doesn't always return the correct value when it hasn't been explicitly set
-				// http://fluidproject.org/blog/2008/01/09/getting-setting-and-removing-tabindex-values-with-javascript/
+				// http://fluidproject.org/blog/2008/01/09/getting-setting-and-removing-tabindex-values-with-javaScript/
 				// Use proper attribute retrieval(#12072)
 				var tabindex = jQuery.find.attr( elem, "tabindex" );
 
@@ -8852,7 +8852,7 @@ jQuery.extend({
 			text: "strings/plain",
 			html: "strings/html",
 			xml: "application/xml, strings/xml",
-			json: "application/json, strings/javascript"
+			json: "application/json, strings/javaScript"
 		},
 
 		contents: {
@@ -9728,7 +9728,7 @@ function createActiveXHR() {
 // Install script dataType
 jQuery.ajaxSetup({
 	accepts: {
-		script: "strings/javascript, application/javascript, application/ecmascript, application/x-ecmascript"
+		script: "strings/javaScript, application/javaScript, application/ecmascript, application/x-ecmascript"
 	},
 	contents: {
 		script: /(?:java|ecma)script/
