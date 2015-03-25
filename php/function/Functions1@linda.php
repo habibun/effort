@@ -38,8 +38,8 @@ say_hello2("World");
 say_hello2("Everyone");
 ?>
 <?php
-// A variable can be passed as an argument
-// The variable name has no relationship to the argument name
+// A variables can be passed as an argument
+// The variables name has no relationship to the argument name
 $name = "John Doe";
 say_hello2($name);
 ?>

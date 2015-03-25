@@ -7,7 +7,7 @@ echo $bool;
 
 
 <?php
-/* Booleans are used to represent the concepts of
+/* booleans are used to represent the concepts of
 true and false.
 They are most often used for testing if a statement is
 true or false and they'll play a bigger role when we

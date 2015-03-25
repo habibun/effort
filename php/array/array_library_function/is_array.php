@@ -1,5 +1,5 @@
 <?php
-//is_array() function.txt is check a variable is that variable is array or not
+//is_array() function.txt is check a variables is that variables is array or not
 
 //letter array
 $letter = range("C","K");

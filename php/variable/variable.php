@@ -19,7 +19,7 @@ echo "<br />";
 ?>
 
 <?php
-// variables values are variable; $var1 can be assigned a new value
+// variables values are variables; $var1 can be assigned a new value
 $var1 = 100;
 echo $var1;
 ?>

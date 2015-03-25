@@ -9,7 +9,7 @@
 <body>
 
 <?php
-$stefan = new person("Stefan Mischook");   //The variable $stefan becomes a handle/reference to our newly created person object
+$stefan = new person("Stefan Mischook");   //The variables $stefan becomes a handle/reference to our newly created person object
 
 //create multiple object from the same class
 /*$nick =new person();

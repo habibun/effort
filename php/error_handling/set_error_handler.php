@@ -6,7 +6,7 @@
  * Year: 2014
  * File Name: set_error_handler.php
  */
-//testing the error handler by trying to output variable that does not exist:
+//testing the error handler by trying to output variables that does not exist:
 //error handler function.txt
 function customError($errno, $errstr)
 {

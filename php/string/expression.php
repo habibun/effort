@@ -9,7 +9,7 @@
 $a=2+5;
 
 /*in above example:
-$a is a variable
+$a is a variables
 = is a assignment operator
 2 and 5 is operand
 

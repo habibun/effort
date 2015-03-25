@@ -7,7 +7,7 @@ $anothernumber = 20;
 $addnumber = $number+$anothernumber;
 echo $addnumber;
 }
-echo "This \$number variable from outside of calculation() function.txt and its
+echo "This \$number variables from outside of calculation() function.txt and its
 value is $number";
 echo "</br>";
 calculation();
