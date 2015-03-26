@@ -5,7 +5,7 @@
  * Time: 7:56 PM
  * File Name: connecting_to_mysql.php
  */
-//in the following example we store the connection in a variable ($con) for later use in the script.
+//in the following example we store the connection in a variables ($con) for later use in the script.
 //the die part will be executed if the connection fails:
 $con = mysql_connect("localhost","","");
 if (!$con)

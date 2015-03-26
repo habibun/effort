@@ -10,7 +10,7 @@ class Foo
     public $Bar;
     public function _construct()
     {
-        $this->Bar=0;//use this to access Bar variable
+        $this->Bar=0;//use this to access Bar variables
     }
     public function Baz()
     {

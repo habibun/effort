@@ -4,11 +4,11 @@
 </head>
 <body>
 <?php /* global variables in functions
-Variables inside a function.txt aren't the same as the variable outside it
-Declaring a variable as global "pulls in" the variable
+Variables inside a function.txt aren't the same as the variables outside it
+Declaring a variables as global "pulls in" the variables
 as it exists outside the function.txt so that the function.txt can use it.
 */
-// Example using a global variable
+// Example using a global variables
 $bar = "outside";
 function foo() {
     global $bar;
@@ -20,7 +20,7 @@ echo $bar . "<br />";
 ?>
 <br />
 <?php
-// Example using a local variable, arguments and return values
+// Example using a local variables, arguments and return values
 $bar = "outside";
 function foo2($var) {
     $var = "inside";

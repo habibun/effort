@@ -6,7 +6,7 @@
  * File Name: functions_and_Filters.php
  */
 
-/*to filter a variable use one of the following filter function.txt:
+/*to filter a variables use one of the following filter function.txt:
 filter_var()_
 
 */

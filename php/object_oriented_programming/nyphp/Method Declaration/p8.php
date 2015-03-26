@@ -1,7 +1,7 @@
 <?php
 class university
 {
-    public $name = "John"; //declare variable name and value id john
+    public $name = "John"; //declare variables name and value id john
     function getName() //method name getName //function.txt id keyword
     {
         //return $this->name;

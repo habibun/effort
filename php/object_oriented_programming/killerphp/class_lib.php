@@ -2,7 +2,7 @@
 class person
 {
     //When you declare a property with the 'var' keyword, it is considered 'public'.
-    var $name;  //when you crate a variable inside a class it is called property.
+    var $name;  //when you crate a variables inside a class it is called property.
 
    /* public $height; //properties declared as 'public' have no access restrictions,meaning anyone can access them.
 

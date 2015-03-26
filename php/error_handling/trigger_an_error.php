@@ -9,7 +9,7 @@
 //in a script where users can input data it is useful to trigger errors when an illegal input occurs.In
 //php this is done by the trigger_error() function.txt.
 
-//in this example an error occurs if the test variable is bigger than 1:
+//in this example an error occurs if the test variables is bigger than 1:
 $test = 2;
 if ($test > 1) {
     trigger_error("Value must be 1 or below");
