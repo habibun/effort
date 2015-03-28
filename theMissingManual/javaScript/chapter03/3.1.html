@@ -6,11 +6,10 @@
 <title>Script 3.1</title>
 <link href="../css/global.css" rel="stylesheet" type="text/css">
 <script type="text/javascript">
-    var luckyNumber = prompt('What is your lucky number?','');
-    luckyNumber = parseInt(luckyNumber, 10);
-    if(isNaN(luckyNumber)) {
-        luckyNumber = prompt('Please, tell me your lucky number.','');
-    }
+    do{
+        var luckyNumber = prompt('What is your lucky number?','');
+        luckyNumber = parseInt(luckyNumber, 10);
+    }while(isNaN(luckyNumber));
 </script>
 </head>
 <body id="twoCol">
@@ -28,7 +27,6 @@
     }else {
         document.write("The number " + luckyNumber + " is lucky for you!");
     }
-
 </script>
 </p>
 </div>
