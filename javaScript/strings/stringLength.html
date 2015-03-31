@@ -1,22 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
 <script>
-    var myString = "123456";
-
-    var length = myString.length;
-
-    document.write("The string is this long: " + length);
-
-    // Same thing, but using the property inside the write function.txt
-    document.write("<br />The string is this long: " + myString.length);
-
+    var password = 'sesame';
+    if(password.length <= 6) {
+        alert('That password is too short.');
+    }else if (password.length > 15) {
+        alert('That password is too long.')
+    }
 </script>
-
-#when string is changed then length is definitely changed.
-
-<script>
-    var myString = "123456";
-    document.write("The string is this long: " + myString.length);
-
-    myString = myString + "7890";
-    document.write("<br />The string is now this long: " + myString.length);
-
-</script>
+</body>
+</html>
