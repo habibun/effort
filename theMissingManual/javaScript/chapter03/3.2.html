@@ -6,7 +6,10 @@
 <title>Script 3.2</title>
 <link href="../css/global.css" rel="stylesheet" type="text/css">
 <script type="text/javascript">
-
+    function printToday() {
+        var today = new Date();
+        document.write(today.toDateString());
+    }
 </script>
 </head>
 <body id="twoCol">
@@ -16,7 +19,7 @@
   <div id="contentWrap">
   <div id="main">
   <h1>A Basic Function</h1>
-  <p>Today is <strong></strong></p>
+  <p>Today is <strong><script>printToday();</script></strong></p>
 </div>
   
   <div id="sidebar">
