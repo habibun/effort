@@ -6,12 +6,9 @@
 </head>
 <body>
 <script>
-    function rndNum(from, to) {
-        return Math.floor(Math.random() * (to) + from );
-    }
-    var dieRoll = rndNum(1,6); // get a number between 1 and 6
-
-    document.write(dieRoll);
+    var now = new Date();
+    var time = now.getTime();
+    document.write(time);
 </script>
 </body>
 </html>
