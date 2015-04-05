@@ -10,16 +10,13 @@
     var month = now.getMonth();
     document.write(month);  //result 3 because of 0 indexing
 
-
     //If you want to retrieve a number that matches how we think of months
     var realMonth = now.getMonth() + 1; //matches the real month
-
 
     //get the month name
     var months = ['January', 'February', 'March', 'April', 'May',
         'June', 'July', 'August', 'September',
         'October', 'November', 'December'];
-
     //get the month name
     var now = new Date();
     var monthName = months[now.getMonth()];

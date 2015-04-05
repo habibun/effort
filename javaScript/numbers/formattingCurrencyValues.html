@@ -16,17 +16,15 @@
     var printCost = '$' + cost.toFixed(2);
     document.write(printCost);
 
-
-    //The toFixed( ) method only works with numbers. So if you use a string, you end up with an error:
-    var cost='10';//a string
-    var printCost='$' + cost.toFixed(2);//error
+    //The toFixed() method only works with numbers. So if you use a string, you end up with an error:
+    var cost = '10';//a string
+    var printCost = '$' + cost.toFixed(2);//error
 
     //To get around this problem
-    var cost='10';//a string
+    var cost = '10';//a string
     var cost = +cost;
     var printCost = '$' + cost.toFixed(2);
     document.write(printCost);
-
 </script>
 </body>
 </html>
