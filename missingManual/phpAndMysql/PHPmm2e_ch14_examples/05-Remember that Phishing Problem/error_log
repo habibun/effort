@@ -1,0 +1,1 @@
+[05-Sep-2012 09:57:59] PHP Warning:  Missing argument 2 for handle_error(), called in /home4/yellowta/public_html/phpMM2/ch14/scripts/authorize.php on line 43 and defined in /home4/yellowta/public_html/phpMM2/ch14/scripts/app_config.php on line 24
