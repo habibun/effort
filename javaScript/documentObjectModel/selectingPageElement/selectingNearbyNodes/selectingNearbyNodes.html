@@ -6,6 +6,7 @@
 </head>
 <body>
 <h1 id="header">A headline</h1>
+
 <p>Some <strong>important</strong> text</p>
 <script>
     //childNodes
@@ -27,7 +28,7 @@
     //prevSibling
     var headline = document.getElementById('header');
     var headlineSibling = headline.prevSibling;
-    if (! headlineSibling) {
+    if (!headlineSibling) {
         alert('This node does not have a previous sibling!');
     } else {
         // do something with the sibling node

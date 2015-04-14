@@ -1,0 +1,4 @@
+[21-Aug-2012 10:41:01] PHP Fatal error:  Call to undefined function  preg_replace_all() in /home4/yellowta/public_html/phpMM2/ch08/scripts/show_error.php on line 2
+[21-Aug-2012 15:21:56] PHP Fatal error:  Call to undefined function  debug_print() in /home4/yellowta/public_html/phpMM2/ch08/scripts/show_error.php on line 43
+[21-Aug-2012 15:23:42] PHP Fatal error:  Call to undefined function  debug_print() in /home4/yellowta/public_html/phpMM2/ch08/scripts/show_error.php on line 43
+[21-Aug-2012 15:24:04] PHP Fatal error:  Call to undefined function  debug_print() in /home4/yellowta/public_html/phpMM2/ch08/scripts/show_error.php on line 43

@@ -15,7 +15,7 @@
 <a href="http://test.com">test</a>
 
 <script>
-    $('a[href^=http]').each(function() {
+    $('a[href^=http]').each(function () {
         var extLink = $(this).attr('href');
         $('#bibList').append('<li>' + extLink + '</li>');
     });
