@@ -37,7 +37,32 @@ td {
 <script type="text/javascript">
 $(document).ready(function( ) {
 	$('table.striped tr:even').addClass('even');
-	
+    $('table.striped tbody tr').mouseover(function(){
+        $(this).addClass('highlight');
+    });
+    $('table.striped tbody tr').mouseout(function() {
+        $(this).removeClass('highlight');
+    });
+
+    //no need to waste time creating the same selection twice
+    $('table.striped tr:even').addClass('even');
+    var rows = $('table.striped tbody tr');
+    rows.mouseover(function(){
+        $(this).addClass('highlight');
+    });
+    rows.mouseout(function() {
+        $(this).removeClass('highlight');
+    });
+
+    //Efficient Programming with jQuery Chaining
+    $('table.striped tr:even').addClass('even');
+    $('table.striped tbody tr')
+            .mouseover(function() {
+                $(this).addClass('highlight');
+            })
+            .mouseout(function() {
+                $(this).removeClass('highlight');
+            });
 });
 </script>
 </head>
