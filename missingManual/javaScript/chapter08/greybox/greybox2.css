@@ -3,22 +3,22 @@
 /* settings for window where page loads */
 #GB_window {
   background: #fff;
-  border: 5px solid #aaa;
+  border: 5px solid #000;
 }
 
 /* settings for caption */
 #GB_caption {
 	font: 12px bold helvetica, verdana, sans-serif;
 	color: #fff;
-	background: #fff url(close.gif) no-repeat right center;
+	background: #000 url(close2.gif) no-repeat right center;
 	padding: 2px 0 2px 5px;
 }
 
 /*overlay for all but Mac FF*/
 .GB_overlayBG {
-  background-color:#000;
-	filter:alpha(opacity=80);
-	opacity: 0.80;
+    background-color:#000;
+    filter:alpha(opacity=60);
+    opacity: .60;
 }
 /*overlay for Mac FF to deal with Flash in iFrame problem*/
 .GB_overlayMacFFBGHack {
