@@ -80,13 +80,13 @@ body {
 
 /* look for buttons that have menus */
 .nav .sub {
-	background-image: url(../superfish/images/arrow_down.png);
+	background-image: url(images/arrow_down.png);
   background-repeat:no-repeat;
   background-position: 2px 3px;
 }
 
 .nav .subsub {
-	background-image: url(../superfish/images/arrow_left.png);
+	background-image: url(images/arrow_left.png);
   background-repeat: no-repeat;
   background-position: 4px 7px;
 }
