@@ -6,7 +6,17 @@
 <link href="accordion.css" rel="stylesheet" type="text/css">
 
 <script type="text/javascript" src="../js/jquery.js"></script>
-
+    <script type="text/javascript" src="../js/ui/ui.core.js"></script>
+    <script type="text/javascript" src="../js/ui/ui.accordion.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#accordion').accordion({
+                header: 'h2',
+                active: '.open',
+                selectedClass: 'current'
+            });
+        });
+    </script>
 </head>
 <body id="twoCol">
 
@@ -24,7 +34,7 @@
     <p>Ut enim ad minim veniam, quis nostrud exercitation in reprehenderit in voluptate. Velit esse cillum dolore lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt.</p>
     <p>Ut enim ad minim veniam, quis nostrud exercitation in reprehenderit in voluptate. Velit esse cillum dolore lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt.</p>
   </div>
-  <h2>Accordion 3</h2>
+  <h2 class="open">Accordion 3</h2>
   <div>
     <p>Ut enim ad minim veniam, quis nostrud exercitation in reprehenderit in voluptate. Velit esse cillum dolore lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt.</p>
     <p>Ut enim ad minim veniam, quis nostrud exercitation in reprehenderit in voluptate. Velit esse cillum dolore lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt.</p>

@@ -37,3 +37,6 @@ p {
 	margin: 0;
 	cursor: pointer;
 }
+#accordion h2.ui-state-active {
+    background: #036;
+}
