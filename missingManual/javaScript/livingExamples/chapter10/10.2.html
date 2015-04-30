@@ -4,15 +4,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Quis Nostrud</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
-
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/ui/ui.core.js"></script>
+    <script type="text/javascript" src="../js/ui/ui.tabs.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function( ) {
+        $('#tabSet').tabs();
+    });
+    </script>
 </head>
 <body id="twoCol">
 
   <h1>Tabs</h1>
-  <ul>
-    <li><a>Tab 1</a></li>
-    <li><a>Tab 2</a></li>
-    <li><a>Tab 3</a></li>
+  <ul id="tabSet">
+    <li><a href="#panel1">Tab 1</a></li>
+    <li><a href="#panel2">Tab 2</a></li>
+    <li><a href="#panel3">Tab 3</a></li>
   </ul>
   <div id="panel1">
     <h2>Panel 1</h2>
