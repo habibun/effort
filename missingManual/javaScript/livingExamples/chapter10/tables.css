@@ -17,4 +17,13 @@ th {
 td {
 	border-left: 1px solid #A7A37E;
 }
-
+.sortable th {
+    cursor: pointer;
+}
+th.headerSortDown {
+    background: #A6B8C2 url(images/down_arrow.png) no-repeat 98% 7px;
+}
+th.headerSortUp {
+    background: #A6B8C2 url(images/up_arrow.png) no-repeat 98% 5px;
+}
+.sortable tr.even { background-color: #F34; }
