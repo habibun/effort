@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    /* parseInt */
+    //You can convert a string to an integer using the built-in parseInt() function
+    console.log(parseInt('123', 10));   //123
+
+    /* Nan */
+    //A special value called NaN (short for "Not a Number") is returned if the string is non-numeric:
+    console.log(NaN + 5);   //NaN
+
+    //You can test for NaN using the built-in isNaN() function:
+    console.log(isNaN(NaN));    //true
+
+    /* Infinity */
+    //JavaScript also has the special values Infinity and -Infinity:
+    console.log(1 / 0);     // Infinity
+    console.log(-1 / 0);    //-Infinity
+
+    //ou can test for Infinity, -Infinity and NaN values using the built-in isFinite() function:
+    console.log(isFinite(1/0));     //false
+    console.log(isFinite(-Infinity));   //false
+    console.log(isFinite(NaN));     //false
+    console.log(isFinite(Infinity));    //false
+    console.log(isFinite(2 / 2));
+</script>
+</body>
+</html>
