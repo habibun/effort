@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+/*    function add (x,y) {
+        var total = x + y;
+        return total
+    }
+    console.log(add(2,3));*/
+
+    function add() {
+        var sum = 0;
+        for(var i = 0, j = arguments.length; i < j; i++ ){
+            sum += arguments[i];
+        }
+        return sum;
+    }
+//    console.log(add(2,3,4,5));
+
+    function avg() {
+        var sum = 0;
+        for(var i = 0, j = arguments.length; i<j; i++) {
+            sum += arguments[i];
+        }
+        return sum / arguments.length;
+    }
+//    console.log(avg(2,3,4,5));
+
+    function avgArray(arr) {
+        var sum = 0;
+        for(var i= 0, j = arr.length; i < j; i++) {
+            sum += arr[i];
+        }
+        return sum / arr.length;
+    }
+    console.log(avgArray([2, 3, 4, 5]));
+
+    console.log(avg.apply(null,[2,3,4,5]));
+</script>
+</body>
+</html>
