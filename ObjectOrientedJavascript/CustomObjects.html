@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function makePerson(first, last) {
+        return {
+            first: first,
+            last: last
+        }
+    }
+    function personFullName(person) {
+        return person.first + ' ' + person.last;
+    }
+    function fullNameReserved(person) {
+        return person.last + ' ' + person.first;
+    }
+    s = makePerson('Simon', 'Willison');
+    console.log(personFullName(s));
+
+    console.log(fullNameReserved(s));
+
+
+    /*This works, but it's pretty ugly. You end up with dozens of functions in your global namespace.
+    What we really need is a way to attach a function to an object. Since functions are objects, this is easy:
+    * */
+    function makePerson(first, last) {
+        return{
+            first: first,
+            last: last,
+            fullName: function() {
+                return this.first + ' ' + this.last;
+            },
+            fullNameReversed: function() {
+                return this.last + ' ' + this.first;
+            }
+        }
+    }
+
+    p = makePerson("Simon", "Willison");
+
+    var fullName = p.fullName();
+    console.log(fullName);
+
+    var reversedFullName = p.fullNameReversed();
+    console.log(reversedFullName);
+
+    //We can take advantage of the this keyword to improve our makePerson function:
+
+</script>
+</body>
+</html>
