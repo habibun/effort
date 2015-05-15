@@ -36,8 +36,8 @@ else
 //if "email" is not filled out, display the form
 {
     echo "<form method='post' action='Stopping_E-mail_Injections.php'>
-    Email: <input name='email' type='text' /><br />
-    Subject: <input name='subject' type='text' /><br />
+    Email: <input name='email' type='strings' /><br />
+    Subject: <input name='subject' type='strings' /><br />
      Message:<br />   <textarea name='message' rows='15' cols='40'>
      </textarea><br />
      <input type='submit' />

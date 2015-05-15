@@ -1,15 +1,13 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>this is a test</title>
-
+    <meta charset="UTF-8">
+    <title>Document</title>
 </head>
 <body>
-<script type="text/javascript">
 
-        alert("Hello World");
-
-</script>
-<p>this is webpage body</p>
 </body>
 </html>
+
+
 

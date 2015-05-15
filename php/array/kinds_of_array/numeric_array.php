@@ -9,7 +9,7 @@ echo $fruit[1];
 
 <?php
 //another method to declare numeric array
-//in the following example you access the variable values by referring to the array name and index.
+//in the following example you access the variables values by referring to the array name and index.
 
 $fruit[0]="Mango";
 $fruit[1]="Banana";

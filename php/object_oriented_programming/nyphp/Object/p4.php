@@ -6,8 +6,8 @@
  * Time: 11:08 PM
  */
 class human{
-    public $gender = "Male"; //in the gender variable assign male value
+    public $gender = "Male"; //in the gender variables assign male value
 }
 $manik = new human();
-echo $manik->gender; //access the variable gender using human class object manik
+echo $manik->gender; //access the variables gender using human class object manik
 ?>

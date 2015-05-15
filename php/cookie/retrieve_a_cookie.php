@@ -1,5 +1,5 @@
 <?php
-//the PHP_COOKIE variable is used to retrieve a cookie value.
+//the PHP_COOKIE variables is used to retrieve a cookie value.
 //in the example below,we retrieve the value of the cookie named "user" and display it on a page:
 
 //print a cookie

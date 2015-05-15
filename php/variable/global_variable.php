@@ -8,7 +8,7 @@ function calculation()
 	$roll=$number+$another_number;
 	echo $roll;
 }
-echo "the \$number variable value outside the function.txt is $number.";
+echo "the \$number variables value outside the function.txt is $number.";
 echo "and function.txt into function.txt is ";
 calculation();
 ?>
