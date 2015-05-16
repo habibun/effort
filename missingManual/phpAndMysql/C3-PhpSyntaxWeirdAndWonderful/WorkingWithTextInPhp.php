@@ -29,8 +29,11 @@ $str = strpos($str, 'jony');
 
 //substr — Return part of a string
 $subs = substr("jony",2);
+//echo $subs;
 
-$jony = 'jony';
-$rony = 0;
-$subs = substr($jony, $rony+1);
-echo $subs;
+//concatenate
+$firstName = 'habibun';
+$lastName = 'noby';
+$space = ' ';
+$fullName = $firstName .$space. $lastName;
+echo $fullName;
