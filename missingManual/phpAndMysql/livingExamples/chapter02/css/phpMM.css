@@ -1,10 +1,10 @@
 body {
-    background: #75bb45 url('/phpMM/images/tmm_php-mysql_background.png') repeat-y;
+    background: #75bb45 url('../images/tmm_php-mysql_background.png') repeat-y;
     margin: 0 68px 0 68px;
 }
 
 div#header {
-    background: #fff url('/phpMM/images/tmm_php-mysql_banner.png') no-repeat top left;
+    background: #fff url('../images/tmm_php-mysql_banner.png') no-repeat top left;
     height: 114px;
     left: 11px;
     position: relative;
@@ -17,7 +17,7 @@ div#header {
 }
 
 div#example {
-    background-image: url('/phpMM/images/tmm_php-mysql_example-arrow.png');
+    background-image: url('../images/tmm_php-mysql_example-arrow.png');
     background-repeat: no-repeat;
     background-position: left top;
     color: #fff;
@@ -88,7 +88,7 @@ a:hover {
 }
 
 div#footer {
-    background: #fff url('/phpMM/images/tmm_php-mysql_footer.png') no-repeat top left;
+    background: #fff url('../images/tmm_php-mysql_footer.png') no-repeat top left;
     height: 114px;
     left: 11px;
     position: relative;
