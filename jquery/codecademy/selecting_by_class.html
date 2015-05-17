@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vanishing Act</title>
+    <style>
+        .vanish {
+            height: 100px;
+            width: 100px;
+            display: inline-block;
+            background-color: #F38630;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="vanish"></div>
+<div class="vanish"></div>
+<div class="vanish"></div>
+<div class="vanish"></div>
+<br/>
+<button>Click Me!</button>
+
+<script type="text/javascript" src="../jquery_latest.js"></script>
+<script>
+    $(document).ready(function () {
+        $('button').click(function () {
+            $('.vanish').fadeOut('slow');
+        });
+    });
+</script>
+</body>
+</html>

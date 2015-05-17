@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <!--
+    the class selector is used to specify a style for a group of elements.unlike the id selector the class selector is most
+    often used on the several elements .
+    this allows you to set a particular style for any html elements with the same class.
+    the class selector uses the html class attribute and is defined with "."
+    -->
+   <style type="text/css">
+       .center{
+           text-align: center;
+       }
+   </style>
+</head>
+<body>
+<h1 class="center">Center align heading.</h1>
+<p class="center">Center align paragraph.</p>
+</body>
+</html>
+
+
+
+        example2:
+        <html>
+        <head>
+            <!--
+            all p element with class ="center" will be center aligned
+            -->
+            <style type="text/css">
+                p.center{
+                    text-align: center;
+                }
+            </style>
+        </head>
+        <body>
+        <h1 class="center">this is heading will be not affected.</h1>
+        <p class="center">this is paragraph will be center align.</p>
+        </body>
+        </html>

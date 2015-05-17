@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ghostly Divs</title>
+    <style>
+        div {
+            border-radius: 5px;
+            background-color: #ABCDEF;
+            transition: background-color 0.5s ease;
+            display:inline;
+            font-size:25px;
+            padding:20px;
+            border:1px solid #ccc;
+            margin-top:10px;
+        }
+
+        .active {
+            background-color:#556677;
+        }
+    </style>
+    <script type='text/javascript' src='../jquery_latest.js'></script>
+</head>
+<body>
+<div>Home</div>
+<div>About Us</div>
+<div>Contact</div>
+<script>
+    $(document).ready(function () {
+        $('div').hover(
+                function () {
+                    $(this).addClass('active');
+                },
+                function () {
+                    $(this).removeClass('active');
+                }
+        );
+    });
+</script>
+</body>
+</html>

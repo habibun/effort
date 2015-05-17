@@ -1,0 +1,59 @@
+/*#tutorial{
+color:green;
+font-size:20px;
+text-align:center;
+font-family:Verdana;
+}
+*/
+
+/*for add class and remove class*/
+/*#webcoachbd{
+font-weight:bolder;
+font-family:Verdana;
+}
+.redPara{
+color:#f00;
+}
+.greenPara{
+color:green;
+}*/
+
+/*for each method*/
+body {
+font-family: "Lucida Sans Unicode","Lucida Grande",Sans-Serif;
+color: #3E3E3E;
+background: #efefef;
+font-size: 12px;
+}
+
+
+table {
+border-collapse:collapse;
+font-size:12px;
+margin:0 20px 20px 20px;
+border-top:2px solid #015287;
+width:480px;
+}
+
+
+th {
+border-bottom: 2px solid #015287;
+color: #D15600;
+font-size: 14px;
+font-weight: normal;
+text-align: left;
+padding: 3px 8px;
+}
+
+
+td {
+padding: 6px;
+}
+.odd{
+background:ivory;
+}
+.even{
+background:#ccc;
+}
+
+

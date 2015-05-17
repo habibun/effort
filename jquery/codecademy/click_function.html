@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            background-color: #FA6900;
+            border-radius: 5px;
+        }
+    </style>
+    <script type='text/javascript' src='script.js'></script>
+</head>
+<body>
+<div></div>
+
+<script>
+    $(document).ready(function() {
+        $('div').click(function() {
+            $('div').fadeOut('slow');
+        });
+    });
+</script>
+</body>
+</html>

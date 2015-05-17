@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>conflick removal</title>
+<script type="text/javascript">
+	var abc = Jquery.noConflict();
+	abc(document).ready(function(){
+		abc('table tr').each(function(i){
+			if (i < 5) {
+			if (i % 2 == 0) {
+				abc(this).addClass('even');
+			}else
+			{
+				abc(this).addClass('odd');
+			}
+		}
+		});
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>

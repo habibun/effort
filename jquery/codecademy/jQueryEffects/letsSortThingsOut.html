@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Ye Favorite</title>
+    <style>
+        ol {
+            list-style-type: none;
+            position: relative;
+            left: -20px;
+        }
+
+        ol li {
+            background: #eeeeee;
+            border-radius: 5px;
+            border: 1px solid black;
+            margin: 3px;
+            padding: 0.4em;
+            font-size: 1em;
+            height: 16px;
+            font-family: Verdana, Arial, Sans-Serif;
+        }
+
+        ol .ui-selected {
+            background: #F39814; color: white;
+        }
+    </style>
+    <script type='text/javascript' src='../../jquery_latest.js'></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('ol').sortable();
+        });
+    </script>
+</head>
+<body>
+<ol>
+    <li>Super Mario Bros.</li>
+    <li>Tetris</li>
+    <li>Legend of Zelda: Link's Awakening</li>
+    <li>Kirby's Dream World</li>
+    <li>Burger Time</li>
+    <li>Pokémon Red</li>
+    <li>Pokémon Blue</li>
+</ol>
+</body>
+</html>

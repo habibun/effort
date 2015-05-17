@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>
+bind method
+</title>
+<script src="jquery_latest.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+function handlerFn(){
+$('.myPara').toggleClass('changeColor');
+}
+$('#buttonA').click(function(){
+$('.myPara').bind('click mouseenter mouseleave',handlerFn);
+});
+$('#buttonB').click(function(){
+$('.myPara').unbind('click mouseenter mouseleave',handlerFn);
+});
+});
+
+</script>
+
+
+<style type="text/css">
+.changeColor{
+background:#ddd;
+color:#000;
+font-weight:bold;
+}
+</style>
+</head>
+<body>
+<h2>JQUERY tutorials</h2>
+<p class="myPara">Webcoachbd provide massive tutorials on Web Development</p>
+<button id="buttonA">Binder</button>
+<button id="buttonB">UnBinder</button>
+</body>
+</html>

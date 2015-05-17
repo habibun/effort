@@ -1,0 +1,6 @@
+[21-Aug-2012 12:50:44] PHP Notice:  Undefined variable: first_name in /home4/yellowta/public_html/phpMM2/ch08/03/display_error.php on line 5
+[21-Aug-2012 15:21:55] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'yellowta_brett'@'localhost' (using password: YES) in /home4/yellowta/public_html/phpMM2/ch08/04/connect.php on line 6
+[21-Aug-2012 15:34:05] PHP Parse error:  syntax error, unexpected '(', expecting T_STRING in /home4/yellowta/public_html/phpMM2/ch08/scripts/app_config.php on line 18
+[21-Aug-2012 15:35:32] PHP Parse error:  syntax error, unexpected '(', expecting T_STRING in /home4/yellowta/public_html/phpMM2/ch08/scripts/app_config.php on line 18
+[21-Aug-2012 15:36:29] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'yellowta_brett'@'localhost' (using password: YES) in /home4/yellowta/public_html/phpMM2/ch08/04/connect.php on line 6
+[21-Aug-2012 15:47:13] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'yellowta_brett'@'localhost' (using password: YES) in /home4/yellowta/public_html/phpMM2/ch08/04/connect.php on line 6

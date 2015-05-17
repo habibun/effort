@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Webcoachbd Callback function tutorials</title>
+<style type="text/css">
+	body{
+font-family:Verdana;
+font-size:13px;
+}
+#content_pane{
+width:400px;
+margin:0 auto;
+overflow:hidden;
+border:1px solid #ccc;
+border-radius:5px;
+padding:10px;
+}
+h3{
+text-align:center;
+padding:5px;
+background:#ddd;
+border:1px solid #ccc;
+cursor:pointer;
+}
+
+
+.pane_toggler{
+display:none;
+}
+</style>
+
+<script src="jquery_latest.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#shower').show();
+		$('h3').click(function(){
+		$(this).next().slideUp(500,function(){
+		var test = $(this).next().next().text();
+		if(test == ''){
+		$('#shower').slideDown('slow');
+		}else{
+		$(this).next().next().slideDown('slow');
+		}
+		});
+		});
+});
+</script>
+</head> 
+
+<body>
+<div id="content_pane">
+<h3>Information</h3>
+<p id="shower" class="pane_toggler">Lorem ipsum dolor sit amet, amet coram regis suam non coepit cenam veniebant est in lucem exitum vivit in. Maria cum unde tu bestias terras se ad te finis puellam ad suis alteri si. Manu in lucem exempli paupers coniunx.</p>
+
+
+<h3>Metadata</h3>
+<p class="pane_toggler">Lorem ipsum dolor sit amet, amet coram regis suam non coepit cenam veniebant est in lucem exitum vivit in. Maria cum unde tu bestias terras se ad te finis puellam ad suis alteri si. Manu in lucem exempli paupers coniunx2.</p>
+</div>
+</body>
+</html>
