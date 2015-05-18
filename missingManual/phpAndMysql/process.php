@@ -2,27 +2,49 @@
 <head>
 </head>
 <body>
-    <?php
-        require 'app_config.php';
-        mysql_connect(DATABASE_HOST, DATABASE_USERNAME, DATABASE_PASSWORD) or die("<p>Error connecting to database: " . mysql_error() . "</p>");
-        echo "<p>Connected to MySQL!</p>";
+<?php
+require 'database_connection.php';
+$query_text = $_REQUEST['query'];
+$result = mysql_query($query_text);
 
-        mysql_select_db(DATABASE_NAME) or die('<p>Error selecting the database'. DATABASE_NAME . mysql_error().'</p>');
-        echo '<p>Connected to MySQL, using database effort.</p>';
+if (!$result) {
+    die("<p>Error in executing the SQL query " . $query_text . ": " .
+        mysql_error() . "</p>");
+}
 
-        $result = mysql_query('show tables;');
-
-    if (!$result) {
-        die("<p>Error in listing tables: " . mysql_error() . "</p>");
+$return_rows = false;
+$uppercase_query_text = strtoupper($query_text);
+$position = strpos($query_text, 'CREATE');
+if ($position === false) {
+    $position = strpos($query_text, 'INSERT');
+    if ($position === false) {
+        $position = strpos($query_text, 'UPDATE');
+        if ($position === false) {
+            $position = strpos($query_text, 'DELETE');
+            if ($position === false) {
+                $position = strpos($uppercase_query_text, 'DROP');
+                if ($position === false) {
+                    $return_rows = true;
+                }
+            }
+        }
     }
+}
 
-//    print_r ($result);
-    echo '<p>Tables in database: '.'</p>';
-    echo '<ul>';
-    while ($row = mysql_fetch_array($result)) {
-        echo "<li>Table: {$row[0]}</li>";
+if ($return_rows) {
+    // We have rows to show from the query
+    echo "<p>Results from your query:</p>";
+    echo "<ul>";
+    while ($row = mysql_fetch_row($result)) {
+        echo "<li>{$row[0]}</li>";
     }
-    echo '</ul>';
-    ?>
+    echo "</ul>";
+} else {
+    // No rows. Just report if the query ran or not
+    echo "<p>Your query was processed successfully.</p>";
+    echo "<p>{$query_text}</p>";
+
+}
+?>
 </body>
 </html>

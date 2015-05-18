@@ -6,12 +6,15 @@
  * Time: 7:57 PM
  */
 
-$database_host = "localhost";
+/*$database_host = "localhost";
 $username = "root";
 $password = "";
-$database_name = "effort";
+$database_name = "effort";*/
 
-define(DATABASE_HOST, 'localhost');
-define(DATABASE_USERNAME, 'root');
-define(DATABASE_PASSWORD, '');
-define(DATABASE_NAME, 'effort');
+
+// Database connection constants
+define("DATABASE_HOST", "localhost");
+define("DATABASE_USERNAME", "root");
+define("DATABASE_PASSWORD", "");
+define("DATABASE_NAME", "effort");
+?>
