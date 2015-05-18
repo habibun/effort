@@ -11,6 +11,9 @@ mysql_connect('localhost','root','') or die('<p>Error connecting to database: ' 
 //connect database
 mysql_select_db('effort') or die('<p>Error selecting the database effort: '.mysql_error().'</p>');
 
+//for query
+$result = mysql_query('show tables;');
+
 //mysql function return false when there is a problem error handling
 if ($result === false) {
     die("<p>Error in listing tables: " . mysql_error() . "</p>");
