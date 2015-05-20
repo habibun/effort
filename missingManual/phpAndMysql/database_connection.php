@@ -16,6 +16,4 @@ mysql_select_db(DATABASE_NAME)
 or die("<p>Error selecting the database " .
     DATABASE_NAME . mysql_error() . "</p>");
 
-echo "<p>Connected to MySQL, using database " .
-    DATABASE_NAME . ".</p>";
 ?>
