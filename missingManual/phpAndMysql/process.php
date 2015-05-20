@@ -13,8 +13,8 @@ if (!$result) {
 }
 
 $return_rows = true;
-if (preg_match("/^(CREATE|INSERT|UPDATE|DELETE|DROP)/",
-    trim(strtoupper($query_text)))) {
+if (preg_match("/^\s *(CREATE|INSERT|UPDATE|DELETE|DROP)/i",
+    $query_text)) {
     $return_rows = false;
 }
 
