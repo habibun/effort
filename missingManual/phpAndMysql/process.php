@@ -4,34 +4,42 @@
 <body>
 <?php
 require 'database_connection.php';
-$query_text = $_REQUEST['query'];
-$result = mysql_query($query_text);
-
-if (!$result) {
-    die("<p>Error in executing the SQL query " . $query_text . ": " .
-        mysql_error() . "</p>");
+$first_name = trim($_REQUEST['first_name']);
+$last_name = trim($_REQUEST['last_name']);
+$email = trim($_REQUEST['email']);
+$facebook_url = str_replace("facebook.org", "facebook.com", trim($_REQUEST['facebook_url']));
+$position = strpos($facebook_url, "facebook.com");
+if ($position === false) {
+    $facebook_url = "http://www.facebook.com/" . $facebook_url;
 }
 
-$return_rows = true;
-if (preg_match("/^\s *(CREATE|INSERT|UPDATE|DELETE|DROP)/i",
-    $query_text)) {
-    $return_rows = false;
-}
-
-if ($return_rows) {
-    // We have rows to show from the query
-    echo "<p>Results from your query:</p>";
-    echo "<ul>";
-    while ($row = mysql_fetch_row($result)) {
-        echo "<li>{$row[0]}</li>";
-    }
-    echo "</ul>";
+$twitter_handle = trim($_REQUEST['twitter_handle']);
+$twitter_url = "http://www.twitter.com/";
+$position = strpos($twitter_handle, "@");
+if ($position === false) {
+    $twitter_url = $twitter_url . $twitter_handle;
 } else {
-    // No rows. Just report if the query ran or not
-    echo "<p>Your query was processed successfully.</p>";
-    echo "<p>{$query_text}</p>";
+    $twitter_url = $twitter_url . substr($twitter_handle, $position + 1);
+}
 
+$insert_sql = "INSERT INTO php_and_mysql_users(first_name,last_name,email,facebook_url,twitter_handle) VALUES
+('{$first_name}','{$last_name}','{$email}','{$facebook_url}','{$twitter_url}')";
+
+$result = mysql_query($insert_sql) or die(mysql_error());
+if ($result) {
+    echo 'data inserted successfully';
 }
 ?>
+<div id="content">
+    <p>Here's a record of what information you submitted:</p>
+    <p>
+        Name: <?php echo $first_name . " " . $last_name; ?><br />
+        E-Mail Address: <?php echo $email; ?><br />
+        <a href="<?php echo $facebook_url; ?>">Your Facebook page</a>
+        <br />
+        <a href="<?php echo $twitter_url; ?>">Check out your Twitter feed</a>
+        <br />
+    </p>
+</div>
 </body>
 </html>
