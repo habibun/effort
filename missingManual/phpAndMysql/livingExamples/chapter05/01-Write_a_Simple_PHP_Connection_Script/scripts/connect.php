@@ -1,16 +1,12 @@
 <?php
-  $database_host = "your.database.host";
-  $username = "your-username";
-  $password = "your-password";
-  $database_name = "your-database-name";
-
-  mysql_connect($database_host, $username, $password)
+  mysql_connect("localhost",
+                "root", "")
     or die("<p>Error connecting to database: " . 
            mysql_error() . "</p>");
 
   echo "<p>Connected to MySQL!</p>";
   
-  mysql_select_db($database_name)
+  mysql_select_db("effort")
     or die("<p>Error selecting the database your-database-name: " .
            mysql_error() . "</p>");
 

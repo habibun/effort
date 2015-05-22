@@ -6,7 +6,7 @@ require '../../scripts/database_connection.php';
 $user_id = $_REQUEST['user_id'];
 
 // Build the SELECT statement
-$select_query = "SELECT * FROM users WHERE user_id = " . $user_id;
+$select_query = "SELECT * FROM php_and_mysql_users WHERE user_id = " . $user_id;
 
 // Run the query
 $result = mysql_query($select_query);
@@ -17,11 +17,8 @@ if ($result) {
   $bio            = preg_replace("/[\r\n]+/", "</p><p>", $row['bio']);
   $email          = $row['email'];
   $facebook_url   = $row['facebook_url'];
-  $twitter_handle = $row['twitter_handle'];
+  $twitter_url = $row['twitter_handle'];
 
-  // Turn $twitter_handle into a URL
-  $twitter_url = "http://www.twitter.com/" . 
-                 substr($twitter_handle, $position + 1);
 
   // To be added later
   $user_image = "../../images/missing_user.png";

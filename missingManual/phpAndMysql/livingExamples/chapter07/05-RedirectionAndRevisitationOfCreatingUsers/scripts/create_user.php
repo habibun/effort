@@ -5,6 +5,7 @@ require '../../scripts/database_connection.php';
 $first_name = trim($_REQUEST['first_name']);
 $last_name = trim($_REQUEST['last_name']);
 $email = trim($_REQUEST['email']);
+$bio = trim($_REQUEST['bio']);
 $facebook_url = str_replace("facebook.org", "facebook.com", trim($_REQUEST['facebook_url']));
 $position = strpos($facebook_url, "facebook.com");
 if ($position === false) {
@@ -20,13 +21,16 @@ if ($position === false) {
   $twitter_url = $twitter_url . substr($twitter_handle, $position + 1);
 }
 
-$insert_sql = "INSERT INTO users (first_name, last_name, email, " .
+$insert_sql = "INSERT INTO php_and_mysql_users (first_name, last_name, email, bio," .
                                  "facebook_url, twitter_handle) " .
-              "VALUES ('{$first_name}', '{$last_name}', '{$email}', " .
+              "VALUES ('{$first_name}', '{$last_name}', '{$email}', '{$bio}', " .
                       "'{$facebook_url}', '{$twitter_handle}');";
 
 // Insert the user into the database
 mysql_query($insert_sql)
   or die(mysql_error());
 
+// Redirect the user to the page that displays user information
+header("Location: show_user.php?user_id=" . mysql_insert_id());
+exit();
 ?>
