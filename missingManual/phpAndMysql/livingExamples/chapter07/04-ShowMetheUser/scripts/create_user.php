@@ -20,7 +20,7 @@ if ($position === false) {
   $twitter_url = $twitter_url . substr($twitter_handle, $position + 1);
 }
 
-$insert_sql = "INSERT INTO users (first_name, last_name, email, " .
+$insert_sql = "INSERT INTO php_and_mysql_users (first_name, last_name, email, " .
                                  "facebook_url, twitter_handle) " .
               "VALUES ('{$first_name}', '{$last_name}', '{$email}', " .
                       "'{$facebook_url}', '{$twitter_handle}');";
