@@ -1,13 +1,17 @@
 <html>
 <head>
+    <link href="../css/phpMM.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
+<div id="header"><h1>PHP & MySQL: The Missing Manual</h1></div>
+<div id="example">Example 7-2</div>
 
 <div id="content">
     <h1>Join the Missing Manual (Digital) Social Club</h1>
     <p>Please enter your online connections below:</p>
-    <form action="process.php" method="POST">
+    <form action="create.php" method="POST"
+          enctype="multipart/form-data">
         <fieldset>
             <label for="first_name">First Name:</label>
             <input type="text" name="first_name" size="20" /><br />
@@ -19,10 +23,14 @@
             <input type="text" name="facebook_url" size="50" /><br />
             <label for="twitter_handle">Twitter Handle:</label>
             <input type="text" name="twitter_handle" size="20" /><br />
+            <label for="user_pic">Upload a picture:</label>
+            <input type="file" name="user_pic" size="30" /><br />
+            <label for="bio">Bio:</label>
+            <textarea name="bio" cols="40" rows="10"></textarea>
         </fieldset>
         <br />
         <fieldset class="center">
-            <input type="submit" value="Submit data" />
+            <input type="submit" value="Join the Club" />
             <input type="reset" value="Clear and Restart" />
         </fieldset>
     </form>
