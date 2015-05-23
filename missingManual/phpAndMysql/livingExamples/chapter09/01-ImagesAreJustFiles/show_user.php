@@ -19,12 +19,8 @@ if ($result) {
   $facebook_url   = $row['facebook_url'];
   $twitter_handle = $row['twitter_handle'];
 
-  // Turn $twitter_handle into a URL
-  $twitter_url = "http://www.twitter.com/" . 
-                 substr($twitter_handle, $position + 1);
-
   // To be added later
-  $user_image = "../../images/missing_user.png";
+  $user_image = "../images/missing_user.png";
 } else {
   die("Error locating user with ID {$user_id}");
 }
@@ -33,7 +29,7 @@ if ($result) {
 
 <html>
  <head>
-  <link href="../../css/phpMM.css" rel="stylesheet" type="text/css" />
+  <link href="../css/phpMM.css" rel="stylesheet" type="text/css" />
  </head>
 
  <body>
@@ -52,7 +48,7 @@ if ($result) {
         <li>...by
           <a href="<?php echo $facebook_url; ?>">checking them out 
              on Facebook</a></li>
-        <li>...by <a href="<?php echo $twitter_url; ?>">following them 
+        <li>...by <a href="<?php echo $twitter_handle; ?>">following them
              on Twitter</a></li>
       </ul>
     </div>
