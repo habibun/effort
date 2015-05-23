@@ -4,13 +4,13 @@
 define("DEBUG_MODE", true);
 
 // Site root
-define("SITE_ROOT", "/phpMM2/");
+define("SITE_ROOT", "/effort/missingManual/phpAndMysql/livingExamples/chapter08/");
 
 // Database connection constants
-define("DATABASE_HOST", "localhost");
-define("DATABASE_USERNAME", "root");
-define("DATABASE_PASSWORD", "");
-define("DATABASE_NAME", "effort");
+define("DATABASE_HOST", "your.database.host");
+define("DATABASE_USERNAME", "your-username");
+define("DATABASE_PASSWORD", "your-password");
+define("DATABASE_NAME", "your-database-name");
 
 function debug_print($message) {
   if (DEBUG_MODE) {
