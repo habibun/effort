@@ -3,7 +3,7 @@
 require_once '../scripts/app_config.php';
 require_once '../scripts/database_connection.php';
 
-$upload_dir = HOST_WWW_ROOT . "uploads/profile_pics/";
+$upload_dir = HOST_WWW_ROOT . "../uploads/profile_pics/";
 $image_fieldname = "user_pic";
 
 // Potential PHP upload errors
@@ -52,9 +52,7 @@ if ($position === false) {
 
 // Name the file uniquely
 $now = time();
-while (file_exists($upload_filename = $upload_dir . $now .
-                                     '-' .
-                                     $_FILES[$image_fieldname]['name'])) {
+while (file_exists($upload_filename = $upload_dir . $now . '-' . $_FILES[$image_fieldname]['name'])) {
     $now++;
 }
 
@@ -65,7 +63,7 @@ while (file_exists($upload_filename = $upload_dir . $now .
                   "permissions or related error moving " .
                   "file to {$upload_filename}");
 
-$insert_sql = "INSERT INTO users (first_name, last_name, email, bio," .
+$insert_sql = "INSERT INTO php_and_mysql_users (first_name, last_name, email, bio," .
                                  "facebook_url, twitter_handle," .
                                  "user_pic_path) " .
               "VALUES ('{$first_name}', '{$last_name}', '{$email}', '{$bio}', " .

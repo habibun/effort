@@ -4,7 +4,7 @@
 define("DEBUG_MODE", true);
 
 // Site root
-define("SITE_ROOT", "/phpMM2/");
+define("SITE_ROOT", "/effort/missingManual/phpAndMysql/livingExamples/chapter08/");
 
 // Database connection constants
 define("DATABASE_HOST", "your.database.host");
