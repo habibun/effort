@@ -8,7 +8,7 @@ define("SITE_ROOT", "/effort/missingManual/phpAndMysql/");
 
 // Location of web files on host
 define("HOST_WWW_ROOT", "C:/xampp/htdocs/effort/missingManual/phpAndMysql/");
-
+//exit($_SERVER['DOCUMENT_ROOT']);
 // Database connection constants
 define("DATABASE_HOST", "localhost");
 define("DATABASE_USERNAME", "root");

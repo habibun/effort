@@ -5,7 +5,7 @@ require 'database_connection.php';
 require_once 'app_config.php';
 
 //addition variable
-$uploadPath = HOST_WWW_ROOT.'uploads/';
+$uploadPath = '';
 $userPic = 'user_pic';
 
 //potential php upload error
@@ -18,7 +18,6 @@ $phpErrors = [
 
 //get input from all field
 $firstName = $_REQUEST['first_name'];
-print_r($firstName);
 $lastName = $_REQUEST['last_name'];
 $email = $_REQUEST['email'];
 $facebookUrl = $_REQUEST['facebook_url'];
@@ -38,7 +37,7 @@ getimagesize($_FILES[$userPic]['tmp_name']);
 
 //name the file uniquely
 $now = time();
-while(file_exists( $fileName = $_FILES[$userPic]['name'])){
+while(file_exists( $fileName = $uploadPath.$_FILES[$userPic]['name'])){
     $now++;
 }
 
@@ -47,9 +46,10 @@ move_uploaded_file($_FILES[$userPic]['tmp_name'],$fileName);
 
 //query for insert
 $insetData = "insert into php_and_mysql_users (first_name, last_name, email, facebook_url, twitter_handle, bio, user_pic_path)
- VALUES ('{$firstName}','{$lastName}','{$email}','{$facebookUrl}','{$twitterUrl}','{$bio}','{$userPic}')";
+ VALUES ('{$firstName}','{$lastName}','{$email}','{$facebookUrl}','{$twitterUrl}','{$bio}','{$fileName}')";
 
 //insert data into the database
 mysql_query($insetData) or die (mysql_error());
 
+header('Location: show_user.php?user_id='.mysql_insert_id());
 ?>
