@@ -7,3 +7,8 @@
  */
 //To establish what your document root is
 echo "DOCUMENT ROOT: {$_SERVER['DOCUMENT_ROOT']}";
+
+//a mysql query
+/*
+ SELECT * FROM users WHERE user_id = " . $user_id;
+ * */

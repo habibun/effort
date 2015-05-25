@@ -1,0 +1,236 @@
+body {
+  background: #75bb45 url('../images/tmm_php-mysql_background.png') repeat-y;
+  margin: 0 68px 0 68px;
+}
+
+div#header {
+  background: #fff url('../images/tmm_php-mysql_banner.png') no-repeat top left;
+  height: 114px;
+  left: 11px;
+  position: relative;
+  top: 36px;
+  width: 753px;
+}
+
+#header h1 {
+  display: none;
+}
+
+div#example {
+  background-image: url('../images/tmm_php-mysql_example-arrow.png');
+  background-repeat: no-repeat;
+  background-position: left top;
+  color: #fff;
+  font-family: Arial, Arial, Helvetica, sans-serif;
+  font-size: .9em;
+  height: 22px;
+  left: 28px;
+  padding: 2px 0 0 4px;
+  position: relative;
+  top: 24px;
+  width: 119px;
+}
+
+div#content {
+  padding: 20px 5px 20px 40px;
+  position: relative;
+  width: 675px;
+}
+
+div.user_profile {
+  background-color: #CCC;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 15px;
+  padding: 10px 20px;
+  width: 600px;
+  -moz-border-radius: 10px;
+}
+
+div.user_profile h1 {
+  border-bottom: 1px dotted black;
+  font-size: 18px;
+}
+
+div.user_profile img.user_pic {
+  border: solid;
+  border-color: #ddd #aaa #aaa #ddd;
+  border-width: 1px 2px 2px 1px;
+  float: right;
+  margin: 0 0 10px 25px;
+  padding: 8px;
+  width: 135px;
+}
+
+div.user_profile p {
+  font-size: 14px;
+  color: #333;
+}
+
+div.user_profile p.contact_info {
+  clear: both;
+}
+
+div.user_profile ul {
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+div#footer {
+  background: #fff url('../images/tmm_php-mysql_footer.png') no-repeat top left;
+  height: 114px;
+  left: 11px;
+  position: relative;
+  top: 36px;
+  width: 753px;
+}
+
+label {
+  display: block;
+  float: left;
+  width: 150px;
+  padding: 0 10px;
+  margin: 5px 0 0;
+  text-align: right;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+  min-width: 500px;
+  width: 690px;
+}
+
+fieldset {
+  border-color: #000;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
+  margin: 0;
+}
+
+fieldset br {
+  clear: left;
+}
+
+form input, form textarea {
+  margin: 5px 0 5px 5px;
+}
+
+.center {
+  text-align: center;
+}
+
+img.error {
+  float: right;
+  padding-left: 20px;
+}
+
+.error_message {
+  font-style: italic;
+}
+
+#messages {
+  left: 33px;
+  position: relative;
+  top: 25px;
+  width: 698px;
+}
+
+#messages div {
+  border: 2px solid;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 0.7em;
+  font-style: italic;
+  min-height: 16px;
+  padding: 5px 28px;
+  position: relative;
+  text-align: center;
+}
+
+#messages p {
+  margin: 0;
+}
+
+#messages div.success {
+  background: #E6EFC2;
+  border-color: #C6D880;
+  color: #264409;
+}
+
+#messages div.error {
+  background: #FBE3E4;
+  border-color: #FBC2C4;
+  color: #8A1F11;
+}
+
+input.error {
+  border: 1px dotted red;
+}
+
+label.error {
+  color: red;
+  display: inline;
+  float: none;
+  font-style: italic;
+  margin-left: 10px;
+  width: auto;
+}
+
+.password-meter {
+  float: right;
+  margin-right: 120px;
+}
+
+div#home_banner {
+  background-image: url('../images/home_main_image.png');
+  left: -5px;
+  height: 393px;
+  position: relative;
+  top: 40px;
+  width: 680px;
+}
+
+div#signup {
+  margin-top: 70px;
+  position: relative;
+  text-align: center;
+}
+
+#signup img {
+  margin: 0 10px;
+}
+
+div#menu {
+  height: 20px;
+  left: 35px;
+  position: relative;
+  text-align: right;
+  width: 695px;
+}
+
+#menu ul {
+  display: inline;
+}
+
+#menu ul li {
+  border-left: 1px solid #000;
+  display: inline;
+  list-style: none;
+  padding: 0 10px;
+}
+
+#menu a, #menu a:visited {
+  color: #75bb45;
+}
+
+#menu a:hover {
+  text-decoration: underline;
+}
