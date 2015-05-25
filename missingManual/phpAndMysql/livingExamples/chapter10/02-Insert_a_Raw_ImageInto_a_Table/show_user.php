@@ -21,7 +21,7 @@ if ($result) {
   $user_image     = get_web_path($row['user_pic_path']);
 
   // Turn $twitter_handle into a URL
-  $twitter_url = "http://www.twitter.com/" . 
+  $twitter_url = "http://www.twitter.com/" .
                  substr($twitter_handle, $position + 1);
 } else {
   handle_error("There was a problem finding your " .
@@ -53,7 +53,7 @@ if ($result) {
         <li>...by
           <a href="<?php echo $facebook_url; ?>">checking them out 
              on Facebook</a></li>
-        <li>...by <a href="<?php echo $twitter_url; ?>">following them 
+        <li>...by <a href="<?php echo $twitter_url; ?>">following them
              on Twitter</a></li>
       </ul>
     </div>

@@ -6,7 +6,7 @@ require_once '../scripts/database_connection.php';
 $user_id = $_REQUEST['user_id'];
 
 // Build the SELECT statement
-$select_query = "SELECT * FROM users WHERE user_id = " . $user_id;
+$select_query = "SELECT * FROM php_and_mysql_users WHERE user_id = " . $user_id;
 
 // Run the query
 $result = mysql_query($select_query);
@@ -21,8 +21,8 @@ if ($result) {
   $user_image     = get_web_path($row['user_pic_path']);
 
   // Turn $twitter_handle into a URL
-  $twitter_url = "http://www.twitter.com/" . 
-                 substr($twitter_handle, $position + 1);
+/*  $twitter_url = "http://www.twitter.com/" .
+                 substr($twitter_handle, $position + 1);*/
 } else {
   handle_error("There was a problem finding your " .
                "information in our system.",
@@ -34,7 +34,7 @@ if ($result) {
 
 <html>
  <head>
-  <link href="../../css/phpMM.css" rel="stylesheet" type="text/css" />
+  <link href="../css/phpMM.css" rel="stylesheet" type="text/css" />
  </head>
 
  <body>
@@ -51,9 +51,9 @@ if ($result) {
         <li>...by emailing them at
           <a href="<?php echo $email; ?>"><?php echo $email; ?></a></li>
         <li>...by
-          <a href="<?php echo $facebook_url; ?>">checking them out 
+          <a href="<?php echo $facebook_url; ?>">checking them out
              on Facebook</a></li>
-        <li>...by <a href="<?php echo $twitter_url; ?>">following them 
+        <li>...by <a href="<?php echo $twitter_handle; ?>">following them
              on Twitter</a></li>
       </ul>
     </div>

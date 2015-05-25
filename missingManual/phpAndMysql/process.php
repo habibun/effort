@@ -41,15 +41,39 @@ while(file_exists( $fileName = $uploadPath.$_FILES[$userPic]['name'])){
     $now++;
 }
 
-//finally move the file to it's permanent location
-move_uploaded_file($_FILES[$userPic]['tmp_name'],$fileName);
-
 //query for insert
-$insetData = "insert into php_and_mysql_users (first_name, last_name, email, facebook_url, twitter_handle, bio, user_pic_path)
- VALUES ('{$firstName}','{$lastName}','{$email}','{$facebookUrl}','{$twitterUrl}','{$bio}','{$fileName}')";
+$insert_sql = sprintf("iNSERT iNTO users " .
+    "(first_name, last_name, email, " .
+    "bio, facebook_url, twitter_handle) " .
+    "VALUES ('%s', '%s', '%s', '%s', '%s', '%s');",
+    mysql_real_escape_string($first_name),
+    mysql_real_escape_string($last_name),
+    mysql_real_escape_string($email),
+    mysql_real_escape_string($bio),
+    mysql_real_escape_string($facebook_url),
+    mysql_real_escape_string($twitter_handle));
 
 //insert data into the database
-mysql_query($insetData) or die (mysql_error());
+mysql_query($insert_sql) or die (mysql_error());
+
+// insert the image into the images table
+$image = $_FILES['$image_fieldname'];
+$image_filename = $image['name'];
+$image_info = getimagesize($image['tmp_name']);
+$image_mime_type = $image_info['mime'];
+$image_size = $image['size'];
+$image_data = file_get_contents($image['tmp_name']);
+
+$insert_image_sql = sprintf("iNSERT iNTO images " .
+    "(filename, mime_type, " .
+    "file_size, image_data) " .
+    "VALUES ('%s', '%s', %d, '%s');",
+    mysql_real_escape_string($image_filename),
+    mysql_real_escape_string($image_mime_type),
+    mysql_real_escape_string($image_size),
+    mysql_real_escape_string($image_data));
+
+mysql_query($insert_image_sql);
 
 header('Location: show_user.php?user_id='.mysql_insert_id());
 ?>
