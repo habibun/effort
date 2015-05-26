@@ -59,7 +59,7 @@ while (file_exists($upload_filename = $upload_dir . $now .
 }
 
 // This replaces the older assignment to $insert_sql
-$insert_sql = sprintf("INSERT INTO users " .
+$insert_sql = sprintf("INSERT INTO php_and_mysql_users " .
                              "(first_name, last_name, email, " .
                               "bio, facebook_url, twitter_handle) " .
                       "VALUES ('%s', '%s', '%s', '%s', '%s', '%s');",
@@ -84,7 +84,7 @@ $image_mime_type = $image_info['mime'];
 $image_size = $image['size'];
 $image_data = file_get_contents($image['tmp_name']);
 
-$insert_image_sql = sprintf("INSERT INTO images " .
+$insert_image_sql = sprintf("INSERT INTO php_and_mysql_images " .
                                     "(filename, mime_type, " .
                                      "file_size, image_data) " .
                             "VALUES ('%s', '%s', %d, '%s');",

@@ -11,7 +11,7 @@ try {
   $image_id = $_REQUEST['image_id'];
 
   // Build the SELECT statement
-  $select_query = sprintf("SELECT * FROM images WHERE image_id = %d",
+  $select_query = sprintf("SELECT * FROM php_and_mysql_images WHERE image_id = %d",
                           $image_id);
 
   // Run the query
