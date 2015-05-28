@@ -4,9 +4,7 @@ require_once '../scripts/app_config.php';
 require_once '../scripts/database_connection.php';
 
 // Build the SELECT statement
-$select_users =
-  "SELECT user_id, first_name, last_name, email " .
-  "  FROM users";
+$select_users = "SELECT user_id, first_name, last_name, email " . "  FROM php_and_mysql_users";
 
 // Run the query
 $result = mysql_query($select_users);

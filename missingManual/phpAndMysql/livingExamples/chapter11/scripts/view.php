@@ -5,8 +5,7 @@ require_once 'app_config.php';
 define("SUCCESS_MESSAGE", "success");
 define("ERROR_MESSAGE", "error");
 
-function page_start($title, $javascript = NULL,
-                    $success_message = NULL, $error_message = NULL) {
+function page_start($title, $javascript = NULL, $success_message = NULL, $error_message = NULL) {
   display_head($title, $javascript);
   display_title($title, $success_message, $error_message);
 }
