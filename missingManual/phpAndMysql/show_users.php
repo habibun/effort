@@ -3,6 +3,7 @@
 
 require_once 'app_config.php';
 require_once 'database_connection.php';
+require_once 'view.php';
 
 if(isset($_REQUEST['confirm_message'])){
     $msg = $_REQUEST['confirm_message'];
