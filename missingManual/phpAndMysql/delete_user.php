@@ -15,4 +15,5 @@ $deleteUser = 'delete from php_and_mysql_users where user_id = '.$user_id;
 
 $doDelete = mysql_query($deleteUser);
 
-header('Location: show_users.php');
+$confirmMessage = 'user was deleted successfully';
+header('Location: show_users.php?confirm_message='.$confirmMessage);
