@@ -36,6 +36,9 @@ div#content {
   position: relative;
   width: 675px;
 }
+img.delete_user {
+  border: 0;
+}
 
 div.user_profile {
   background-color: #CCC;
@@ -205,7 +208,8 @@ div#signup {
 }
 
 #signup img {
-  margin: 0 10px;
+  border: 0;
+  margin: 0 7px;
 }
 
 div#menu {

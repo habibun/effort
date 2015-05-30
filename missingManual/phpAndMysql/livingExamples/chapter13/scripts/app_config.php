@@ -4,10 +4,10 @@
 define("DEBUG_MODE", true);
 
 // Site root
-define("SITE_ROOT", "/effort/missingManual/phpAndMysql/livingExamples/chapter12/");
+define("SITE_ROOT", "/effort/missingManual/phpAndMysql/livingExamples/chapter13/");
 
 // Location of web files on host
-define("HOST_WWW_ROOT", "C:/xampp/htdocs/effort/missingManual/phpAndMysql/livingExamples/chapter12");
+define("HOST_WWW_ROOT", "C:/xampp/htdocs/effort/missingManual/phpAndMysql/livingExamples/chapter13");
 
 // Database connection constants
 define("DATABASE_HOST", "localhost");

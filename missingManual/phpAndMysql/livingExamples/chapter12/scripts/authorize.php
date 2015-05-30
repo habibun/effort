@@ -11,7 +11,7 @@ if (!isset($_SERVER['PHP_AUTH_USER']) ||
 }
 
 // Look up the user-provided credentials
-$query = sprintf("SELECT user_id, username FROM users " .
+$query = sprintf("SELECT user_id, username FROM php_and_mysql_users " .
                  " WHERE username = '%s' AND " .
                  "       password = '%s';",
             mysql_real_escape_string(trim($_SERVER['PHP_AUTH_USER'])),
