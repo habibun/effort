@@ -4,16 +4,16 @@
 define("DEBUG_MODE", true);
 
 // Site root
-define("SITE_ROOT", "/phpMM2/");
+define("SITE_ROOT", "/effort/missingManual/phpAndMysql/livingExamples/chapter12/");
 
 // Location of web files on host
-define("HOST_WWW_ROOT", "/home4/yellowta/public_html/phpMM2/");
+define("HOST_WWW_ROOT", "C:/xampp/htdocs/effort/missingManual/phpAndMysql/livingExamples/chapter12");
 
 // Database connection constants
-define("DATABASE_HOST", "your.database.host");
-define("DATABASE_USERNAME", "your-username");
-define("DATABASE_PASSWORD", "your-password");
-define("DATABASE_NAME", "your-database-name");
+define("DATABASE_HOST", "localhost");
+define("DATABASE_USERNAME", "root");
+define("DATABASE_PASSWORD", "");
+define("DATABASE_NAME", "effort");
 
 function debug_print($message) {
   if (DEBUG_MODE) {
