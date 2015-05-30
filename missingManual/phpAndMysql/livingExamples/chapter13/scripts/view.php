@@ -17,12 +17,10 @@ function display_head($page_title = "", $embedded_javascript = NULL) {
  <head>
   <title>{$page_title}</title>
   <link href="../css/phpMM.css" rel="stylesheet" type="text/css" />
-  <link href="../css/jquery.validate.password.css" rel="stylesheet"
-        type="text/css" />
+  <link href="../css/jquery.validate.password.css" rel="stylesheet"type="text/css" />
   <script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
   <script type="text/javascript" src="../js/jquery.validate.min.js"></script>
-  <script type="text/javascript" 
-          src="../js/jquery.validate.password.js"></script>
+  <script type="text/javascript"src="../js/jquery.validate.password.js"></script>
 EOD;
   if (!is_null($embedded_javascript)) {
     echo "<script type='text/javascript'>" .
