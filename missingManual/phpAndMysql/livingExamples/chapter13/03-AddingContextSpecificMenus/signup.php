@@ -32,8 +32,7 @@ page_start("User Signup", $inline_javascript);
   <div id="content">
     <h1>Join the Missing Manual (Digital) Social Club</h1>
     <p>Please enter your online connections below:</p>
-    <form id="signup_form" action="create_user.php" 
-          method="POST" enctype="multipart/form-data">
+    <form id="signup_form" action="create_user.php" method="POST" enctype="multipart/form-data">
       <fieldset>
         <label for="first_name">First Name:</label>
         <input type="text" name="first_name" size="20" class="required" /><br />
@@ -42,8 +41,7 @@ page_start("User Signup", $inline_javascript);
         <label for="username">Username:</label>
         <input type="text" name="username" size="20" class="required" /><br />
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" 
-               size="20" class="required password" />
+        <input type="password" id="password" name="password" size="20" class="required password" />
         <div class="password-meter">
           <div class="password-meter-message"> </div>
           <div class="password-meter-bg">
@@ -52,8 +50,7 @@ page_start("User Signup", $inline_javascript);
         </div>
         <br />
         <label for="confirm_password">Confirm Password:</label>
-        <input type="password" id="confirm_password" name="confirm_password" 
-               size="20" class="required" /><br />
+        <input type="password" id="confirm_password" name="confirm_password" size="20" class="required" /><br />
         <label for="email">E-Mail Address:</label>
         <input type="text" name="email" size="30" class="required email" /><br />
         <label for="facebook_url">Facebook URL:</label>
