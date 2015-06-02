@@ -4,7 +4,7 @@ require_once '../scripts/app_config.php';
 require_once '../scripts/database_connection.php';
 
 $upload_dir = HOST_WWW_ROOT . "uploads/profile_pics/";
-$image_fieldname = "user_pic";
+$image_fieldname = "../user_pic";
 
 // Potential PHP upload errors
 $php_errors = array(1 => 'Maximum file size in php.ini exceeded',
@@ -67,7 +67,7 @@ while (file_exists($upload_filename = $upload_dir . $now .
                   "permissions or related error moving " .
                   "file to {$upload_filename}");
 
-$insert_sql = sprintf("INSERT INTO users " .
+$insert_sql = sprintf("INSERT INTO php_and_mysql_users " .
                              "(first_name, last_name, username, " .
                               "password, email, " .
                               "bio, facebook_url, twitter_handle, " .

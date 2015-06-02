@@ -10,8 +10,7 @@ authorize_user(array("Administrators"));
 
 // Build the SELECT statement
 $select_users =
-  "SELECT user_id, first_name, last_name, email " .
-  "  FROM users";
+  "SELECT user_id, first_name, last_name, email " . "  FROM php_and_mysql_users";
 
 // Run the query
 $result = mysql_query($select_users);
