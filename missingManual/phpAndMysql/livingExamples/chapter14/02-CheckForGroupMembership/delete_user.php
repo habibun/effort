@@ -11,8 +11,7 @@ authorize_user(array("Administrators"));
 $user_id = $_REQUEST['user_id'];
 
 // Build the DELETE statement
-$delete_query = sprintf("DELETE FROM users WHERE user_id = %d",
-                        $user_id);
+$delete_query = sprintf("DELETE FROM php_and_mysql_users WHERE user_id = %d", $user_id);
 
 // Delete the user from the database
 mysql_query($delete_query);

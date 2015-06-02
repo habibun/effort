@@ -15,7 +15,7 @@ if (!isset($_COOKIE['user_id'])) {
     $password = mysql_real_escape_string(trim($_REQUEST['password']));
 
     // Look up the user
-    $query = sprintf("SELECT user_id, username FROM users " .
+    $query = sprintf("SELECT user_id, username FROM php_and_mysql_users " .
                      " WHERE username = '%s' AND " .
                      "       password = '%s';",
                      $username, crypt($password, $username));
