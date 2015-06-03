@@ -10,8 +10,7 @@ authorize_user(array("Administrators"));
 
 // Build the SELECT statement
 $select_users =
-  "SELECT user_id, first_name, last_name, email " .
-  "  FROM users";
+  "SELECT user_id, first_name, last_name, email " ."  FROM php_and_mysql_users";
 
 // Run the query
 $result = mysql_query($select_users);
@@ -25,8 +24,7 @@ function delete_user(user_id) {
   }
 }
 EOD;
-  page_start("Current Users", $delete_user_script,
-             $_REQUEST['success_message'], $_REQUEST['error_message']);
+  page_start("Current Users", $delete_user_script,$_REQUEST['success_message'], $_REQUEST['error_message']);
 ?>
 
   <div id="content">
