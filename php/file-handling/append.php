@@ -5,7 +5,7 @@
  * Time: 10:45 PM
  * File Name: append.php
  */
-$myFile = "../uses_file/testFile.txt";
+$myFile = "../used-files/testFile.txt";
 $fh = fopen($myFile, 'a') or die("Can't open file");
 $stringData = "New Stuff 1\n";
 fwrite($fh,$stringData);

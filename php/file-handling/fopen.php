@@ -5,7 +5,7 @@
 //and the second parameter specifies in which mode the file should be opened:
 
 
-$file = fopen("../uses_file/welcome.txt","r")
+$file = fopen("../used-files/welcome.txt","r")
 or exit("Unable to open file!");
 ;
 ?>

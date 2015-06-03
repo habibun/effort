@@ -6,10 +6,10 @@
  * Year: 2014
  * File Name: die_function.php
  */
-$file = fopen("uses_file/welcome.txt","r");
+$file = fopen("used-files/welcome.txt","r");
 
 //if the file doesn't exit you get this type of error:
-//Warning: fopen(uses_file/welcome.txt): failed to open stream: No such file or directory in F:\xampp\htdocs\my_library\error_handling\die_function.php on line 9
+//Warning: fopen(used-files/welcome.txt): failed to open stream: No such file or directory in F:\xampp\htdocs\my_library\error-handling\die_function.php on line 9
 ?>
 
 <?php
@@ -20,7 +20,7 @@ if(!file_exists("../welcome.txt"))
 }
 else
 {
-    $file = fopen("../uses_file/welcome.txt","r");
+    $file = fopen("../used-files/welcome.txt","r");
 }
 
 //Now if the file does not exist you get an error like this:(File not found)

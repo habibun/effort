@@ -7,7 +7,7 @@
  */
 
 //to delete all the data from file.
-$myFile = "../uses_file/testFile.txt";
+$myFile = "../used-files/testFile.txt";
 $fh = fopen($myFile, 'w');
 fclose($fh);
 ?>

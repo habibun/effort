@@ -5,7 +5,7 @@
 
 //Example: the example below reads a file character by character,until the end of file is reached.
 
-$file = fopen("../uses_file/testFile.txt","r")
+$file = fopen("../used-files/testFile.txt","r")
     or exit("Unable to open file!");
 while (!feof($file)) {
     echo fgetc($file);
