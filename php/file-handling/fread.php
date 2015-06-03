@@ -7,7 +7,7 @@
  */
 //fread function.txt is used to read file
 //one character is equal to one byte.If you wanted to read the first five characters then you would use five as the integer.
-$myFile= "../uses_file/testFile.txt";
+$myFile= "../used-files/testFile.txt";
 $fh = fopen($myFile,'r');
 $theData = fread($fh,5);
 fclose($fh);

@@ -6,7 +6,7 @@
  * File Name: filesize.php
  */
 //if you wanted to read all the data from the file,then use filesize.
-$myFile = "../uses_file/testFile.txt";
+$myFile = "../used-files/testFile.txt";
 $fh = fopen($myFile, 'r');
 $theData = fread($fh, filesize($myFile));
 fclose($fh);
