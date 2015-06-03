@@ -49,5 +49,10 @@ $check5 = preg_match($queryText5, $queryTo5);
 $queryText6 = "/^[ \t\r\n]* jony/";
 $queryTo6 = 'my name is jony';
 $check6 = preg_match($queryText6, $queryTo6);
-var_dump($check6);
+//var_dump($check6);
 
+//In fact, this sort of whitespace matching is so common that regular expressions can use \s as an abbreviation
+$queryText7 = "/^\s* jony/";
+$queryTo7 = 'my name is jony';
+$check7 = preg_match($queryText7, $queryTo7);
+//var_dump($check7);
