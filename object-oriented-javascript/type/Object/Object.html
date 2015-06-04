@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //There are two basic ways to create an empty object:
+    var obj = new Object();
+    //and
+    var obj = {};
+
+
+    function Person(name, age) {
+        this.name = name;
+        this.age = age
+    }
+
+    //define an object
+    var You = new Person('you', 24);
+
+    //Once created, an object's properties can again be accessed in one of two ways:
+    You.name = 'jony';
+    var name = You.name;
+    console.log(name);
+
+
+    //and
+    You[name] = 'rony';
+    var name = You[name];
+    console.log(name);
+
+    //
+    You['name'] = 'sumon';
+    var name = You['name'];
+    console.log(name);
+
+    //Object literal syntax can be used to initialize an object in its entirety:
+    var obj = {
+        name: "Carrot",
+        "for": "Max",
+        details: {
+            color: "orange",
+            size: 12
+        }
+    };
+
+    //Attribute access can be chained together:
+    var color = obj.details.color;
+    console.log(color);
+
+    var size = obj['details']['size'];
+    console.log(size);
+
+</script>
+</body>
+</html>
