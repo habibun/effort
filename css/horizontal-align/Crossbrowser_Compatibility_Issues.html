@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+
+
+   <!--
+   When aligning elements like this,
+   it is always a good idea to predefine margin and padding for the <body> element.
+   This is to avoid visual differences in different browsers.
+   There is also another problem with IE when using the position property.
+   If a container element (in our case <div class="container">) has a specified width,
+   and the !DOCTYPE declaration is missing, IE will add a 17px margin on the right side.
+   This seems to be space reserved for a scrollbar.
+   Always set the !DOCTYPE declaration when using the position property:
+   -->
+
+    <style type="text/css">
+        body
+        {
+            margin:0;
+            padding:0;
+        }
+        .container
+        {
+            position:relative;
+            width:100%;
+        }
+        .right
+        {
+            position:absolute;
+            right:0px;
+            width:300px;
+            background-color:#b0e0e6;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="right">
+        <p><b>Note: </b>When aligning using the position property, always include the !DOCTYPE declaration!
+            If missing, it can produce strange results in IE browsers.</p>
+    </div>
+</div>
+
+</body>
+</html>
+
+
