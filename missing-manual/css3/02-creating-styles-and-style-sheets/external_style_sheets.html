@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!--CSS includes a built-in way to add external style sheets—the @import directive. You
+    add the directive inside of an HTML <style> tag, like so:-->
+
+    <style>
+        @import url(css/styles.css);
+    </style>
+
+    <!--•	 As with the <link> tag, you can include multiple external style sheets by using
+    more than one @import:-->
+
+    <style type="text/css">
+        @import url(css/styles.css);
+        @import url(css/form.css);
+    </style>
+
+</head>
+<body>
+
+<!--HTML 4.01 is similar, but requires an additional type attribute:-->
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+<!--For example, here’s HTML5:-->
+<link rel="stylesheet" href="css/styles.css">
+
+
+</body>
+</html>
