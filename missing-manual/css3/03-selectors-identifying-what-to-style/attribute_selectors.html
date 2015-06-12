@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--With attribute selectors, you can single out tags that have a particular property.
+    For example, here’s how to select all <img> tags with a title attribute:-->
+
+    <style>
+        img[title]
+    /* you can combine them with classes too */
+    .className[title]
+
+    /*you can select elements that not only share a particular attribute but also have an exact value set for that attribute*/
+     a[href="http://www.cafesoylentgreen.com"] {
+            color: red;
+            font-weight: bold;
+        }
+
+        input[type='text'] {
+            color: red;;
+        }
+
+        /*you can assume that any external link begins with http://*/
+        a[href^="http://"] {
+            color: red;
+        }
+
+        /*you can assume that any external link begins with www*/
+        a[href^="www"] {
+            color: #ffff00;
+        }
+
+        /*The ^= translates to “begins with,” */
+
+        /*Similarly, there are times when you want to select an element with an attribute that ends in a specific value.*/
+        a[href$=".pdf"] {
+            color: #00ff11;
+        }
+
+        /*$= translates to “ends with.”*/
+
+        /*Finally, you can even select elements with attributes that contain another value*/
+        img[src*="photo"] {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+<label>Username
+    <input type="text" name="username">
+</label>
+
+<div>
+    <a href="http://facebook.com">facebook</a>
+    <a href="http://twitter.com">twitter</a>
+    <a href="www.linkedin.com">linkedin</a>
+</div>
+
+<p><a href="download_instructions.pdf">download</a></p>
+
+<div class="image">
+    <img src="photo_number_1.gif">
+    <img src="photo_number_2.gif">
+    <img src="photo_number_2.gif">
+</div>
+
+</body>
+</html>
