@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /* first child */
+        h1:first-child {
+            color: red;
+        }
+
+        /* child selector */
+        div > p {
+            color: red;
+        }
+
+        ul :last-child {
+            color: red;
+        }
+
+        /*nth child*/
+        /*table tbody tr:nth-child(odd) {
+            background-color: red;
+        }*/
+
+        /*every third child element in a series, starting with the second child element*/
+        table tbody tr:nth-child(3n+2){
+            background-color: red;
+        }
+
+        /* first of type */
+        .sidebar p:first-of-type {
+            color:red;
+        }
+
+        /* last of type */
+        .sidebar p:last-of-type {
+            color: #0000ff;
+        }
+
+        /* nth of type */
+        img:last-of-type(odd) {
+            float: left;
+        }
+        img:nth-of-type(even) {
+            float: right;
+        }
+        /*In fact, you can use :nth-of-type()  to select alternating table rows as well:*/
+        tr:nth-of-type(odd) { background-color: #D9F0FF; }
+        tr:nth-of-type(even) { background-color: #FFFFFF; }
+
+    </style>
+</head>
+<body>
+    <p>this is paragraph.</p>
+    <div>
+        <p>this is paragraph.</p>
+    </div>
+    <h1>this is h1</h1>
+    <div>
+        <h1>
+            this is h2
+        </h1>
+        <p>this is link<strong><a href="text">text</a> </strong></p>
+    </div>
+    <h2></h2>
+    <ul>
+        <li>Sub-item 1</li>
+        <li>Sub-item 2</li>
+        <li>Sub-item 3</li>
+    </ul>
+
+
+<table border="1">
+    <thead>
+    <tr>
+        <td>username</td>
+        <td>password</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>jony</td>
+        <td>234</td>
+    </tr>
+    <tr>
+        <td>rony</td>
+        <td>sdf</td>
+    </tr>
+    <tr>
+        <td>sumon</td>
+        <td>2sdfsdf34</td>
+    </tr>
+    <tr>
+        <td>jony</td>
+        <td>234</td>
+    </tr>
+    <tr>
+        <td>rony</td>
+        <td>sdf</td>
+    </tr>
+    <tr>
+        <td>sumon</td>
+        <td>2sdfsdf34</td>
+    </tr>
+    </tbody>
+</table>
+
+
+<div class="sidebar">
+    <h2>
+        <p>this is a first paragraph.</p>
+        <p>this is a second paragraph.</p>
+        <p>this is a third paragraph.</p>
+    </h2>
+
+    <p>this is a first paragraph.</p>
+    <p>this is a second paragraph.</p>
+    <p>this is a third paragraph.</p>
+</div>
+
+<div class="img">
+    <img src="image1" />
+    <img src="image1" />
+    <img src="image1" />
+    <img src="image1" />
+    <img src="image1" />
+    <img src="image1" />
+</div>
+</body>
+</html>
