@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--you can use hover effect with a tag or class-->
+    <style>
+        p:hover {
+
+        }
+        .text:hover {
+
+        }
+        /*to select first letter*/
+        p::first-letter {
+            color: red;
+        }
+
+        /* select first line */
+        .first-line::first-line {
+            color: red;
+        }
+
+        /* focus */
+        input:focus {
+            background-color: #ffff00;
+        }
+
+        /* before */
+        p.tip::before {
+            content: "HOT TIP!";
+        }
+
+        /* after */
+        p.af::after {
+            content: "AFTER!";
+        }
+
+        /* selection */
+        ::selection {
+            color: #FFFFFF;
+            background-color: #993366;
+        }
+
+        /* You can, however, add support for Firefox by adding what’s called a vendor-prefix to the selector, like this:*/
+        ::-moz-selection {
+            color: #FFFFFF;
+            background-color: #993366;
+        }
+
+        /* you can specify a different background color just for text selected inside a particular element */
+        p::selection {
+            color: red;
+            background-color: pink;
+        }
+
+    </style>git status
+
+</head>
+<body>
+    <p class="tip"></p>
+    <p class="af">see next </p>
+    <p>this is a test.</p>
+    <div class="first-line">
+        <p>this is a div.</p>
+        <p>this is a div.</p>
+    </div>
+
+    <label>Name
+        <input type="text" name="name"/>
+    </label>
+
+</body>
+</html>
