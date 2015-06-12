@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        /* not selector */
+        p:not(.not) {
+            color: red;
+        }
+
+        /* another example */
+        a[href^="http://"]:not([href^="http://www.mywebsite.com"]) {
+            color: #ffff00;
+        }
+
+        /*A shorter way to write the same thing would be this:*/
+        a[href^="http://"]:not([href*="mysite.com"])
+        /*In an attribute selector *= means “contains,” so this would exclude any absolute URL that contains mysite.com. */
+
+
+
+    </style>
+</head>
+<body>
+    <p class="not">this is first paragraph.</p>
+    <p>this is second paragraph.</p>
+    <p>this is third paragraph.</p>
+    <div>
+        <a href="http://www.mywebsite.com">my site</a>
+        <a href="http://www.othersite.com">other site</a>
+        <a href="http://www.othersite.com">other site</a>
+    </div>
+</body>
+</html>
