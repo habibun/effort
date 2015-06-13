@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*
+            •	 A tag selector is worth 1 point.
+            •	 A class selector is worth 10 points.
+            •	 An ID selector is worth 100 points.
+            •	 An inline style (page 44) is worth 1,000 points
+        */
+        img {
+            background-color: #000000;
+        }
+        #logo {
+            background-color: red;
+        }
+        .highlight {
+            background-color: #ffff00;
+        }
+
+        /* use of important */
+        .nav a {
+            color: red;
+        }
+        a {
+            color: #008080 !important;
+        }
+    </style>
+</head>
+<body>
+    <img id="logo" class="highlight" src="logo.png">
+
+    <div class="nav">
+        <a href="www.mysite.com">my site</a>
+    </div>
+</body>
+</html>
