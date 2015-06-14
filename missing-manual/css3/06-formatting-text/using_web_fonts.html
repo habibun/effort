@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /* using font-face */
+        @font-face {
+            font-family: "League Gothic";
+            src: url('fonts/League_Gothic-webfont.ttf');
+        }
+
+        /*You’d write an @font-face directive for that font like this:*/
+        @font-face {
+            font-family: "My Font";
+            src: url('../_fonts/my_font.ttf');
+        }
+
+
+        /* for ie-8 Here’s how to rewrite the above code*/
+        @font-face {
+            font-family: 'League Gothic';
+            src: url('fonts/League_Gothic-webfont.eot');
+            src: url('fonts/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+            url('fonts/League_Gothic-webfont.woof') format('woff'),
+            url('fonts/League_Gothic-webfont.ttf') format('truetype'),
+            url('fonts/League_Gothic-webfont.svg') format('svg');
+        }
+
+    </style>
+</head>
+<body>
+
+</body>
+</html>
