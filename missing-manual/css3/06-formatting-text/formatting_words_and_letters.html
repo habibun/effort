@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /* To italicize text, add this to a style: */
+        p {
+            font-style: italic;
+        }
+
+        /* alternatively you can make sure text is not italicized */
+        p {
+            font-style: normal;
+        }
+
+        /*To make text bold:*/
+        p {
+            font-weight: bold;
+        }
+
+        /*And to make text un-bold:*/
+        p {
+            font-weight: normal;
+        }
+
+        /*you may want to find another way of highlighting a word or words that are strongly emphasized or bolded inside a headline. Here’s one way*/
+        h1 strong { color: #3399FF; }
+
+        /*Capitalizing*/
+        h1 {
+            /*text-transform: uppercase;*/
+
+            /*To tell CSS not to change the case of text, use the none value*/
+            text-transform: none;
+        }
+
+        /*SMALL CAPS:*/
+
+        /*To create small-cap text:*/
+        .sc {
+            font-variant: small-caps;
+        }
+
+        /* Decorating */
+        p {
+            text-decoration: underline overline;
+        }
+
+        body p {
+            text-decoration: none;
+        }
+
+        /*Letter and Word Spacing*/
+
+        /*To reduce the space between letters, you use a negative value like this:*/
+        .letter-spacing-negative {
+            letter-spacing: -1px;
+        }
+
+        /*A positive value adds space between letters:*/
+        .letter-spacing-positive {
+            letter-spacing: .7em;
+        }
+
+        /* word spacing */
+        .word-spacing {
+            word-spacing: 3px;
+        }
+
+    </style>
+</head>
+<body>
+    <p>this is a paragraph.</p>
+    <h1>this is a heading.</h1>
+    <p class="sc">this is a paragraph.</p>
+    <p class="decoration">this is a  paragraph.</p>
+    <p class="letter-spacing-negative">this is a  paragraph.</p>
+    <p class="letter-spacing-positive">this is a  paragraph.</p>
+    <p class="word-spacing">this is a  paragraph.</p>
+
+</body>
+</html>
