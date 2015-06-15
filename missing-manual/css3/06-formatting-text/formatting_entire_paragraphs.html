@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /* by default 120% */
+        p {
+            line-height: 150%;
+        }
+
+        /*CSS offrs one other measurement method specifi to line height, which is simply a number. You write it like this:*/
+        .hed {
+            line-height: 1.5;  /*There’s no unit (like em or px) after this value. The browser multiplies this number by the font size to determine the line height*/
+        }
+
+        /* Aligning Text */
+        .text-al {
+            text-align: center;
+        }
+
+        /*FIRST-LINE INDENTS*/
+        .inde {
+            text-indent: 25px;
+        }
+
+        /* CoNTRoLLING MARGINS BETWEEN PARAGRAPHS */
+        p {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        /*Formatting the First Letter or First Line of a Paragraph*/
+        p::first-letter {
+            font-weight: bold;
+            color: red;
+        }
+
+        /*To be more selective and format just the fist letter of a particular paragraph, you
+can apply a class style to the paragraph—.intro, for example:*/
+        .intro::first-letter {
+            font-weight: bold;
+            color: #0000ff;
+            font-size: xx-large;
+        }
+        /*Say you want to capitalize every letter
+in the fist line of the fist paragraph of a page. */
+        .cap::first-line {
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <p>this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.<br>
+        this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.<br>
+    </p>
+    <p class="cap">this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.<br>
+        this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.<br>
+    </p>
+
+    <p class="intro">this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.<br>
+        this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.<br>
+    </p>
+
+    <p class="inde">this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.<br>
+        this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.<br>
+    </p>
+
+    <p class="text-al">this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.<br>
+        this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.<br>
+    </p>
+
+
+</body>
+</html>
