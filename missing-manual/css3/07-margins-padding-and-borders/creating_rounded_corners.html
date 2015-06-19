@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .specialBox {
+            background-color: red;
+            /*border-radius: 20px;*/
+            /*border-radius: 0 30px 10px 5px;*/
+
+            /*The 20px value is the horizontal radius; the 40px value is the vertical radius. */
+            /*border-radius: 20px/40px;*/
+
+            /*You can make all four corners have diffrent oblong shapes by providing four sets of these values, like this:*/
+            /*border-radius: 40px/20px 10px/30px 20px/40px 10px/20px;*/
+
+            /*You can even mix and match elliptical and circular corners if you’d like:*/
+            /*border-radius: 10px 10px/30px 20px/40px 10px;*/
+
+            /*  Finally, if you want to go the longhand route, you can use separate properties to
+                defie the appearance of each corner. For example
+            */
+            /*border-radius: 1em 2em 1.5em .75em;*/
+
+            /*can also be written as:*/
+            border-top-left-radius: 1em;
+            border-top-right-radius: 2em;
+            border-bottom-right-radius: 1.5em;
+            border-bottom-left-radius: .75em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="specialBox">
+    <p>this is a paragraph.</p>
+
+
+    <!-- vendor prefix -->
+    •	 -webkit-  is used by Chrome, Safari, and other WebKit based browsers
+    •	 -moz-  is used by Mozilla Firefox
+    •	 -o-  is used by Opera
+    •	 -ms-  is used by Microsoft Internet Explorer
+</div>
+</body>
+</html>
