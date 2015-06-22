@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*Suppose you want to place a graphic directly in the middle of a web page. You can create a style like this:*/
+        body {
+            background-image: url(bg_page.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        h1 {
+            background-position: 5px 50%;
+            background-attachment: fixed;
+            background-origin: content-box;
+
+            /*you can make sure that an image begins in the upper-left of the content area and appears only behind content like this:*/
+            background-origin: content-box;
+            background-clip: content-box;
+
+            /*set background image size*/
+            background-size: 100px;
+            background-size: 100px auto;
+            background-size: contain;
+            background-size: cover;
+            /* you can place a large background image in the banner and use this setting*/
+            background-size: 100% auto;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+</html>
