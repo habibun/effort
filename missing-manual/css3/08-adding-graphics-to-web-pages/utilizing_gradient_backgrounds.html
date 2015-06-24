@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            background-image: linear-gradient(left, black, white);
+            –webkit-linear-gradient: linear-gradient(left, black, white);
+
+            /*For example, to draw a gradient that travels from the top-left
+corner to the bottom-right corner changing from black to white, write this:*/
+            /*background-image: linear-gradient(top left,black,white);*/
+
+            /*For example, the gradient
+created in the bottom-left image in Figure 8-13 uses this declaration:*/
+            background-image: linear-gradient(45deg, rgb(0,0,0), rgb(204,204,204));
+
+            /*, to get the simple
+gradient on page 262 to work in the diffrent browsers*/
+            background-image: -webkit-linear-gradient(left,black,white);
+            background-image: -moz-linear-gradient(left,black,white);
+            background-image: -o-linear-gradient(left,black,white);
+            background-image: linear-gradient(left,black,white);
+
+            /*to get the repeating gradient of the left image you can write this code:*/
+
+        }
+
+        h1 {
+            /*radial gradient*/
+            background-image: radial-gradient(red, blue);
+
+            /*ou can also make circular gradients by adding a “circle” keyword before the colors*/
+            background-image: radial-gradient(circle, red, blue);
+
+        }
+    </style>
+</head>
+<body>
+
+</body>
+</html>
