@@ -5,45 +5,132 @@
     <title></title>
     <style>
         /* change text color for unvisited link */
-        a:link { color: #F60; }
+        a:link {
+            color: #F60;
+        }
 
         /* change visited link color */
-        a:visited { color: #900; }
+        a:visited {
+            color: #900;
+        }
 
         /* hover effect */
-        a:hover { color: #F33; }
+        a:hover {
+            color: #F33;
+        }
 
         /* active effect */
-        a:active {color: #B2F511; }
-
+        a:active {
+            color: #B2F511;
+        }
 
         /* concentrate to order */
-        a:link { color: #F60; }
-        a:visited { color: #900; }
-        a:hover { color: #F33; }
-        a:active {color: #B2F511; }
+        a:link {
+            color: #F60;
+        }
+
+        a:visited {
+            color: #900;
+        }
+
+        a:hover {
+            color: #F33;
+        }
+
+        a:active {
+            color: #B2F511;
+        }
 
         /* targeting a particular link */
-/*To style this link in its own way, you’d create styles like this:*/
-        a.sponsor { font-family: Arial, sans-serif; }
-        a.sponsor:link { color: #F60; }
-        a.sponsor:visited { color: #900; }
-        a.sponsor:hover { color: #F33; }
-        a.sponsor:active {color: #B2F511; }
+        /*To style this link in its own way, you’d create styles like this:*/
+        a.sponsor {
+            font-family: Arial, sans-serif;
+        }
+
+        a.sponsor:link {
+            color: #F60;
+        }
+
+        a.sponsor:visited {
+            color: #900;
+        }
+
+        a.sponsor:hover {
+            color: #F33;
+        }
+
+        a.sponsor:active {
+            color: #B2F511;
+        }
 
         /*Leaving of the a and only specifying the class works too:*/
-        .sponsor { font-family: Arial, sans-serif; }
-        .sponsor:link { color: #F60; }
-        .sponsor:visited { color: #900; }
-        .sponsor:hover { color: #F33; }
-        .sponsor:active {color: #B2F511; }
+        .sponsor {
+            font-family: Arial, sans-serif;
+        }
 
+        .sponsor:link {
+            color: #F60;
+        }
+
+        .sponsor:visited {
+            color: #900;
+        }
+
+        .sponsor:hover {
+            color: #F33;
+        }
+
+        .sponsor:active {
+            color: #B2F511;
+        }
+
+        /*Grouping links with descendent selectors*/
+
+        nav a {
+            font-family: Arial, sans-serif;
+        }
+
+        nav a:link {
+            color: #F60;
+        }
+
+        nav a:visited {
+            color: #900;
+        }
+
+        nav a:hover {
+            color: #F33;
+        }
+
+        nav a:active {
+            color: #B2F511;
+        }
+
+        .mainNav a {
+            font-family: Arial, sans-serif;
+        }
+
+        .mainNav a:link {
+            color: #F60;
+        }
+
+        .mainNav a:visited {
+            color: #900;
+        }
+
+        .mainNav a:hover {
+            color: #F33;
+        }
+
+        .mainNav a:active {
+            color: #B2F511;
+        }
     </style>
 </head>
 <body>
-    <a href="www.test.com">test link</a>
+<a href="www.test.com">test link</a>
 
-    <a href="http://www.hydroponicsonline.com" class="sponsor">Visit this great resource</a>
+<a href="http://www.hydroponicsonline.com" class="sponsor">Visit this great resource</a>
 
 </body>
 </html>
