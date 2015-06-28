@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /* link to other website */
+        /* ^ caret means at the beginning of the */
+
+        /*to create a style that only affcts links using an absolute URL, you use this selector*/
+        a[href^='http://']
+
+
+        /*if you want to add a globe icon next to external links, but not for links
+         within your site, you can create these two styles
+         */
+         a[href^='http://'] {
+            background: url(images/globe.png) no-repeat center right;
+            padding-right: 15px;
+        }
+
+        a[href^='http://www.mysite.com'] {
+            background: none;
+            padding-right: 0;
+        }
+
+        /* to create a single style that will affect all absolute URLs except ones pointing to your own site*/
+        a[href^='http://']:not(a[href^='http://www.mysite.com'])
+
+
+        /* email link */
+         a[href='mailto:']
+
+
+        /* Links to Specific Types of Files */   /* at the end */
+        /*CSS provides an attribute selector that lets you fid attributes that end with specifi
+        information
+        */
+        a[href='.pdf']
+        a[href$='.zip'] /* zip archive */
+        a[href$='.doc'] /* Word document */
+
+    </style>
+</head>
+<body>
+
+</body>
+</html>
