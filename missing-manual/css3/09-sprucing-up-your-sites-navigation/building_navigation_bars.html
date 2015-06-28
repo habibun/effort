@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /* vertical navbar */
+        /*ul.nav {
+            list-style-type: none;
+            padding-left: 0;
+            margin-left: 0;
+        }
+        ul.nav a {
+            display: block;
+            width: 8em;
+        }
+        a {
+            height: 1.25em;
+            line-height: 1.25em;
+        }*/
+
+        /* horizontal navbar */
+        /*ul.nav {
+            margin-left: 0px;
+            padding-left: 0px;
+            list-style: none;
+            border-bottom: 1px dashed #000;
+        }
+        .nav li {
+            display: inline;
+            margin-right: -5px;
+        }
+        .nav a {
+            display: inline-block;
+            border: 1px dashed #000;
+            border-bottom: none;
+            padding: 5px 15px 5px 15px;
+            background-color: #EAEAEA;
+            text-decoration: none;
+            color: #333;
+        }*/
+
+        /* using float for horizontal navigation */
+        nav li {
+            float: left;
+        }
+
+        ul.nav a {
+            display: block;
+        }
+
+        ul.nav {
+            overflow: hidden;
+        }
+
+        .nav {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            border-bottom: 3px solid rgb(204, 204, 204);
+            overflow: hidden;
+        }
+
+        .nav li {
+            float: left;
+        }
+
+        .nav a {
+            width: 12em;
+            display: block;
+            border: 3px solid rgb(204, 204, 204);
+            border-bottom: none;
+            border-radius: 5px 5px 0 0;
+            padding: 10px;
+            margin-right: 5px;
+            background-color: rgb(95, 95, 95);
+            background-image: -webkit-linear-gradient(rgb(175, 175, 175), rgb(95, 95, 95));
+            background-image: -moz-linear-gradient(rgb(175, 175, 175), rgb(95, 95, 95));
+            background-image: -o-linear-gradient(rgb(175, 175, 175), rgb(95, 95, 95));
+            background-image: linear-gradient(rgb(175, 175, 175), rgb(95, 95, 95));
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            font-family: Arial, Helvetice, sans-serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<ul class="nav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+</ul>
+</body>
+</html>
