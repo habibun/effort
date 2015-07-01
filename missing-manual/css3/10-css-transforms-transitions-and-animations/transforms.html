@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+        p {
+            background-color: #008000;
+            width: 25px;
+            height: 25px;
+        }
+
+        /* rotate */
+        .rotate {
+            /*transform: rotate(10deg);*/
+            /*transform: rotate(180deg);*/
+            transform: rotate(-45deg);
+        }
+
+        /* scale */
+        .scale {
+            /*transform: scale(2);*/
+            /*transform: scale(.5,2);*/
+            transform: scaleY(2);
+        }
+
+        /*Translate*/
+        .translate:hover {
+            /*transform: translate(1px,2px);*/
+            transform: translateY(-.5em);
+        }
+
+        /* Skew */
+        .skew {
+            /*transform: skew(45deg, 0);*/
+            /*transform: skew(0,45deg);*/
+            transform: skew(25deg,10deg);
+        }
+
+        /* Multiple Transformations */
+        .multiple-translation {
+            transform: rotate(45deg) scale(2);
+            /*transform: skew(45deg,0deg) scale(.5) translate(400px,500px) rotate(90deg);*/
+        }
+
+        /* origin */
+        .origin p {
+            /*transform-origin: left top;*/
+            /*transform-origin: 0 0;*/
+            /*transform-origin: 0% 0%;*/
+            transform-origin: right bottom;
+            /*transform-origin: 100% 100%;*/
+        }
+    </style>
+</head>
+<body>
+    <!--<div class="rotate"></div>-->
+    <!--<div class="scale"></div>-->
+    <!--<div class="translate"></div>-->
+    <!--<div class="skew"></div>-->
+    <!--<div class="multiple-translation"></div>-->
+    <div class="origin">
+        <p></p>
+    </div>
+</body>
+</html>
