@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .navButton {
+            background-color: orange;
+            transition-property: background-color;
+            transition-duration: 1s;
+        }
+
+        .navButton:hover {
+            background-color: blue;
+            /*transition-timing-function: ease-in-out;*/
+            transition-timing-function: cubic-bezier(.20, .96, .74, .07);
+            /*Delaying a Transition’s Start*/
+            transition-delay: .5s;
+        }
+
+        /*You list out all three of those properties like this:*/
+        body {
+            transition-property: color, background-color, border-color;
+        }
+
+        /*Or, to make it simple, use the all keyword like this:*/
+        body {
+            transition-property: all;
+        }
+
+        /*For example, to make a transition take half a second to complete, you can use either:*/
+        body {
+            /*transition-duration: .5s;*/
+            transition-duration: 500ms;
+        }
+
+        /* multiple */
+        body {
+            transition-property: color, background-color, border-color;
+            transition-duration: .25s, .75s, 2s;
+        }
+
+        /*For example, say you have a button whose background color and text color
+you want to change, and then have its border color change suddenly after the other
+two properties have fiished. Here’s how you might do that:*/
+        .navButton {
+            color: black;
+            background-color: #FF6603;
+            border: 5px solid #660034;
+            transition-property: color, background-color, border-color;
+            transition-duration: 1s, 1s, .5s;
+            transition-delay: 0, 0, 1s;
+        }
+
+        .navButton:hover {
+            color: white;
+            background-color: #660034;
+            border-color: #FF6603;
+        }
+
+        /*transition short hand*/
+        body {
+            /*to animate all CSS properties for one second using the ease-in timing function, with a half-second delay, write the following:*/
+            transition: all 1s ease-in .5s;
+
+            /*So if you simply want to animate the transition of all CSS properties for one second, then write this:*/
+            transition: all 1s;
+
+            /*If you only want to animate the change in the background color, then list that property:*/
+            transition: background-color 1s;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li class="navButton">home</li>
+    <li>contact</li>
+</ul>
+</body>
+</html>
