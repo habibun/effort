@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /* say you want to create an animation that fades an element into view. You could start with an opacity value of 0 (invisible), and end with a value of 1 (fully visible):*/
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /*say you want to create an effct where the background of an element changes from yellow to blue to red.
+        You can write this:*/
+        @keyframes backgroundGlow {
+            from {
+                background-color: yellow;
+            }
+            50% {
+                background-color: blue;
+            }
+            to {
+                background-color: red;
+            }
+        }
+
+        /*Nor are you limited to a single CSS property*/
+        @keyframes growAndGlow {
+            from {
+                background-color: yellow;
+            }
+            50% {
+                transform: scale(1.5);
+                background-color: blue;
+            }
+            to {
+                transform: scale(3);
+                background-color: red;
+            }
+        }
+
+        /*you want a sort of pause in the middle while the background color stays constant before changing again. You can do that with this code*/
+        @keyframes glow {
+            from {
+                background-color: yellow;
+            }
+            25%, 75% {
+                background-color: blue;
+            }
+            to {
+                background-color: red;
+            }
+        }
+
+        /*say you want to animate the
+        background color again, but this time go from yellow to blue to orange to blue to
+        orange to red. Blue and orange appear twice, so instead of writing their backgroundcolor properties multiple times, you can instead do this:*/
+        @keyframes glow {
+            from {
+                background-color: yellow;
+            }
+            20%, 60% {
+                background-color: blue;
+            }
+            40%, 80% {
+                background-color: orange;
+            }
+            to {
+                background-color: red;
+            }
+        }
+
+        .announcement {
+            animation-name: fadeIn;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+            animation-delay: 1s;
+            /*            animation-name: growAndGlow;
+                        animation-iteration-count: 10;*/
+            /*animation-iteration-count: infinite;*/
+            animation-fill-mode: forwards;
+
+        }
+
+        /*In addition, you can apply more than one animation to an element*/
+        .multi {
+            animation-name: fadeIn, blink;
+            animation-duration: 1s, 3s;
+        }
+
+        /*Then, play that animation twice, reversing its direction on the second time:*/
+        .fade {
+            animation-name: fadeOut;
+            animation-duration: 2s;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+        }
+
+        /* animation shorthand */
+
+        /* separate properties like this */
+        .fade {
+            animation-name: fadeOut;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+            animation-delay: 5s;
+            animation-fill-mode: forwards;
+        }
+
+        /* above short form */
+        .fade {
+            animation: fadeOut 2s ease-in-out 2 alternate 5s forwards;
+        }
+
+        /*For example, to apply two animations (say
+        fadeOut and glow) to the .fade style, write this:*/
+        .fade {
+            animation: fadeOut 2s ease-in-out 2 alternate 5s forwards,
+            glow 5s;
+        }
+
+        /*Pausing an Animation*/
+        .pause {
+            animation-play-state: paused;
+        }
+
+        .fade {
+            animation: fadeOut 2s ease-in-out 2 alternate 5s forwards,
+            glow 5s;
+        }
+
+        .fade:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+<div class="announcement">this is a test.</div>
+<div class="fade">this is a test.</div>
+</body>
+</html>
