@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        input[type='text'] {
+            background-color: red;
+        }
+
+        .label {
+            float: left;
+            width: 20em;
+            vertical-align: top;
+            text-align: right;
+            margin-right: 15px;
+        }
+
+        .special:checked {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <label>Username:
+        <input type="text" name="username">
+    </label><br>
+    <label>Password:
+        <input type="password" name="password">
+    </label><br>
+    <label>Age:
+        <input type="number" name="age">
+    </label><br>
+    <label>Gender:
+        <select>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+    </label><br>
+    <label>Status:
+        <input type="checkbox" name="status" class="special" checked>
+    </label><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
