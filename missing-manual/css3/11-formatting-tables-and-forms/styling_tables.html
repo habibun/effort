@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        table {
+            /*border: 1px lightgrey solid;*/
+            /*border-spacing: 0;*/
+            /* eliminating double borders */
+            border-collapse: collapse;
+            /*border-radius: 10px;*/
+        }
+
+        /*
+        You apply padding to either a table header or a table cell tag, but not to the <table>
+        tag itself. So, to add 10 pixels of space to the inside of all table cells, use this style:
+        */
+        td, th {
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        /* You can also control the spacing separately for each edge */
+        td {
+            padding-top: 10px;
+            padding-right: 5px;
+            padding-bottom: 3px;
+            padding-left: 5px;
+            /* Rounded corners */
+            /*border-radius: 5px;*/
+        }
+
+        /*Or, use the padding shortcut property:*/
+        td {
+            padding: 10px 5px 3px 5px;
+        }
+
+        /*text align controls horizontal positioning */
+        table {
+            text-align: right;
+        }
+
+        /* vertical align */
+        table {
+            vertical-align: text-top;
+            /* hide empty cell */
+            empty-cells: hide;
+        }
+
+        /* Styling Rows and Columns */
+        /* tr:nth-of-type(odd) {
+             background-color: red;
+         }
+         tr:nth-of-type(even) {
+             background-color: #0000ff;
+         }*/
+        /*If you don’t want to apply the same background to the odd rows of all of your tables, simply add a class name*/
+        .products tr:nth-of-type(odd) {
+            background-color: red;
+        }
+
+        .products tr:nth-of-type(even) {
+            background-color: blue;
+        }
+
+        col.brand {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <caption align="bottom">
+        Table 1: CosmoFarmer.com's Indoor Mower Roundup
+    </caption>
+    <colgroup>
+        <col class="brand"/>
+        <col class="price"/>
+        <col class="power"/>
+    </colgroup>
+    <thead>
+    <tr>
+        <th scope="col">Brand</th>
+        <th scope="col">Price</th>
+        <th scope="col">Power Source</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Chinook Push-o-matic Indoor Mower</td>
+        <td>$247.00</td>
+        <td>Mechanical</td>
+    </tr>
+    <tr>
+        <td>Sampson Deluxe Apartment Mower</td>
+        <td>$370.00</td>
+        <td>Mechanical</td>
+    </tr>
+    <tr>
+        <td>Chinook Push-o-matic Indoor Mower</td>
+        <td>$247.00</td>
+        <td>Mechanical</td>
+    </tr>
+    <tr>
+        <td>Sampson Deluxe Apartment Mower</td>
+        <td>$370.00</td>
+        <td>Mechanical</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
