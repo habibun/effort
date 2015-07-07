@@ -10,9 +10,56 @@
             clear: both;
             overflow: hidden;
         }
+
+        /* normal version */
+        /*        .wrapper {
+                    background-image: linear-gradient(left,
+                    red 0%,
+                    red 25%,
+                    white 25%,
+                    white 75%,
+                    blue 75%,
+                    blue 100%);
+                }*/
+
+        /* vendor prefixed version */
+        .wrapper {
+            background-image: -webkit-linear-gradient(left,
+            red 0%,
+            red 25%,
+            white 25%,
+            white 75%,
+            blue 75%,
+            blue 100%);
+            background-image: -moz-linear-gradient(left,
+            red 0%,
+            red 25%,
+            white 25%,
+            white 75%,
+            blue 75%,
+            blue 100%);
+            background-image: -o-linear-gradient(left,
+            red 0%,
+            red 25%,
+            white 25%,
+            white 75%,
+            blue 75%,
+            blue 100%);
+            background-image: linear-gradient(left,
+            red 0%,
+            red 25%,
+            white 25%,
+            white 75%,
+            blue 75%,
+            blue 100%);
+        }
     </style>
 </head>
 <body>
-
+<div class="wrapper">
+    <div class="sidebar1"> … content here …</div>
+    <div class="main"> … content here …</div>
+    <div class="sidebar2"> … content here …</div>
+</div>
 </body>
 </html>
