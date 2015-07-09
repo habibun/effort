@@ -3,6 +3,56 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+    <!-- create media query -->
+    <link href="css/small.css" rel="stylesheet" media="(width: 480px)">
+    <!--
+        you might want to apply a particular style for screens that are less than or equal to 480 pixels wide. You do that like this
+    -->
+    <link href="css/small.css" rel="stylesheet" media="(max-width:480px)">
+
+    <!-- min and max together -->
+    <link href="css/medium.css" rel="stylesheet" media="(min-width:481px) and (max-width:768px)">
+
+    <!-- using import directive -->
+    <style>
+        @import url(css/small.css) (max-width: 320px);
+    </style>
+
+    <!-- embedded the media query in the stylesheets -->
+    <style>
+        @media (max-width: 480px) {
+            body {
+                /*style properties go here*/
+            }
+
+            .style1 {
+                /*style properties go here*/
+            }
+        }
+    </style>
+    <!--Here’s a skeletal structure for just such a fie:-->
+    <style>
+        /* Put your reset styles here */
+        /* Put styles for desktop and basic styles for all devices here */
+        body {
+            /* properties for body here */
+        }
+
+        /* medium display only */
+        @media (min-width: 481px) and (max-width: 768px) {
+            body {
+                /* properties that only apply to tablets */
+            }
+        }
+
+        /* small display only */
+        @media (max-width: 480px) {
+            body {
+                /* properties that only apply to phones */
+            }
+        }
+    </style>
+
 </head>
 <body>
 
