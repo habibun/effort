@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--You can then create several CSS styles to create the flid layout:-->
+    <style>
+        .columns {
+            width: auto; /* same as 100% */
+            max-width: 1200px;
+        }
+
+        .columns:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .one-third {
+            float: left;
+            width: 33%;
+        }
+
+        .two-thirds {
+            float: left;
+            width: 67%;
+        }
+
+        /*you can make the browser include the border and padding as part of the CSS width property*/
+        * {
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<!--
+For example, say you want to create a two-column design where the fist column
+is one-third the width of the page and the second is two-thirds. You may start with
+some simple HTML, like this:
+-->
+<div class="columns">
+    <div class="one-third">
+        …content goes here…
+    </div>
+    <div class="two-thirds">
+        …content goes here…
+    </div>
+</div>
+
+</body>
+</html>
