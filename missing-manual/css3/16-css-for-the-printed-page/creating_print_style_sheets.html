@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!-- Add the <img> tag to your HTML in the spot where you want it to appear when printed: -->
+    <img src="logo.png" height="100" width="100" class="logo"/>
+
+    <style>
+        /*When you add !important after the value in a CSS declaration, that particular property overrides any conflcts with other styles*/
+        h1 {
+            color: #000 !important;
+        }
+
+        /*To make all paragraphs print in 12-point type (a common size for printing), use the following rule:*/
+        p {
+            font-size: 12pt;
+        }
+
+        /* to make to text black */
+        p {
+            color: #000 !important;
+        }
+
+        * {
+            color: #000 !important;
+        }
+
+        .logo {
+            display: inline;
+        }
+
+        /*Revealing Links in Print*/
+        a[href^="http://"]:after {
+            content: " (" attr(href) ") ";
+        }
+
+        /* remove element from a page */
+        .sidebar {
+            display: none;
+        }
+
+        .break_before {
+            page-break-before: always;
+        }
+
+        .break_after {
+            page-break-after: always;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+</html>
