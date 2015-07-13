@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- to link a stylesheet that should be used only for printing -->
+    <link rel="stylesheet" href="print.css" media="print">
+    <!--In addition, you can specify multiple media types by separating them with commas-->
+    <link rel="stylesheet" media="screen, projection, handheld" href="screen.css"/>
+    <style>
+        /*You can do so using the @media directive, like so*/
+        @media print {
+            h1 {
+                font-size: 24pt;
+            }
+
+            p {
+                font-size: 12pt;
+            }
+        }
+    </style>
+</head>
+<body>
+
+</body>
+</html>
