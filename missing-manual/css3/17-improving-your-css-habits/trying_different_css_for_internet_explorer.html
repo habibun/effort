@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--Here’s the basic structure of a conditional comment:-->
+    <!--[if IE]>
+    Some HTML code that only applies to IE goes here.
+    <![endif]-->
+
+    <!--Say you want to have a particular style sheet load only for internet Explorer 7-->
+    <!--[if IE 7]>
+    <link href="IE7_styles.css" rel="stylesheet">
+    <![endif]-->
+
+    <!--Or, using the @import method:-->
+    <!--[if IE 7]>
+    <style>
+        @import url(IE7_styles.css)
+    </style>
+    <![endif]-->
+
+    <!--you can use lte, which stands for “less than or equal to,”
+    so lte IE 8 means “if this browser is version 8 or earlier of Internet Explorer”:-->
+    <!--[if lte IE 8]>
+    <link href="IE_styles.css" rel="stylesheet">
+    <![endif]-->
+</head>
+<body>
+
+</body>
+</html>
