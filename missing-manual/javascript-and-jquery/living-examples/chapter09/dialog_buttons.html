@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Dialog example</title>
-<link href="../_css/jquery-ui.min.css" rel="stylesheet">
-<link href="../_css/site.css" rel="stylesheet">
-<script src="../_js/jquery.min.js"></script>
-<script src="../_js/jquery-ui.min.js"></script>
-<script>
-$(document).ready(function() {
-  
-}); // end ready
-</script>
+	<meta charset="UTF-8">
+	<title>Dialog example</title>
+	<link href="../_css/jquery-ui.min.css" rel="stylesheet">
+	<link href="../_css/site.css" rel="stylesheet">
+	<script src="../_js/jquery.min.js"></script>
+	<script src="../_js/jquery-ui.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#confirm').dialog({
+				modal: true,
+				autoOpen: false,
+				buttons : {
+					"Confirm" : function() {
+						$('#robot').effect('explode');
+						$(this).dialog('close');
+					},
+					"Cancel" : function() {
+						$(this).dialog('close');
+					}
+				} // end buttons
+			});
+			$('#robot').click(function() {
+				$('#confirm').dialog('open');
+			}); // end click
+		}); // end ready
+	</script>
 </head>
 <body>
 <div class="wrapper">
@@ -22,9 +37,10 @@ $(document).ready(function() {
 		<div class="main">
 			<h1>Adding buttons to a dialog box</h1>
 			<p>Eeek, a robot! Click on the robot to destroy it.</p>
-      <p><img src="images/robot.jpg" id="robot"></p>
-			<!-- add dialog here -->
-
+			<p><img src="images/robot.jpg" id="robot"></p>
+			<div id="confirm" title="Confirm Destruction">
+				<p>Are you sure you want to destroy the robot?</p>
+			</div>
 		</div>
 	</div>
 	<footer>

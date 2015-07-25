@@ -9,7 +9,12 @@
     <script src="../_js/jquery-ui.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('[title]').tooltip();
+            $('#hello').dialog({
+                modal: true,
+                resizable: false,
+                draggable: false,
+                hide: 'explode'
+            });
         }); // end ready
     </script>
     >
@@ -21,20 +26,12 @@
     </header>
     <div class="content">
         <div class="main">
-            <h1>Tooltips</h1>
+            <h1>Hello World</h1>
 
-            <p>You can add tooltips to anything on a page.</p>
+            <p>Notice that the dialog box looks so much better than an Alert!</p>
 
-            <div class="row">
-
-                <p title="Yes, I am a paragraph.">A paragraph</p>
-
-                <p title="I am a map!">An image <img src="images/map.png"></p>
-
-                <p>
-                    <button title="Click this button!">A button</button>
-                </p>
-
+            <div id="hello" title="Hello World!">
+                <p>A jQuery UI Dialog Box</p>
             </div>
         </div>
     </div>
