@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="modernizr-latest.js"></script>
+    <title></title>
+</head>
+<body>
+<p>The verdict is... <span id="result"></span></p>
+<script>
+    // Find the element on the page (named result) where you can show
+    // the results.
+    var result = document.getElementById("result");
+    if (Modernizr.draganddrop) {
+        result.innerHTML = "Rejoice! Your browser supports drag-and-drop.";
+    }
+    else {
+        result.innerHTML = "Your feeble browser doesn't support drag-and-drop.";
+    }
+</script>
+<p>The verdict is... <span id="result"></span></p>
+<script>
+    // Find the element on the page (named result) where you can show
+    // the results.
+    var result = document.getElementById("result");
+    if (Modernizr.draganddrop) {
+        result.innerHTML = "Rejoice! Your browser supports drag-and-drop.";
+    }
+    else {
+        result.innerHTML = "Your feeble browser doesn't support drag-and-drop.";
+    }
+</script>
+</body>
+</html>
