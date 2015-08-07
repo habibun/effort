@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!-- Dates and Times with <time>-->
+The party starts
+<time>2014-03-21</time>
+
+The party starts
+<time datetime="2014-03-21">March 21<sup>st</sup></time>
+.
+
+
+Parties start every night at
+<time datetime="16:30">4:30 p.m.</time>
+.
+
+
+The party starts
+<time datetime="2014-03-21 16:30">March 21<sup>st</sup>
+    at 4:30 p.m.
+</time>
+.
+
+<!-- you can use pubdate -->
+<p>Published on
+    <time datetime="2014-03-21" pubdate>March 31, 2014</time>
+    .
+</p>
+
+
+<!-- output tag -->
+<p>Your BMI: <span id="result"></span></p>
+
+Here’s the more meaningful version you’d use in HTML5:
+<p>Your BMI:
+    <output id="result"></output>
+</p>
+
+
+<!-- Highlighted Text with <mark>-->
+<p>In 2009, Facebook made a bold grab to own everyone's content,
+    <em>forever</em>. This is the text they put in their terms of service:</p>
+<blockquote>You hereby grant Facebook an
+    <mark>irrevocable, perpetual,
+        non-exclusive, transferable, fully paid, worldwide license
+    </mark>
+    (with the
+    right to sublicense) to
+    <mark>use, copy, publish</mark>
+    , stream, store,
+    retain, publicly perform or display, transmit, scan, reformat, modify, edit,
+    frame, translate, excerpt, adapt, create derivative works and distribute
+    (through multiple tiers),
+    <mark>any user content you post</mark>
+    ...
+</blockquote>
+</body>
+</html>
