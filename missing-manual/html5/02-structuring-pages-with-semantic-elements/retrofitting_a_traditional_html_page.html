@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /* Format the <div> that represents the header (as a blue, bordered box). */
+        header {
+            background-color: #7695FE;
+            border: thin #336699 solid;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        /* Format any <h1> headings in the header <div> (that's the article title). */
+        header h1 {
+            margin: 0px;
+            color: white;
+            font-size: xx-large;
+        }
+
+        /* Format the subtitle in the header <div>. */
+        header .Teaser {
+            margin: 0px;
+            font-weight: bold;
+        }
+
+        /* Format the byline in the header <div>. */
+        header .Byline {
+            font-style: italic;
+            font-size: small;
+            margin: 0px;
+        }
+
+        /* Format the floating figure box. */
+        .FloatFigure {
+            float: left;
+            margin-left: 0px;
+            margin-top: 0px;
+            margin-right: 20px;
+            margin-bottom: 0px;
+        }
+
+        /* Format the figure caption text. */
+        .FloatFigure p {
+            max-width: 200px;
+            font-size: small;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .PullQuote {
+            float: right;
+            max-width: 300px;
+            border-top: thin black solid;
+            border-bottom: thick black solid;
+            font-size: 30px;
+            line-height: 130%;
+            font-style: italic;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-left: 15px;
+            margin-bottom: 10px;
+        }
+
+        .PullQuote img {
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+<body>
+<article>
+    <header>
+        <h1>How the World Could End</h1>
+
+        <p class="Teaser">Scenarios that spell the end of life as we know it</p>
+
+        <p class="Byline">by Ray N. Carnation</p>
+    </header>
+    <div>
+        <p><span class="LeadIn">Right now</span>, you're probably ...</p>
+
+        <p>...</p>
+
+        <h2>Mayan Doomsday</h2>
+
+        <p>Skeptics suggest ...</p>
+        ...
+    </div>
+</article>
+
+<figure class="FloatFigure">
+    <img src="human_skull.jpg" alt="Human skull">
+    <figcaption>Will you be the last person standing if one of these
+        apocalyptic scenarios plays out?
+    </figcaption>
+</figure>
+
+<p>... (in a suitably robotic voice) "Who's your daddy now?"</p>
+<aside class="PullQuote">
+    <img src="quotes_start.png" alt="Quote">
+    We don't know how the universe started, so we can't be sure it won't
+    just end, maybe today.
+    <img src="quotes_end.png" alt="End quote">
+</aside>
+
+
+<footer>
+    <p class="Disclaimer">These apocalyptic predictions ...</p>
+
+    <p>
+        <a href="AboutUs.html">About Us</a>
+        ...
+    </p>
+
+    <p>Copyright © 2014</p>
+</footer>
+</body>
+</html>
