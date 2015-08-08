@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        input:required {
+            background-color: lightyellow;
+        }
+
+        input:required:invalid {
+            background-color: lightyellow;
+        }
+    </style>
+    <script>
+        function validateComments(input) {
+            if (input.value.length < 20) {
+                input.setCustomValidity('You need to comment in more detail.');
+            } else {
+                input.setCustomValidity('');
+            }
+        }
+    </script>
+</head>
+<body>
+<!-- turning off validation using novalidate -->
+<form id="zooKeeperForm" action="processApplication.cgi" novalidate>
+
+
+</form>
+
+<form>
+    <label for="name">Name: </label>
+    <input type="text" name="name">
+
+    <input type="submit" value="Save for Later" formnovalidate>
+</form>
+
+<form>
+    <label for="name">Name <em>*</em></label>
+    <input id="name" placeholder="Jane Smith" autofocus required><br>
+
+    <label for="promoCode">Promotion Code</label>
+
+    <!-- using pattern attributes -->
+    <input id="promoCode" placeholder="QRB-001"
+           title="Your promotion code is three uppercase letters, a dash, then three numbers"
+           pattern="[A-Z]{3}-[0-9]{3}">
+    <input type="submit">
+</form>
+
+
+<form>
+    <label for="comments">Comment: </label>
+    <textarea name="comments" id="comments" onchange="validateComments(this)" required></textarea>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
