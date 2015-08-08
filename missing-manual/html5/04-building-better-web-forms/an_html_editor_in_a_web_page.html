@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function startEdit() {
+            var element = document.getElementById('edit');
+            element.contentEditable = true;
+        }
+        function stopEdit() {
+            var element = document.getElementById('edit');
+            element.contentEditable = false;
+            alert("Your edited content: " + element.innerHTML);
+        }
+
+
+        function startEdit() {
+            // Turn on design mode in the <iframe>.
+            var editor = document.getElementById("pageEditor");
+            editor.contentWindow.document.designMode = "on";
+        }
+        function stopEdit() {
+            // Turn off design mode in the <iframe>.
+            var editor = document.getElementById("pageEditor");
+            editor.contentWindow.document.designMode = "off";
+            // Display the edited HTML (just to prove it’s there).
+            var htmlDisplay = document.getElementById("editedHTML");
+            htmlDisplay.textContent = editor.contentWindow.document.body.innerHTML;
+        }
+    </script>
+</head>
+<body>
+<div id="editableElement" contenteditable="true">
+    You can edit this text, if you'd like.
+</div>
+<hr>
+<div>
+    <p id="edit">this is a test.</p>
+    <button id="start" onclick="startEdit()">start editing</button>
+    <button id="stop" onclick="stopEdit()">stop editing</button>
+</div>
+
+
+<h1>Editable Page</h1>
+<iframe id="pageEditor" src="#editPage"></iframe>
+<div>
+    <button onclick="startEdit()">Start Editing</button>
+    <button onclick="stopEdit()">Stop Editing</button>
+</div>
+<h1>Edited HTML</h1>
+
+<div id="editedHTML"></div>
+
+
+<div id="editPage">
+    this is a test for iframe.
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--<form>
+    <legend>What's Your Favorite Animal?</legend>
+    <label for="favoriteAnimal"></label>
+    <input id="favoriteAnimal" list="animalChoices">
+    <datalist id="animalChoices">
+        <option label="Alpaca" value="alpaca">
+        <option label="Zebra" value="zebra">
+        <option label="Cat" value="cat">
+        <option label="Caribou" value="caribou">
+        <option label="Caterpillar" value="caterpillar">
+        <option label="Anaconda" value="anaconda">
+        <option label="Human" value="human">
+        <option label="Elephant" value="elephant">
+        <option label="Wildebeest" value="wildebeest">
+        <option label="Pigeon" value="pigeon">
+        <option label="Crab" value="crab">
+    </datalist>
+</form>-->
+
+<legend>What's Your Favorite Animal?</legend>
+<datalist id="animalChoices">
+    <span class="Label">Pick an option:</span>
+    <select id="favoriteAnimalPreset">
+        <option label="Alpaca" value="alpaca">
+        <option label="Zebra" value="zebra">
+        <option label="Cat" value="cat">
+        <option label="Caribou" value="caribou">
+        <option label="Caterpillar" value="caterpillar">
+        <option label="Anaconda" value="anaconda">
+        <option label="Human" value="human">
+        <option label="Elephant" value="elephant">
+        <option label="Wildebeest" value="wildebeest">
+        <option label="Pigeon" value="pigeon">
+        <option label="Crab" value="crab">
+    </select>
+    <br>
+    <span class="Label">Or type it in:</span>
+</datalist>
+<input list="animalChoices" name="list">
+
+<progress value="0.25"></progress>
+<br>
+
+<progress>Task in progress ...</progress>
+<br>
+
+Your suitcase weighs:
+<meter min="5" max="70" value="28">28 pounds</meter>
+<br>
+
+<p>Our goal is to raise $50,000 for SLF (Save the Lemmings Foundation).</p>
+
+<p>So far we've raised $14,000.
+    <meter max="50000" value="14000"></meter>
+    <br>
+    Your suitcase weighs:
+    <meter min="5" max="100" high="70" value="79">79 pounds</meter>
+    *
+<p>
+    <small>* A surcharge applies to suitcases heavier than 70 pounds.
+    </small>
+</p>
+
+</body>
+</html>
