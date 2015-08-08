@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function validateForm() {
+            if (!Modernizr.input.required) {
+                // The required attribute is not supported, so you need to check the
+                // required fields yourself.
+                // First, get an array that holds all the elements.
+                var inputElements = document.getElementById("zooKeeperForm").elements;
+                // Next, move through that array, checking each element.
+                for (var i = 0; i < inputElements.length; i++) {
+                    // Check if this element is required.
+                    if (inputElements[i].hasAttribute("required")) {
+                        // If this element is required, check if it has a value.
+                        // If not, the form fails validation, and this function returns false.
+                        if (inputElements[i].value == "") return false;
+                    }
+                }
+                // If you reach this point, everything worked out and the browser
+                // can submit the form.
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+<form id="zooKeeperForm" action="processApplication.cgi"
+      onsubmit="return validateForm()">
+</form>
+</body>
+</html>
