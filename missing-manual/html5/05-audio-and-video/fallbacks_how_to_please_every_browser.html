@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<audio controls>
+    <source src="rubberduckies.mp3" type="audio/mp3">
+    <source src="rubberduckies.ogg" type="audio/ogg">
+</audio>
+
+<video controls width="700" height="400">
+    <source src="beach.mp4" type="video/mp4">
+    <source src="beach.webm" type="video/webm">
+</video>
+
+<video controls width="400" height="300">
+    <source src="discoParty.mp4" type="video/mp4">
+    <source src="discoParty.webm" type="video/webm">
+    <p>We like disco dancing.</p>
+</video>
+
+
+<video controls width="700" height="400">
+    <source src="beach.mp4" type="video/mp4">
+    <source src="beach.webm" type="video/webm">
+    <object id="flowplayer" width="700" height="400"
+            data="flowplayer-3.2.16.swf"
+            type="application/x-shockwave-flash">
+        <param name="movie" value="flowplayer-3.2.16.swf">
+        <param name="flashvars" value='config={"clip":"beach.mp4"}'>
+    </object>
+</video>
+
+
+<video controls width="700" height="400">
+    <source src="beach.mp4" type="video/mp4">
+    <source src="beach.webm" type="video/webm">
+    <object id="flowplayer" width="700" height="400"
+            data="http://releases.flowplayer.org/swf/flowplayer-3.2.16.swf"
+            type="application/x-shockwave-flash">
+        <param name="movie" value="beach.mp4">
+        <img src="beach_thumbnail.jpg" alt="A lazy day at the beach">
+
+        <p>Your browser does not support HTML5 video or Flash.</p>
+
+        <p>You can download the video in <a href="beach.mp4">MP4 H.264</a>
+            or <a href="beach.webm">WebM</a> format.</p>
+    </object>
+</video>
+
+
+<object id="flowplayer" width="700" height="400"
+        data="http://releases.flowplayer.org/swf/flowplayer-3.2.16.swf"
+        type="application/x-shockwave-flash">
+    <param name="movie" value="butterfly.mp4">
+    <video controls width="700" height="400">
+        <source src="beach.mp4" type="video/mp4">
+        <source src="beach.webm" type="video/webm">
+        <img src="beach_thumbnail.jpg" alt="A lazy day at the beach">
+
+        <p>Your browser does not support HTML5 video or Flash.</p>
+
+        <p>You can download the video in <a href="beach.mp4">MP4 H.264</a>
+            or <a href="beach.webm">WebM</a> format.</p>
+    </video>
+</object>
+
+
+</body>
+</html>
