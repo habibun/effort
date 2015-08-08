@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var audioElement = document.getElementById('backgroundMusic');
+        audioElement.play();
+
+
+        var audioElement = document.getElementById('backgroundMusic');
+        audioElement.pause();
+        audioElement.currentTime = 0;
+
+        //keep track of the number of <audio> elements
+        var audioElementCount = 3;
+
+        //keep track of the <audio> element that's next in line for playback.
+        var audioElementIndex = 1;
+
+        function boing() {
+            //Get the <audio> element that's next in the rotation.
+            var audioElementName = "audio" + audioElementIndex;
+            var audio = document.getElementById(audioElementName);
+
+            //play the sound effect
+            audio.currentTime = 0;
+            audio.play();
+
+            //Move the counter to the next <audio> element.
+            if (audioElementIndex == audioElementCount) {
+                audioElementIndex = 1;
+            } else {
+                audioElementIndex += 1;
+            }
+        }
+
+        function progressUpdate() {
+            // Resizing the blue positionBar, from 0 to 100%.
+            var positionBar = document.getElementById("positionBar");
+            positionBar.style.width = (video.currentTime / video.duration * 100) + "%";
+            // Display the number of seconds, using two decimal places.
+            displayStatus.innerHTML = (Math.round(video.currentTime * 100) / 100) + " sec";
+        }
+
+    </script>
+    <style>
+        #durationBar {
+            border: solid 1px black width : 100 %;
+            margin-bottom: 5px;
+        }
+
+        #positionBar {
+            height: 30px;
+            color: white;
+            font-weight: bold;
+            background: steelblue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<audio id="backgroundMusic" loop>
+    <source src="../living-examples/Chapter%2005/theowlnamedorion.mp3" type="audio/mp3">
+    <source src="../living-examples/Chapter%2005/TheOwlNamedOrion.ogg" type="audio/ogg">
+</audio>
+
+<audio id="audio1">
+    <source src="boing1.mp3" type="audio/mp3">
+    <source src="boing1.wav" type="audio/wav">
+</audio>
+<audio id="audio2">
+    <source src="boing2.mp3" type="audio/mp3">
+    <source src="boing2.wav" type="audio/wav">
+</audio>
+<audio id="audio3">
+    <source src="boing3.mp3" type="audio/mp3">
+    <source src="boing3.wav" type="audio/wav">
+</audio>
+
+<video id="videoPlayer" ontimeupdate="progressUpdate()">
+    <source src="butterfly.mp4" type="video/mp4">
+    <source src="butterfly.webm" type="video/webm">
+</video>
+
+</body>
+</html>
