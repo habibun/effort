@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .stylishBox {
+            background: yellow;
+            background-image: -moz-radial-gradient(circle, green, yellow);
+            background-image: -webkit-radial-gradient(circle, green, yellow);
+            background-image: -o-radial-gradient(circle, green, yellow);
+            background-image: -ms-radial-gradient(circle, green, yellow);
+        }
+
+        /* Settings for all headers, no matter what level of CSS3 support. */
+        header {
+            background-color: #7695FE;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        /* Settings for browsers that support border-radius. */
+        .borderradius header {
+            border: thin #336699 solid;
+            border-radius: 25px;
+        }
+
+        /* Settings for browsers that don't support border-radius. */
+        .no-borderradius header {
+            border: 5px #336699 double;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+</html>
