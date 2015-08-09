@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .semitransparentBox {
+            background: rgb(170, 240, 0);
+            background: rgba(170, 240, 0, 0.5);
+        }
+
+        .semitransparentBox {
+            background: rgb(170, 240, 0);
+            opacity: 0.5;
+        }
+
+        .roundedBox {
+            background: yellow;
+            border-top-left-radius: 150px 30px;
+            border-top-right-radius: 150px 30px;
+        }
+
+        .decoratedBox {
+            margin: 50px;
+            padding: 20px;
+            background-image: url('left.png'), url('middle.png'), url('right.png');
+            background-position: left top, left top, right bottom;
+            background-repeat: no-repeat, repeat-x, no-repeat;
+        }
+
+        .textShadow {
+            font-size: 30px;
+            font-weight: bold;
+            text-shadow: gray 10px 10px 7px;
+        }
+
+        .colorBlendBox {
+            background: lightblue;
+            background: -webkit-linear-gradient(top left, white, lightblue);
+            background: linear-gradient(from top left, white, lightblue);
+        }
+
+        .radial-gradient {
+            background: radial-gradient(circle at 90% 5%, white, lightblue);
+            background: repeating-radial-gradient(circle, yellow, green);
+        }
+    </style>
+</head>
+<body>
+
+</body>
+</html>

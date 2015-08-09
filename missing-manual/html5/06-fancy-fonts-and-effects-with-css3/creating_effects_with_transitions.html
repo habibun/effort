@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .slickButton {
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            border: solid 1px black;
+            background: lightgreen;
+            cursor: pointer;
+        }
+
+        .slickButton:hover {
+            color: black;
+            background: yellow;
+        }
+
+        img {
+            position: absolute;
+            -webkit-transition: opacity 10s;
+            transition: opacity 10s;
+        }
+
+        .rotatedElement {
+            -ms-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .gallery img {
+            margin: 5px;
+            padding: 5px;
+            width: 75px;
+            border: solid 1px black;
+            -ms-transition: all 1s;
+            -webkit-transition: all 1s;
+            transition: all 1s;
+            background: white;
+        }
+
+        .gallery img:hover {
+            -ms-transform: scale(2.2) rotate(10deg);
+            -webkit-transform: scale(2.2) rotate(10deg);
+            transform: scale(2.2) rotate(10deg);
+        }
+    </style>
+    <script>
+        function toNight() {
+            var nightImage = document.getElementById("nightImage");
+            nightImage.className = "solid";
+        }
+        function toDay() {
+            var nightImage = document.getElementById("nightImage");
+            nightImage.className = "transparent";
+        }
+    </script>
+</head>
+<body>
+
+<div>
+    <img src="day.png" alt="Daytime view">
+    <img id="nightImage" src="night.png" alt="Night-time view" class="transparent">
+</div>
+<button onclick="toNight()">Go to Night</button>
+<button onclick="toDay()">Go to Day</button>
+
+
+</body>
+</html>
