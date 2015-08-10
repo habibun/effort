@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" media="(max-width: 568px)" href="small_styles.css">
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="standard.css">
+    <![endif]-->
+    <link rel="stylesheet" media="print and (min-width: 25cm)" href="NormalPrintStyles.css">
+    <link rel="stylesheet" media="print and (not min-width: 25cm)" href="NarrowPrintStyles.css">
+
+    <link rel="stylesheet" media="(max-device-width: 568px)" href="mobile_styles.css">
+    <style>
+        @media (max-width: 480px) {
+            .leftColumn {
+                background: lime;
+            }
+        }
+
+        @media (min-width: 400px) and (max-width: 700px) {
+            /* These styles apply to windows from 400 to 700 pixels wide. */
+        }
+    </style>
+</head>
+<body>
+<video controls width="400" height="300">
+    <source src="butterfly_mobile.mp4"
+            type="video/mp4"
+            media="(max-device-width: 480px)">
+    <source src="butterfly.mp4"
+            type="video/mp4">
+    <source src="butterfly.ogv"
+            type="video/ogg">
+</video>
+</body>
+</html>
