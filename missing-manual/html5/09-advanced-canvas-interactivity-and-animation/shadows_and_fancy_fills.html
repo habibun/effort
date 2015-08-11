@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        // Create a gradient from point (10,0) to (100,0).
+        var gradient = context.createLinearGradient(10, 0, 100, 0);
+        // Add two colors.
+        gradient.addColorStop(0, "magenta");
+        gradient.addColorStop(1, "yellow");
+        // Call another function to draw the shape.
+        drawHeart(60, 50);
+        // Paint the shape.
+        context.fillStyle = gradient;
+        context.fill();
+        context.stroke();
+
+
+        //radial gradient
+        var gradient = context.createRadialGradient(180, 250, 10, 180, 250, 50);
+        gradient.addColorStop("0", "magenta");
+        gradient.addColorStop(".25", "blue");
+        gradient.addColorStop(".50", "green");
+        gradient.addColorStop(".75", "yellow");
+        gradient.addColorStop("1.0", "red");
+        drawHeart(180, 230);
+        context.fillStyle = gradient;
+        context.fill();
+        context.stroke();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
