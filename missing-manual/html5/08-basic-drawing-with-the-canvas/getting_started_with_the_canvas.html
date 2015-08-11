@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        canvas {
+            border: 1px dashed black;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            /*            var canvas = document.getElementById("drawingCanvas");
+             var context = canvas.getContext("2d");
+             // Set the line width and color (for all the lines).
+             context.lineWidth = 20;
+             context.strokeStyle = "rgb(205,40,40)";
+
+             // Draw the first line, with the standard butt ending.
+             context.moveTo(10,50);
+             context.lineTo(400,50);
+             context.lineCap = "butt";
+             context.stroke();
+
+             // Draw the second line, with a round cap.
+             context.beginPath();
+             context.moveTo(10,120);
+             context.lineTo(400,120);
+             context.lineCap = "round";
+             context.stroke();
+
+             // Draw the third line, with a square cap.
+             context.beginPath();
+             context.moveTo(10,190);
+             context.lineTo(400,190);
+             context.lineCap = "square";
+             context.stroke();*/
+
+//            Here’s the complete triangle-drawing code:
+            var canvas = document.getElementById("drawingCanvas");
+            var context = canvas.getContext("2d");
+            context.moveTo(250, 50);
+            context.lineTo(50, 250);
+            context.lineTo(450, 250);
+            context.closePath();
+            // Paint the inside.
+            context.fillStyle = "blue";
+            context.fill();
+            // Draw the outline.
+            context.lineWidth = 10;
+            context.strokeStyle = "red";
+            context.stroke();
+        }
+    </script>
+</head>
+<body>
+<canvas id="drawingCanvas" width="500" height="300"></canvas>
+</body>
+</html>

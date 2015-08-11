@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var canvas;
+        var context;
+
+        window.onload = function () {
+            //get the canvas and drawing context.
+            canvas = document.getElementById('drawingCanvas');
+            context.canvas.getContext('2d');
+
+            //attach the event that you need for drawing.
+            canvas.onmousedown = startDrawing;
+            canvas.onmouseup = stopDragging;
+            canvas.onmouseout = stopDragging;
+            canvas.onmousemove = draw;
+        };
+    </script>
+</head>
+<body>
+
+</body>
+</html>
