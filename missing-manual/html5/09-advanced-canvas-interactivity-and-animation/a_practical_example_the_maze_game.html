@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function processKey(e) {
+            // If the face is moving, stop it.
+            dx = 0;
+            dy = 0;
+            // The up arrow was pressed, so move up.
+            if (e.keyCode == 38) {
+                dy = -1;
+            }
+            // The down arrow was pressed, so move down.
+            if (e.keyCode == 40) {
+                dy = 1;
+            }
+            // The left arrow was pressed, so move left.
+            if (e.keyCode == 37) {
+                dx = -1;
+            }
+            // The right arrow was pressed, so move right.
+            if (e.keyCode == 39) {
+                dx = 1;
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
