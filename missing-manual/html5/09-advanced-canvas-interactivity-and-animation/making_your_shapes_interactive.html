@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function canvasClick(e) {
+            // Get the canvas click coordinates.
+            var clickX = e.pageX - canvas.offsetLeft;
+            var clickY = e.pageY - canvas.offsetTop;
+            // Look for the clicked circle.
+            for (var i = circles.length; i > 0; i--) {
+                // Use Pythagorean theorem to find the distance from this point
+                // and the center of the circle.
+                var distanceFromCenter =
+                        Math.sqrt(Math.pow(circle.x - clickX, 2) + Math.pow(circle.y - clickY, 2))
+                // Does this point lie in the circle?
+                if (distanceFromCenter <= circle.radius) {
+                    // Clear the previous selection.
+                    if (previousSelectedCircle != null) {
+                        previousSelectedCircle.isSelected = false;
+                    }
+                    previousSelectedCircle = circle;
+                    // Select the new circle.
+                    circle.isSelected = true;
+                    // Update the display.
+                    drawCircles();
+                    // Stop searching.
+                    return;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
