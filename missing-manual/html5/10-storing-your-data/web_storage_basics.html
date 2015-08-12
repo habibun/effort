@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        //Local Storage
+
+        //To store a piece of data, you use the localStorage.setItem()  method
+        localStorage.setItem('keyName', data);
+
+        localStorage.setItem('user_name', 'jony');
+
+
+        //store a form data
+        var nameInput = document.getElementById('userName');
+
+        localStorage.setItem('user_name', nameInput.value);
+
+        alert("You stored: " + localStorage.getItem("user_name"));
+
+        //to check value is not null
+        if (localStorage.getItem('user_name') == null) {
+            alert('You haven\'t entered a name yet.');
+        } else {
+            //put the name into a text box.
+            document.getElementById('userName').value = localStorage.getItem('user_name');
+        }
+
+        //Session Storage
+
+        //get the current date
+        var today = new Date();
+
+        //store the time as a piece of the text in the form
+        var time = today.getHours() + ":" + today.getMinutes();
+        sessionStorage.setItem("LastUpdatedTime", time);
+    </script>
+</head>
+<body>
+<form>
+    <label for="userName">Username: </label>
+    <input type="text" name="user_name" id="userName">
+    <input type="submit" name="submit">
+</form>
+</body>
+</html>
