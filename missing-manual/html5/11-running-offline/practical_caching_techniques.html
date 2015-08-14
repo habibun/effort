@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        //inform visitor of the change
+        window.onload = function(){
+            //attach the function that handles the onUpdateReady event.
+            applicationCache.onupdateready = function(){
+                var displayStatus = document.getElementById('displayStatus');
+                displayStatus.innerHTML =  "There is a new version of this application. " + "To load it, refresh the page.";
+
+            }
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
