@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        //removing item
+        localStorage.removeItem('user_name');
+
+        // if you want to empty out all the local data
+        sessionStorage.clear();
+
+        // scan through the collection of items
+        function findAllItems() {
+            //get the ul elements from the list of item
+            var itemList = document.getElementById('itemList');
+
+            //clear the list
+            itemList.innerHTML = '';
+
+            //do a loop over all the items.a
+            for (var i = 0; i < localStorage.length; i++) {
+
+                //get the key for the item current position
+                var key = localStorage.key(i);
+
+                //get the item that stored with this key
+                var item = localStorage.getItem(key);
+
+                //create a new item with this information
+                //and add it to the page.
+                var newItem = document.createElement('li');
+                newItem.innerHTML = key + ": " + item;
+                itemList.appendChild(newItem);
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
