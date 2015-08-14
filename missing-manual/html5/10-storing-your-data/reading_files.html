@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #fileInput {
+            display: none;
+        }
+
+        #dropBox {
+            margin: 15px;
+            width: 300px;
+            height: 300px;
+            border: 5px dashed gray;
+            border-radius: 8px;
+            background: lightyellow;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            text-align: center;
+        }
+
+        #dropBox div {
+            margin: 100px 70px;
+            color: orange;
+            font-size: 25px;
+            font-family: Verdana, Arial, sans-serif;
+        }
+    </style>
+    <script>
+        function showFileInput() {
+            var fileInput = document.getElementById('fileInput');
+            fileInput.click();
+        }
+
+        //drag and drop
+        var dropBox;
+
+        window.onload = function () {
+            dropBox = document.getElementById('dropBox');
+            dropBox.ondragenter = ignoreDrag;
+            dropBox.ondragover = ignoreDrag;
+            dropBox.ondrop = drop;
+        };
+
+        function ignoreDrag(e) {
+            //Make sure nobody else gets this event, because you are handling the drag and drop
+            e.stopPropagation();
+            e.preventDefault();
+        }
+
+        function drop(e) {
+            //Cancel this event for everyone else.
+            e.stopPropagation();
+            e.preventDefault();
+
+            //Get the dragged-in files.
+            var data = e.dataTransfer;
+            var files = data.files;
+
+            //Pass them to the file processing function.
+            processFiles(files);
+        }
+
+        function processFiles(files) {
+            var file = files[0];
+
+            //create the file reader
+            var reader = new FileReader();
+
+            //tell it what to do when data url is ready
+            reader.onload = function (e) {
+                //use image url to paint drop box background
+                dropBox.style.backgroundImage = "url ('" + e.target.result + "')";
+            };
+
+            //start reading the page
+            reader.readAsDataURL(file);
+        }
+    </script>
+</head>
+<body>
+
+<form>
+    <input name="fileInput" type="file" id="fileInput">
+    <button onclick="showFileInput()">Analyze a File</button>
+</form>
+
+<div id="dropBox">
+    <div>Drop your image here...</div>
+</div>
+
+</body>
+</html>
