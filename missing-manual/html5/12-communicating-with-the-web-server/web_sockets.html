@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var socket;
+        window.onload = function () {
+            connect();
+        };
+        function connect() {
+            socket = new WebSocket("ws://echo.websocket.org");
+
+            //Listen to all the web socket event.
+            socket.onopen = connectionOpen;
+            socket.onmessage = messageReceived;
+            socket.onerror = errorOccured;
+            socket.onopen = connectionClosed;
+
+            socket.close();
+        }
+
+        function sendMessage() {
+            // Get the message data.
+            var message = messageBox.value;
+
+            //Send the message through the socket.
+            socket.send(message);
+
+            // Let the user know what just happened.
+            messageLog.innerHTML += "<br>" + "Sent: " + message;
+        }
+
+        function messageReceived(e) {
+            messageLog.innerHTML += "<br>" + "Message received: " + e.data;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
