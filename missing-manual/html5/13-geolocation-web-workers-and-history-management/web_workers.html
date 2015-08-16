@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="/effort/usedFiles/findPrimes.js"></script>
+    <style>
+        #primeContainer {
+            border: solid 1px black;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            padding: 3px;
+            height: 300px;
+            max-width: 500px;
+            overflow: scroll;
+            overflow-x: hidden;
+            font-size: x-small;
+        }
+    </style>
+    <script>
+        function doSearch() {
+            // Get the number for the search range.
+            var fromNumber = document.getElementById('from').value;
+            var toNumber = document.getElementById('to').value;
+
+            // Perform the prime search. (This is the time-consuming step.)
+            var primes = findPrimes(fromNumber, toNumber);
+
+            // Loop over the array of prime numbers, and paste them together into
+            // one long piece of text.
+            var primeList = "";
+            for (var i = 0; i < primes.length; i++) {
+                primeList += primes[i];
+                if (i != primes.length - 1) primeList += ",";
+            }
+
+            //Insert the prime number text into the page.
+            var displayList = document.getElementById('primeContainer');
+            displayList.innerHTML = primeList;
+
+            // Update the status text to tell the user what just happened.
+            var statusDisplay = document.getElementById("status");
+            if (primeList.length == 0) {
+                statusDisplay.innerHTML = "Search failed to find any results.";
+            }
+            else {
+                statusDisplay.innerHTML = "The results are here!";
+            }
+        }
+    </script>
+</head>
+<body>
+<p>Do a prime number search from <input id="from" value="1"> to
+    <input id="to" value="20000">.</p>
+<button id="searchButton" onclick="doSearch()">Start Searching</button>
+<div id="primeContainer">
+</div>
+<div id="status"></div>
+</body>
+</html>
