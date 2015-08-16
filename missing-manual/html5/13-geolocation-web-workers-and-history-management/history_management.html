@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        alert("You have " + history.length +
+                " pages in your browser's history list.");
+        history.back();
+
+        history.pushState(null, null, "ChinaSites4.html");
+
+        function nextSlide() {
+            if (slideNumber == 5) {
+                slideNumber = 1;
+            } else {
+                slideNumber += 1;
+            }
+            history.pushState(slideNumber, null, "ChinaSites" + slideNumber + ".html");
+            goToNewSlide();
+            return false;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
