@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        // This function runs when the onClick event happens.
+        function swapImage() {
+            var imgObject = document.getElementById("dayImage");
+            // Flip from day to night or night to day, and update the picture to match.
+            if (dayTime === true) {
+                dayTime = false;
+                imgObject.src = "cloudy.jpg";
+            }
+            else {
+                dayTime = true;
+                imgObject.src = "sunny.jpg";
+            }
+        }
+
+        /* inline function */
+        var imgObject = document.getElementById("dayImage");
+        imgObject.onclick = function () {
+            // The code that went in the swapImage() function
+            // now goes here.
+            if (dayTime === true) {
+                dayTime = false;
+                imgObject.src = "cloudy.jpg";
+            }
+            else {
+                dayTime = true;
+                imgObject.src = "sunny.jpg";
+            }
+        };
+
+        /* another inline function */
+        window.onload = function () {
+            alert("The page has just finished loading.);
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
