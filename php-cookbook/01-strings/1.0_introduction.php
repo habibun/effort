@@ -59,3 +59,15 @@ print $js;
 $neighbor = 'Hilda';
 print $neighbor[3];
 
+//Example 1-5. Concatenation with a here document
+$divClass = 'class1';
+$ulClass = 'class2';
+$listItem = 'The List Item';
+
+$html = <<< END
+<div class="$divClass">
+<ul class="$ulClass">
+<li>
+END
+    . $listItem . '</li></div>';
+print $html;
