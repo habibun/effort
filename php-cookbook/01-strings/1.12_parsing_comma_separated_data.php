@@ -18,4 +18,5 @@ while($csv_line = fgetcsv($fp)){
     print '</tr>';
 }
 print "</table>\n";
+
 fclose($fp) or die("can't close file");
