@@ -10,3 +10,5 @@ function draw($n)
 {
 
 }
+
+draw(3);
