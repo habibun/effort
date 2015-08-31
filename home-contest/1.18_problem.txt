@@ -1,0 +1,6 @@
+Combining the header() function to change the content type of what your PHP pro‐
+gram outputs with the fputcsv() function for data formatting lets you send CSV files
+to browsers that will be automatically handed off to a spreadsheet program (or whatever
+application is configured on a particular client system to handle CSV files).
+Example 1-38 formats the results of an SQL SELECT query as CSV data and provides the
+correct headers so that it is properly handled by the browser.
