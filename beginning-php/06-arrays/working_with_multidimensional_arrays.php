@@ -32,4 +32,31 @@ $myBooks = array(
     ),
 );
 
-print_r($myBooks);
+//print_r($myBooks);
+
+/**
+ * Accessing Elements of Multidimensional array
+ */
+//print_r($myBooks[1]);
+
+//display the trials
+//echo "<br/>" .$myBooks[1]["title"]."<br>";
+
+//displays "1859"
+//echo "<br/>" .$myBooks[3]["pubYear"]."<br>";
+
+/**
+ * Looping through Multidimensional arrays
+ */
+
+$bookNum = 0;
+foreach ($myBooks as $book) {
+    $bookNum++;
+//    echo "<h2>Book #$bookNum:</h2>";
+    echo "<dl>";
+    foreach ($book as $key => $value) {
+//    echo "<dt>$key</dt><dd>$value</dd>";
+    }
+    echo "</dl>";
+}
+
