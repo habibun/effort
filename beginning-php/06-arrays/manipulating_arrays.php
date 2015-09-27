@@ -142,7 +142,6 @@ $moreAuthors = array( "Tolkien", "Milton" );
 //$merge = array_merge($authors, $moreAuthors);
 //print_r($merge);
 
-
 /*
  *A nice feature of array_merge() is that it preserves the keys of associative arrays, so you can use it to
 add new key/value pairs to an associative array:
@@ -208,9 +207,20 @@ $fruitArray = explode(',',$fruitString,-3);
 $fruitArray = array( "apple", "pear", "banana", "strawberry", "peach" );
 $fruitString = implode( ",", $fruitArray );
 // Displays "apple,pear,banana,strawberry,peach"
-echo $fruitString;
+//echo $fruitString;
 
 /**
  * Converting an Array to a List of Variables
  */
+$myBook = array( "The Grapes of Wrath", "John Steinbeck", 1939 );
+list($title, $author, $pubYear) = $myBook;
+//echo $title;
+//echo $author;
+//echo $pubYear;
+
+$myBook = array( "title" => "The Grapes of Wrath", "author" => "John Steinbeck", "pubYear" => 1939 );
+while( list($key, $value ) = each($myBook)){
+    echo "<dt>$key</dt>";
+    echo "<dt>$value</dt>";
+}
 
