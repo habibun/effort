@@ -120,13 +120,13 @@ hello2();*/
 
 //take a look at the following script
 function setup(){
-    global $myGlobal;
-    $myGlobal = "Hello there!";
+//    global $myGlobal;
+//    $myGlobal = "Hello there!";
 }
 
 function hello3(){
     global $myGlobal;
-    echo "$myGlobal <br />";
+//    echo "$myGlobal <br />";
 }
 
 setup();
@@ -136,3 +136,50 @@ hello3();
 function myFunction() {
     global $oneGlobal, $anotherGlobal;
 }
+
+
+/*
+ *  you can also access global variables using the $GLOBALS array. This array is a special type of
+variable called a superglobal, which means you can access it from anywhere without using the global
+statement
+ */
+$myGlobal = "Hello there!";
+
+function hello4(){
+//    echo  $GLOBALS['myGlobal'];
+}
+
+hello4();
+
+/**
+ * Using Static Variables to Preserve Values
+ */
+//declare a local variable as static
+static $var = 0;
+
+//So when might you use static variables? Here’s a situation where a local variable isn’t much use:
+function nextNumber(){
+    $counter = 0;
+    return ++$counter;
+}
+
+//echo nextNumber();
+//echo nextNumber();
+//echo nextNumber();
+
+//However, by making a small change to turn $counter into a static variable, the script produces the expected output:
+
+function nextNumberWithStatic(){
+    static $counter = 0;
+    return ++$counter;
+}
+
+echo nextNumberWithStatic();
+echo nextNumberWithStatic();
+echo nextNumberWithStatic();
+
+/**
+ * Creating Anonymous Functions
+ */
+
+
