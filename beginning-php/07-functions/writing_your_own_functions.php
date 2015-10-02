@@ -98,7 +98,7 @@ function describeMyDog(){
     echo "My dog is $color<br/>";
 }
 
-// Define my cat’s color
+// Define my cat's color
 $color = "black";
 
 
@@ -157,7 +157,7 @@ hello4();
 //declare a local variable as static
 static $var = 0;
 
-//So when might you use static variables? Here’s a situation where a local variable isn’t much use:
+//So when might you use static variables? Here's a situation where a local variable isn't much use:
 function nextNumber(){
     $counter = 0;
     return ++$counter;
@@ -174,12 +174,56 @@ function nextNumberWithStatic(){
     return ++$counter;
 }
 
-echo nextNumberWithStatic();
-echo nextNumberWithStatic();
-echo nextNumberWithStatic();
+//echo nextNumberWithStatic();
+//echo nextNumberWithStatic();
+//echo nextNumberWithStatic();
 
 /**
  * Creating Anonymous Functions
  */
+//Here's a trivial example that creates an anonymous function dynamically based on the value of a variable:
+$mode = "+";
+
+$processNumbers = create_function('$a, $b', "return \$a $mode \$b;");
+
+//echo $processNumbers(2,3);
 
 
+/*
+ * Sorting words by length
+ */
+$myText = <<<END_TEXT
+But think not that this famous town has
+only harpooneers, cannibals, and
+bumpkins to show her visitors. Not at
+all. Still New Bedford is a queer place.
+Had it not been for us whalemen, that
+tract of land would this day perhaps
+have been in as howling condition as the
+coast of Labrador.
+END_TEXT;
+
+echo "<h2>The text:</h2>";
+echo "<div style=\"width: 30em;\">$myText</div>";
+
+$myText = preg_replace( "/[\,\.]/", "", $myText );
+$words = array_unique( preg_split( "/[ \n\r\t]+/", $myText ) );
+usort( $words, create_function( '$a, $b', 'return strlen($a) - strlen($b);' ) );
+
+echo "<h2>The sorted words:</h2>";
+echo "<div style=\"width: 30em;\">";
+
+foreach ( $words as $word ) {
+    echo "$word ";
+}
+
+echo "</div>";
+
+/*
+ * By the way, you don’t have to use an anonymous function in this situation. The preceding line of code
+could be written as:
+ */
+function sortByLength( $a, $b ) {
+    return strlen( $a ) - strlen( $b );
+}
+usort( $words, "sortByLength" );
