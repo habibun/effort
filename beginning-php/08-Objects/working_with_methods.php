@@ -66,3 +66,48 @@ class MyClassMet{
 
 $obje = new MyClassMet();
 $obje->hello();
+
+//car simulator
+
+class Car5{
+    public $color;
+    public $manufacturer;
+    public $model;
+    private $_speed = 0;
+
+    public function accelerate()
+    {
+        if($this->_speed >= 100) return false;
+        $this->_speed +=10;
+        return true;
+    }
+
+    public function brake()
+    {
+        if($this->_speed <= 0) return false;
+        $this->_speed -=10;
+        return true;
+    }
+
+    public function getSpeed()
+    {
+        return $this->_speed;
+    }
+}
+
+$siCar = new Car5();
+
+echo "starting my car..............";
+
+while($siCar->accelerate())
+{
+    echo "current speed {$siCar->getSpeed()}\n";
+}
+
+echo "top speed! slowing down";
+
+while($siCar->brake())
+{
+    echo "current speed {$siCar->getSpeed()}\n";
+}
+
