@@ -206,3 +206,137 @@ class ChildClass3 extends ParentClass2{
 /**
  * Using Abstract Classes and Methods
  */
+class ShapeInfo2{
+
+    private $_shape;
+
+    public function setShape($shape)
+    {
+        $this->_shape = $shape;
+    }
+
+    public function showInfo()
+    {
+        echo "The shape color is ". $this->_shape->getColor();
+        echo ", and it's area is ". $this->_shape->getArea().".</p>";
+    }
+}
+
+//Here’s how you might use ShapeInfo to display the color and size of a square:
+$squareObj2 = new Square2();
+$squareObj2->setColor('green');
+$squareObj2->makeHollow();
+$squareObj2->setSideLength(3);
+
+
+$infoObj = new ShapeInfo2();
+$infoObj->setShape($squareObj2);
+//$infoObj->showInfo();
+
+class Rectangle2 extends Shape2 {
+
+    private $_width = 0;
+    private $_height = 0;
+
+    public function getWidth()
+    {
+        return $this->_width;
+    }
+
+    public function setWidth($width)
+    {
+        $this->_width = $width;
+    }
+
+    public function getHeight()
+    {
+        return $this->_height;
+    }
+
+    public function setHeight($height)
+    {
+        $this->_height = $height;
+    }
+}
+
+$rectangle2Obj = new Rectangle2();
+$rectangle2Obj->setColor('yellow');
+$rectangle2Obj->fill();
+$rectangle2Obj->setWidth(4);
+$rectangle2Obj->setHeight(5);
+
+$info = new ShapeInfo2();
+$info->setShape($rectangle2Obj);
+//$info->showInfo();
+
+abstract class shape6{
+
+    private $_color = "black";
+    private $_filled = false;
+
+    public function getColor()
+    {
+        return $this->_color;
+    }
+
+    public function setColor($color)
+    {
+        $this->_color = $color;
+    }
+
+    public function isFilled()
+    {
+        return $this->_filled;
+    }
+
+    public function fill()
+    {
+        $this->_filled = true;
+    }
+
+    public function makeHollow()
+    {
+        $this->_filled = false;
+    }
+
+    abstract public function getArea();
+}
+
+class Rectangle6 extends Shape6 {
+
+    private $_width = 0;
+    private $_height = 0;
+
+    public function getWidth()
+    {
+        return $this->_width;
+    }
+
+    public function setWidth($width)
+    {
+        $this->_width = $width;
+    }
+
+    public function getHeight()
+    {
+        return $this->_height;
+    }
+    public function setHeight($height)
+    {
+        $this->_height = $height;
+    }
+    public function getArea()
+    {
+        return $this->_width * $this->_height;
+    }
+}
+
+$rectangle6Obj = new Rectangle6();
+$rectangle6Obj->setColor('yellow');
+$rectangle6Obj->fill();
+$rectangle6Obj->setWidth(4);
+$rectangle6Obj->setHeight(5);
+
+$info2 = new ShapeInfo2();
+$info2->setShape($rectangle6Obj);
+$info2->showInfo();
