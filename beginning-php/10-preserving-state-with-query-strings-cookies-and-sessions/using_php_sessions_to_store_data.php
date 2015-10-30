@@ -106,8 +106,12 @@ function addItem()
     if (isset($_GET["productId"]) and $_GET["productId"] >= 1 and $_GET["productId"] <= 3){
         $productId = (int) $_GET["productId"];
 
-
+        if(!isset($_SESSION["cart"][$productId])){
+            $_SESSION["cart"][$productId] = $products[$productId];
+        }
     }
+    session_write_close();
+    header("Location: using_php_sessions_to_store_data.php");
 }
 
 
