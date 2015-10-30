@@ -49,3 +49,69 @@ if(isset($_SESSION['user'])){
     $_SESSION['user'] = $user;
 }
 ?>
+<?php
+/**
+ *  Create a Simple Shopping Cart
+ */
+
+session_start();
+
+class Product2{
+    private $productId;
+    private $productName;
+    private $price;
+
+    public function __construct($productId, $productName, $price)
+    {
+        $this->productId = $productId;
+        $this->productName = $productName;
+        $this->price = $price;
+    }
+
+    public function getId()
+    {
+        return $this->productId;
+    }
+
+    public function getProductName()
+    {
+        return $this->productName;
+    }
+
+    public function getPrice()
+    {
+        return $this->price;
+    }
+}
+
+$products = array(
+    1 => new Product2(1,"SuperWidget",19.99),
+    2 => new Product2(2,"MegaWidget", 29.99),
+    3 => new Product2(3,"WonderWidget", 39.99)
+);
+
+if(!isset($_SESSION["cart"])) $_SESSION["cart"] = array();
+
+if(isset($_GET["action"]) and $_GET["action"] == "addItem"){
+    addItem();
+}elseif(isset($_GET["action"]) and $_GET["action"] == "removeItem"){
+    removeItem();
+}else{
+    displayCart();
+}
+
+function addItem()
+{
+    global $products;
+    if (isset($_GET["productId"]) and $_GET["productId"] >= 1 and $_GET["productId"] <= 3){
+        $productId = (int) $_GET["productId"];
+
+        if(!isset($_SESSION["cart"][$productId])){
+            $_SESSION["cart"][$productId] = $products[$productId];
+        }
+    }
+    session_write_close();
+    header("Location: using_php_sessions_to_store_data.php");
+}
+
+
