@@ -1,0 +1,27 @@
+git component:
+
+commit = to record a work
+
+push = upload work to server
+
+pull = download this wok
+
+status = check status
+
+add = add work to workflow
+
+diff = show change
+
+log = show log
+
+show =
+
+reset =
+
+branch =
+
+checkout =
+
+merge =
+
+stash = 
