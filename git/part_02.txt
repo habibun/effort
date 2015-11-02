@@ -1,9 +1,23 @@
+git inti:
 git init = initialize a project
-git add = to add a new file
+
+git status:
 git status = to show current status
 
+git add:
 git add fileName = to add a specific file
+git add = to add a new file
 
-git commit -m "your message" = to commit
-
+git diff:
 git diff = to show modified content
+
+git commit:
+git commit -m "your message" = to commit added file
+git commit -am "your message" to commit all modified
+git commit -m "your message" filename = to commit a specific content
+
+git log:
+git log = see all commit log
+
+git show:
+git show commitId or hash = see specific commit change
