@@ -1,0 +1,9 @@
+git init = initialize a project
+git add = to add a new file
+git status = to show current status
+
+git add fileName = to add a specific file
+
+git commit -m "your message" = to commit
+
+git diff = to show modified content
