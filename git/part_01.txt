@@ -24,4 +24,4 @@ checkout =
 
 merge =
 
-stash = 
+stash =
