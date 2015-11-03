@@ -1,0 +1,13 @@
+git checkout:
+git checkout commit# = go to specific commit
+git checkout master = back to head
+git checkout master -f = if specific file checkout and back to head
+
+
+git log:
+git log fileName = to see specific file log
+
+
+git reset:
+git reset --soft commit# = reset to specific commit show changes also
+git reset --hard commit# = reset to specific commit don't show change
