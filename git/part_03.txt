@@ -11,3 +11,12 @@ git log fileName = to see specific file log
 git reset:
 git reset --soft commit# = reset to specific commit show changes also
 git reset --hard commit# = reset to specific commit don't show change
+git reset HEAD{8} = go back to head after git reset hard
+
+git reflog:
+git reflog = to show all log
+
+
+git amend:
+git add specific file and then "git commit --amend" = to add new file in last commit
+
