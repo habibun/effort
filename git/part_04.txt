@@ -1,0 +1,2 @@
+git stash:
+git stash list = to show list of stash
