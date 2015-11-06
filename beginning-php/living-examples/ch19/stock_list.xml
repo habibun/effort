@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE stockList SYSTEM "http://www.example.com/dtds/stockList.dtd">
+<stockList>
+   <item type="fruit">
+      <name>apple</name>
+      <unitPrice>0.99</unitPrice>
+      <quantity>412</quantity>
+      <description><![CDATA[Apples are >>>yummy<<<]]></description>
+   </item>
+   <item type="vegetable">
+      <name>beetroot</name>
+      <unitPrice>1.39</unitPrice>
+      <quantity>67</quantity>
+      <description><![CDATA[Beetroots are lovely & purple]]></description>
+   </item>
+</stockList>
+

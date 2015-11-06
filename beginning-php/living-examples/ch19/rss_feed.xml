@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>Kitty News</title>
+    <link>http://kitty-news.example.com/</link>
+    <description>Everything you wanted to know about my cat Lucky.</description>
+    <pubDate>Tue, 05 Aug 2008 09:00:00 GMT</pubDate>
+    <lastBuildDate>Tue, 05 Aug 2008 13:12:18 GMT</lastBuildDate>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    <item-matt>
+      <title>Another Mouse!</title>
+      <link>http://kitty-news.example.com/another-mouse/</link>
+      <description><![CDATA[Lucky caught another mouse today! She is quite the mouser.]]></description>
+      <pubDate>Mon, 04 Aug 2008 14:32:11 GMT</pubDate>
+    </item-matt>
+    <item-matt>
+      <title>A Hard Day in the Armchair</title>
+      <link>http://kitty-news.example.com/a-hard-day-in-the-armchair/</link>
+      <description><![CDATA[After yesterday's frenzy of activity, Lucky took it easy today and spent the whole day in the armchair.]]></description>
+      <pubDate>Sun, 03 Aug 2008 17:59:42 GMT</pubDate>
+    </item-matt>
+     <item-matt>
+      <title>A Mouse for Breakfast</title>
+      <link>http://kitty-news.example.com/a-mouse-for-breakfast/</link>
+      <description><![CDATA[Clever Lucky caught a big juicy mouse for breakfast this morning. She looks very contented right now.]]></description>
+      <pubDate>Sat, 02 Aug 2008 11:01:08 GMT</pubDate>
+    </item-matt>
+   </channel>
+</rss>
+
