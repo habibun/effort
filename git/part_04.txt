@@ -1,3 +1,12 @@
 git stash:
 git stash = to stash file
 git stash list = to show list of stash
+git stash pop = back to stash file
+git stash apply = back to stash file
+git stash pop stash@{1} = go to specific stash
+git stash clear = to remove all stash
+
+
+git clean:
+git clean -f = remove all untracked file
+git clean -f -n = remove all untracked file with confirmation
