@@ -97,11 +97,79 @@ while ( !feof( $handle ) ) {
     $text .= fread( $handle, 3 );
     // Read 3 chars at a time
 }
-echo $text . "<br />";
+//echo $text . "<br />";
  // Displays "Hello, world!"
 fclose( $handle );
 
 /**
  * Reading One Line at a Time
  */
+$handle = fopen($_SERVER["DOCUMENT_ROOT"]."/common-files/milton.txt","r");
+$lineNumber = 1;
+while($line = fgets($handle)){
+//    echo $lineNumber++ . ": $line<br/>";
+}
+fclose($handle);
 
+/**
+ * Reading CSV Files
+ */
+ $handle = fopen($_SERVER["DOCUMENT_ROOT"]."/common-files/people.csv","r");
+while($record = fgetcsv($handle, 1000)){
+//    echo "Name: {$record[0]} {$record[1]}, Age: {$record[2]}<br />";
+}
+
+/**
+ * Reading and Writing Entire Files
+ */
+/*
+ * file() reads the contents of a file into an array, with each element containing a line from the file. It
+takes just one argument — a string containing the name of the file to read — and returns the array
+containing the lines of the file:
+ */
+$lines = file($_SERVER["DOCUMENT_ROOT"]."/common-files/myFile.txt");
+//echo $lines[0];
+
+/*
+ *  For example, the following code looks for a file in the include path and, when found, reads
+the file, ignoring any empty lines in the file:
+ */
+$lines = file( $_SERVER["DOCUMENT_ROOT"]."/common-files/myFile.txt", FILE_USE_INCLUDE_PATH | FILE_SKIP_EMPTY_LINES );
+//print_r($lines);
+
+//As with fopen(), you can also use file() to fetch files on a remote host:
+$lines = file("https://www.google.com.bd/?gws_rd=cr&ei=0HY_VsDMAcHmuQSo3pegAQ");
+//foreach ( $lines as $line ) echo $line . "<br />";
+
+/*
+ * A related function is file_get_contents(). This does a similar job to file(), but it returns the
+file contents as a single string, rather than an array of lines. The end-of-line characters are included in
+the string:
+ */
+$fileContents = file_get_contents( "https://www.google.com.bd/?gws_rd=cr&ei=0HY_VsDMAcHmuQSo3pegAQ");
+//echo $fileContents;
+
+/*
+ *  For example, the following code reads 23
+characters from myfile.txt, starting at character 17:
+ */
+$fileContents = file_get_contents( $_SERVER["DOCUMENT_ROOT"]."/common-files/myFile.txt", null, null, 17, 23 );
+
+/*
+ * file_put_contents() is the complement to file_get_contents(). As you’d imagine, it takes a
+string and writes it to a file:
+ */
+
+$myString = "this is my string";
+$numChars = file_put_contents( $_SERVER["DOCUMENT_ROOT"]."/common-files/myFile.txt", $myString | FILE_APPEND);
+
+/*
+ * fpassthru() and readfile() both take a file and output its unmodified contents straight to the Web
+browser. fpassthru() requires the handle of an open file to work with:
+ */
+$numChars = fpassthru( $handle );
+
+//readfile() instead works on an unopened file:
+
+$numChars = readfile($_SERVER["DOCUMENT_ROOT"]."/common-files/myFile.txt");
+echo $numChars;
