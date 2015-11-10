@@ -1,3 +1,14 @@
 git clone:
 git clone repository url(git@github.com:habibun/effort.git) = to clone a repository by default name
 git clone repository url(git@github.com:habibun/effort.git) name = to clone a repository by specific name
+
+git remote:
+git remote add origin url(git@github.com:habibun/effort.git) = to add existing remote repository
+git remote show origin = to show remote url
+
+git push:
+git push origin master = to update file local to remote
+
+
+git pull:
+git pull origin master = to update file remote to local
