@@ -1,0 +1,4 @@
+.gitignore:
+.gitignore = to create a gitignore file
+*.zip = to ignore all zip extension file
+vendor = to ignore vendor directory or file
