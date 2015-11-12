@@ -1,0 +1,8 @@
+git mergetool = to show conflict detail visually
+
+conflict symbol:
+
+<<<<<<<<head = current branch file
+=======
+other branch
+>>>>>>>>
