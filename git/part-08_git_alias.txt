@@ -1,0 +1,11 @@
+alias:
+
+alias for terminal session only:
+alias gs="git status"  = create alias for git status
+alias gl="git log"     = create alias for git log
+
+alias for permanent:
+create file  add above aliases:
+open .bashrc file and add file like
+source ~/.fileName = if file not found then show error message
+test -r ~/.fileName && source ~/.fileName = recommended(if not found file no error)
