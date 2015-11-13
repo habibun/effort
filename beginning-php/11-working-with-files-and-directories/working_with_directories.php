@@ -34,7 +34,7 @@ of the next entry in the directory:
     <link rel="stylesheet" type="text/css" href="/beginning-php/living-examples/ch11/common.css" />
 </head>
 <body>
-<h1>Listing the contents of a directory</h1>
+<!--<h1>Listing the contents of a directory</h1>-->
 <?php
 //$dirPath = $_SERVER["DOCUMENT_ROOT"]."/common-files";
 
@@ -152,7 +152,109 @@ appropriate permissions to remove it. For example:
 $path = $_SERVER["DOCUMENT_ROOT"]."common-files/myFolder/myFile.txt";
 //dirname return the directory path of a given path.
 $directoryPath = dirname( $path );
-echo $directoryPath;
+//echo $directoryPath;
 //basename return the filename portion
 $filename = basename( $path );
-echo $filename;
+//echo $filename;
+
+/**
+ * Working with Directory Objects
+ */
+ // first create a Directory object by calling the dir() function with the name of the directory you want to work with, as follows:
+$dir = dir($_SERVER["DOCUMENT_ROOT"]."/common-files");
+
+/*
+ * The Directory object provides two properties: handle and path. These refer to the directory handle
+and the path to the directory, respectively:
+ */
+//echo $dir->handle."<br />";
+//echo $dir->path."<br />";
+
+/**
+ *  For example, you
+can rewrite the dir_list.php script from earlier in the chapter using a Directory object:
+ */
+ ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Listing the contents of a directory</title>
+    <link rel="stylesheet" type="text/css" href="common.css" />
+</head>
+<body>
+<!--<h1>Listing the contents of a directory</h1>-->
+<?php
+$dirPath = $_SERVER["DOCUMENT_ROOT"]."/common-files/";
+$dir = dir( $dirPath );
+?>
+<!--<p>--><?php //echo $dirPath ?><!-- contains the following files and folders:</p>-->
+<ul>
+    <?php
+/*    while ( $file = $dir->read() ) {
+        if ( $file != "." && $file != ".." ) echo "<li>$file</li>";
+}
+    $dir->close();
+    */?>
+</ul>
+</body>
+</html>
+
+<?php
+/**
+ * Telling a File from a Directory
+ */
+ //Here’s a simple example that determines if a file called myfile is a file or a directory:
+//$filename = "myFile";
+$filename = $_SERVER["DOCUMENT_ROOT"]."/common-files/myFile.txt";
+
+if(is_dir($filename)){
+//    echo "$filename is a directory.";
+}elseif(is_file($filename)){
+//    echo "$filename is a file.";
+}else{
+//    echo "$filename is neither a directory nor a file.";
+}
+/**
+ * Traversing a Directory Hierarchy
+ */
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Listing the contents of a directory</title>
+    <link rel="stylesheet" type="text/css" href="../living-examples/ch11/common.css" />
+</head>
+<body>
+<h1>Listing the contents of a directory</h1>
+<?php
+$dirPath = "/home/jony/Desktop";
+
+function traverseDir( $dir ) {
+    echo "<h2>Listing $dir ...</h2>";
+    if ( !( $handle = opendir( $dir ) ) ) die( "Cannot open $dir." );
+
+    $files = array();
+    while ( $file = readdir( $handle ) ) {
+        if ( $file != "." && $file != ".." ) {
+            if ( is_dir( $dir . "/" . $file ) ) $file .= "/";
+            $files[] = $file;
+        }
+    }
+
+    sort( $files );
+    echo "<ul>";
+    foreach ( $files as $file ) echo "<li>$file</li>";
+    echo "</ul>";
+
+    foreach ( $files as $file ) {
+        if ( substr( $file, -1 ) == "/" ) traverseDir( "$dir/" . substr( $file,
+            0, -1 ) );
+    }
+    closedir( $handle );
+}
+traverseDir( $dirPath );
+?>
+</body>
+</html>
