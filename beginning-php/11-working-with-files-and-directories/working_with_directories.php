@@ -31,7 +31,7 @@ of the next entry in the directory:
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <title>Listing the contents of a directory</title>
-    <link rel="stylesheet" type="text/css" href="/beginning-php/living-examples/ch11/common.css" />
+    <link rel="stylesheet" type="text/css" href="/beginning-php/living-examples/ch11/common.css"/>
 </head>
 <body>
 <!--<h1>Listing the contents of a directory</h1>-->
@@ -46,9 +46,9 @@ of the next entry in the directory:
     /*while ( $file = readdir( $handle ) ) {
         if ( $file != "." && $file != ".." ) echo "<li>$file</li>";
     }*/
-/*
- * You can see that the returned filenames are not sorted in any way. To sort them, first read the entries into an array:
- */
+    /*
+     * You can see that the returned filenames are not sorted in any way. To sort them, first read the entries into an array:
+     */
     /*$fileNames = array();
 
     while($file = readdir($handle)){
@@ -74,42 +74,42 @@ of the next entry in the directory:
         echo "<li>$file</li>";
         //end solution second
     }*/
-?>
-    </ul>
+    ?>
+</ul>
 </body>
 </html>
 <?php
 /**
  * Other Directory Functions
  */
- /*
- ❑
- rewinddir() — Moves the directory pointer back to the start of the list of entries
+/*
 ❑
- chdir() — Changes the current directory
+rewinddir() — Moves the directory pointer back to the start of the list of entries
 ❑
- mkdir() — Creates a directory
+chdir() — Changes the current directory
 ❑
- rmdir() — Deletes a directory
+mkdir() — Creates a directory
 ❑
- dirname() — Returns the directory portion of a path
+rmdir() — Deletes a directory
+❑
+dirname() — Returns the directory portion of a path
 
-  */
+ */
 
- /**
-  * Resetting the Directory Pointer
-  */
+/**
+ * Resetting the Directory Pointer
+ */
 //rewinddir($handle);
 
 /**
  * Changing the Current Directory
  */
- //The chdir() function call changes the current directory to a new directory:
+//The chdir() function call changes the current directory to a new directory:
 //chdir( "/home/jony/myfolder" );
 
 /**
  * The current directory is the directory where PHP first looks for files. If you specify a path that isn’t an
-absolute or relative path, PHP looks for the file inside the current directory. So the following code
+ * absolute or relative path, PHP looks for the file inside the current directory. So the following code
  */
 //chdir( $_SERVER["DOCUMENT_ROOT"]."/common-files/myFolder" );
 //$handle = fopen("myFile.txt","r");
@@ -139,29 +139,29 @@ absolute or relative path, PHP looks for the file inside the current directory. 
 /**
  * Deleting Directories
  */
- /*
-  * The rmdir() function removes a given directory. The directory must be empty, and you need
+/*
+ * The rmdir() function removes a given directory. The directory must be empty, and you need
 appropriate permissions to remove it. For example:
-  */
+ */
 //rmdir( $_SERVER["DOCUMENT_ROOT"]."/common-files/newfolder" );
 
 /**
  * Getting the Directory Path
  */
 
-$path = $_SERVER["DOCUMENT_ROOT"]."common-files/myFolder/myFile.txt";
+$path = $_SERVER["DOCUMENT_ROOT"] . "common-files/myFolder/myFile.txt";
 //dirname return the directory path of a given path.
-$directoryPath = dirname( $path );
+$directoryPath = dirname($path);
 //echo $directoryPath;
 //basename return the filename portion
-$filename = basename( $path );
+$filename = basename($path);
 //echo $filename;
 
 /**
  * Working with Directory Objects
  */
- // first create a Directory object by calling the dir() function with the name of the directory you want to work with, as follows:
-$dir = dir($_SERVER["DOCUMENT_ROOT"]."/common-files");
+// first create a Directory object by calling the dir() function with the name of the directory you want to work with, as follows:
+$dir = dir($_SERVER["DOCUMENT_ROOT"] . "/common-files");
 
 /*
  * The Directory object provides two properties: handle and path. These refer to the directory handle
@@ -172,30 +172,30 @@ and the path to the directory, respectively:
 
 /**
  *  For example, you
-can rewrite the dir_list.php script from earlier in the chapter using a Directory object:
+ * can rewrite the dir_list.php script from earlier in the chapter using a Directory object:
  */
- ?>
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <title>Listing the contents of a directory</title>
-    <link rel="stylesheet" type="text/css" href="common.css" />
+    <link rel="stylesheet" type="text/css" href="common.css"/>
 </head>
 <body>
 <!--<h1>Listing the contents of a directory</h1>-->
 <?php
-$dirPath = $_SERVER["DOCUMENT_ROOT"]."/common-files/";
-$dir = dir( $dirPath );
+$dirPath = $_SERVER["DOCUMENT_ROOT"] . "/common-files/";
+$dir = dir($dirPath);
 ?>
 <!--<p>--><?php //echo $dirPath ?><!-- contains the following files and folders:</p>-->
 <ul>
     <?php
-/*    while ( $file = $dir->read() ) {
-        if ( $file != "." && $file != ".." ) echo "<li>$file</li>";
-}
-    $dir->close();
-    */?>
+    /*    while ( $file = $dir->read() ) {
+            if ( $file != "." && $file != ".." ) echo "<li>$file</li>";
+    }
+        $dir->close();
+        */ ?>
 </ul>
 </body>
 </html>
@@ -204,15 +204,15 @@ $dir = dir( $dirPath );
 /**
  * Telling a File from a Directory
  */
- //Here’s a simple example that determines if a file called myfile is a file or a directory:
+//Here’s a simple example that determines if a file called myfile is a file or a directory:
 //$filename = "myFile";
-$filename = $_SERVER["DOCUMENT_ROOT"]."/common-files/myFile.txt";
+$filename = $_SERVER["DOCUMENT_ROOT"] . "/common-files/myFile.txt";
 
-if(is_dir($filename)){
+if (is_dir($filename)) {
 //    echo "$filename is a directory.";
-}elseif(is_file($filename)){
+} elseif (is_file($filename)) {
 //    echo "$filename is a file.";
-}else{
+} else {
 //    echo "$filename is neither a directory nor a file.";
 }
 /**
@@ -224,37 +224,39 @@ if(is_dir($filename)){
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <title>Listing the contents of a directory</title>
-    <link rel="stylesheet" type="text/css" href="../living-examples/ch11/common.css" />
+    <link rel="stylesheet" type="text/css" href="../living-examples/ch11/common.css"/>
 </head>
 <body>
 <h1>Listing the contents of a directory</h1>
 <?php
 $dirPath = "/home/jony/Desktop";
 
-function traverseDir( $dir ) {
+function traverseDir($dir)
+{
     echo "<h2>Listing $dir ...</h2>";
-    if ( !( $handle = opendir( $dir ) ) ) die( "Cannot open $dir." );
+    if (!($handle = opendir($dir))) die("Cannot open $dir.");
 
     $files = array();
-    while ( $file = readdir( $handle ) ) {
-        if ( $file != "." && $file != ".." ) {
-            if ( is_dir( $dir . "/" . $file ) ) $file .= "/";
+    while ($file = readdir($handle)) {
+        if ($file != "." && $file != "..") {
+            if (is_dir($dir . "/" . $file)) $file .= "/";
             $files[] = $file;
         }
     }
 
-    sort( $files );
+    sort($files);
     echo "<ul>";
-    foreach ( $files as $file ) echo "<li>$file</li>";
+    foreach ($files as $file) echo "<li>$file</li>";
     echo "</ul>";
 
-    foreach ( $files as $file ) {
-        if ( substr( $file, -1 ) == "/" ) traverseDir( "$dir/" . substr( $file,
-            0, -1 ) );
+    foreach ($files as $file) {
+        if (substr($file, -1) == "/") traverseDir("$dir/" . substr($file,
+                0, -1));
     }
-    closedir( $handle );
+    closedir($handle);
 }
-traverseDir( $dirPath );
+
+traverseDir($dirPath);
 ?>
 </body>
 </html>
