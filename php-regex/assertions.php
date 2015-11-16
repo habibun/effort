@@ -24,4 +24,56 @@
      echo 'No match found';
  }
 
-// to be continue
+/**
+ * s modifier
+ */
+/*** create a string with new line characters ***/
+$string = 'sox'."\n".'at'."\n".'noon'."\n".'taxes'."\n";
+
+/*** look for a match using s modifier ***/
+echo preg_match("/sox.at.noon/s", $string, $matches);
+
+/**
+ * m modifier
+ */
+// create a string
+$string = 'sox'."\n".'at'."\n".'noon'."\n".'taxes'."\n";
+
+// look for a match
+if(preg_match("/^noon/im", $string))
+{
+    echo 'Pattern Found';
+}
+else
+{
+    echo 'Pattern not found';
+}
+
+/**
+ * x modifier
+ */
+// create a string
+$string = 'sox'."\n".'at'."\n".'noon'."\n".'taxes'."\n";
+
+// create our regex using comments and store the regex
+// in a variable to be used with preg_match
+$regex ='
+ /     # opening double quote
+ ^     # caret means beginning of the string
+ noon  # the pattern to match
+ /imx
+ ';
+
+// look for a match
+if(preg_match($regex, $string))
+{
+    echo 'Pattern Found';
+}
+else
+{
+    echo 'Pattern not found';
+}
+
+/**
+ * e modifier
+ */
