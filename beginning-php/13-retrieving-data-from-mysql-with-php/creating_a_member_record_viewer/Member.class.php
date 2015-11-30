@@ -50,7 +50,7 @@ class Member2 extends DataObject2
             foreach ($st->fetchAll() as $row) {
                 $members[] = new Member2($row);
             }
-            $st = $conn->query("SELECT found_rows as totalRows");
+            $st = $conn->query("SELECT found_rows() as totalRows");
             $row = $st->fetch();
             parent::disconnect($conn);
             return array($members, $row["totalRows"]);
