@@ -15,12 +15,9 @@ abstract class DataObject2{
      * DataObject2 constructor.
      * @param array $data
      */
-    public function __construct($data)
-    {
-        foreach($data as $key => $value){
-            if(array_key_exists($key, $this->data)){
-                $this->data["key"] = $value;
-            }
+    public function __construct( $data ) {
+        foreach ( $data as $key => $value ) {
+            if ( array_key_exists( $key, $this->data ) ) $this->data[$key] = $value;
         }
     }
 
