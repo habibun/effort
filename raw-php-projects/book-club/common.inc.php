@@ -7,7 +7,7 @@ function displayPageHeader( $pageTitle ) {
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <title><?php echo $pageTitle?></title>
-    <link rel="stylesheet" type="text/css" href="../common.css" />
+    <link rel="stylesheet" type="text/css" href="common.css" />
     <style type="text/css">
       th { text-align: left; background-color: #bbb; }
       th, td { padding: 0.4em; }
