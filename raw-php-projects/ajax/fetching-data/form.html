@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title> Fetching(or)Retrieving Data Form Database Without Refreshing
+        Page Using(Ajax+PHP+Jquery+MySQL)</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js">
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $(".submit").click(function () {
+                var eid = $("#eid").val();
+                var dataString = 'eid=' + eid;
+                if (eid == '') {
+                    $('.error').fadeOut(200).show();
+                }
+                else {
+                    $.ajax({
+                        type: "POST",
+                        url: "data.php",
+                        data: dataString,
+                        dataType: "html",
+                        success: function (response) {
+                            $("#results").html(response);
+                            $('.error').fadeOut(200).hide();
+                        }
+                    });
+                }
+                return false;
+            });
+        });
+    </script>
+</head>
+    <body>
+    <form name="form" action="" method="POST">
+        <div align="center">
+            <h2 style="color:green"> Fetching Data Form Database 
+                Without Refreshing Page Using(Ajax+PHP+Jquery+MySQL)</h2>
+            <div>
+                Employee ID:<input type="text" name="eid" id="eid">
+            </div>
+            <input type="submit" name="submit" style="color:green" class="submit" value="Get Data">
+        </div>
+
+        <div id="results" align="center"></div>
+        <div align="center">
+            <span class="error" style="display:none;color:red"> You Entered Incorrect Data</span>
+            <span class="success" style="display:none;color:green"> Results Loaded Successfully</span>
+        </div>
+    </form>
+    </body>
+</html>
