@@ -1,0 +1,34 @@
+git init
+The word init means initialize. The command sets up all the tools Git needs to begin tracking changes made to the project.
+
+
+git status
+You can check the status of those changes with:
+
+Untracked means that Git sees the file but has not started tracking changes yet.
+
+
+
+git add filename
+We can add a file to the staging area with:
+
+
+git diff filename
+ we can check the differences between the working directory and the staging area with:
+
+
+git commit -m "Complete first line of dialogue"
+commit: the option -m followed by a message.
+
+
+Standard Conventions for Commit Messages:
+Must be in quotation marks
+Written in the present tense
+Should be brief (50 characters or less) when using -m
+
+
+git log
+log a list of your commits.
+
+
+
