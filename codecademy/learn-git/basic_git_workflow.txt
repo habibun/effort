@@ -29,6 +29,7 @@ Should be brief (50 characters or less) when using -m
 
 git log
 log a list of your commits.
+A 40-character code, called a SHA, that uniquely identifies the commit. This appears in orange text.
 
 
 
