@@ -1,0 +1,31 @@
+git branch
+You can use the command below to answer the question: “which branch am I on?”
+
+
+git branch new_branch
+To create a new branch
+
+
+git checkout branch_name
+You can switch to the new branch with
+
+
+git merge master
+We can easily accomplish this by merging the branch into master with:
+
+
+conflict resolve
+<<<<<<< HEAD
+master version of line
+=======
+fencing version of line
+>>>>>>> fencing
+
+
+
+git branch -d branch_name
+will delete the specified branch from your Git project.
+
+
+
+
