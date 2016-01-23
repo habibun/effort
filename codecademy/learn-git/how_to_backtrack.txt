@@ -1,0 +1,33 @@
+git show HEAD
+In Git, the commit you are currently on is known as the HEAD commit. In many cases, the most recently made commit is the HEAD commit.
+To see the HEAD commit:
+
+
+
+git checkout HEAD filename
+will restore the file in your working directory to look exactly as it did when you last made a commit.
+
+
+
+git diff
+to see the difference between scene-5.txt as it appears in the working directory vs. how it appears in your last commit.
+
+
+git add filename_1 filename_2
+Add the files to the staging area together
+
+
+
+git reset HEAD filename
+We can unstage that file from the staging area using
+
+
+git reset 5d69206/SHA
+Git enables you to rewind to the part before you made the wrong turn and create a new destiny for the project
+go back to specific commit
+
+
+
+
+
+
