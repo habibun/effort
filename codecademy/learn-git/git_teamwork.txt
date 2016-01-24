@@ -1,0 +1,17 @@
+git clone remote_location clone_name
+ In order to get your own replica of science-quizzes, you'll need to clone it with:
+
+git remote -v
+You can see a list of a Git project's remotes with the command:
+
+
+git fetch
+This command will not merge changes from the remote into your local repository. It brings those changes onto what's called a remote branch.
+
+
+git merge origin/master
+Now we'll use the git merge command to integrate origin/master into your local master branch.
+
+
+git push origin your_branch_name
+will push your branch up to the remote, origin. 
