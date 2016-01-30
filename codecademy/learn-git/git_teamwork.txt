@@ -14,4 +14,4 @@ Now we'll use the git merge command to integrate origin/master into your local m
 
 
 git push origin your_branch_name
-will push your branch up to the remote, origin. 
+will push your branch up to the remote, origin.
