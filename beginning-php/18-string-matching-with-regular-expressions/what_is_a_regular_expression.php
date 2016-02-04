@@ -9,5 +9,5 @@
 // For example, this
 //simple regular expression searches for the word “world” anywhere within the target string:
 
-/world/
+// /world/
 
