@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<stockList>
+    <item type="fruit">
+        <name>apple</name>
+        <unitPrice>0.99</unitPrice>
+        <quantity>412</quantity>
+    </item>
+    <item type="vegetable">
+        <name>beetroot</name>
+        <unitPrice>1.39</unitPrice>
+        <quantity>67</quantity>
+    </item>
+</stockList>
