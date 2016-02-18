@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Here’s an enhanced version of the stockList example document used earlier that illustrates each of
+        these major parts. First the XML declaration:
+        -->
+
+
+        <!-- Next is the reference to a DTD that defines the allowed elements and attributes in the document: -->
+        <!DOCTYPE stockList SYSTEM "http://www.example.com/dtds/stockList.dtd">
+
+
+       <!-- Now the root element begins. Remember that there can be only one root element in an XML document: -->
+<stockList>
+
+        </stockList>
+
+<!-- Creating an XHTML Document -->
+        <!--
+        <?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>An XHTML example</title>
+</head>
+<body>
+<p>This is an example of an XHTML Strict document. It can contain images
+        (<img src="http://www.example.com/images/image.gif" alt="an image" / >) as
+        well as links (<a href="http://example.com/">example.com</a>) and any other
+HTML elements, provided they conform to the XML syntax rules.</p>
+        </body>
+        </html>
+-->
