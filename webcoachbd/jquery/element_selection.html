@@ -1,0 +1,49 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+    <script src="assets/jquery-2.2.3.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+/*        $(document).ready(function(){
+            $('p').click(function(){
+                alert('You clicked on a paragraph');
+            });
+        });*/
+
+        //check css property
+/*        $(document).ready(function(){
+            $('#tutorial').click(function(){
+                var align = $('#tutorial').css('textAlign');
+                alert(align);
+            });
+        });*/
+
+        //add new css
+/*        $(document).ready(function(){
+            $('#first_para,.webcoachbd').click(function(){
+//                $(this).css('color', 'red');
+
+                //add multiple css property
+                $(this).css({'color' : 'red', 'backgroundColor' : 'yellow'});
+            });
+        });*/
+
+        //another example
+$(document).ready(function(){
+    $('#first_para,.webcoachbd').click(function(){
+        $('#tutorial').css('color', 'red');
+    });
+});
+
+
+
+
+    </script>
+</head>
+<body>
+<h1 id="tutorial">JQuery Tutorials</h1>
+<p id="first_para">Bangladesh is a country of natural beauty</p>
+<p class="webcoachbd">Webcoachbd DOT com is the largest bengali tutorial site</p>
+<p class="webcoachbd">There are 30 tutorial on JQuery in Webcoachbd</p>
+</body>
+</html>
