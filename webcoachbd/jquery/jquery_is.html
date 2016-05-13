@@ -1,0 +1,37 @@
+<html>
+<head>
+    <script src="assets/jquery-2.2.3.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        /* using is method */
+        /*$(document).ready(function(){
+            $('#tutorial').click(function(){
+                if($('#webcoachbd').is(':visible')){
+                    $('#webcoachbd').hide();
+                }else{
+                    $('#webcoachbd').show();
+                };
+            });
+        });*/
+
+        /* using toggle method */
+        /*$(document).ready(function(){
+            $('#tutorial').click(function(){
+                $('#webcoachbd').toggle();
+            });
+        });*/
+
+        /* using slideToggle */
+        $(document).ready(function(){
+            $('#tutorial').click(function(){
+                $('#webcoachbd').slideToggle(500);
+            });
+        });
+
+    </script>
+</head>
+<body>
+<p id="tutorial">When you click me,a button will toggle</p>
+<input type="submit" id="webcoachbd" value="Submit"/>
+</body>
+</html>
