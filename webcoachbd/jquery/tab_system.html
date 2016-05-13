@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Webcoachbd Tab System tutorials</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css"/>
+    <script src="assets/jquery-2.2.3.js" type="text/javascript"></script>
+    <script>
+        //tab slider jquery code
+        $(document).ready(function(){//Default view
+            $('#current').show();
+            $('#tab_bar li:nth-child(1) a').addClass('running');
+            $('#favorite,#all_time').hide();
+            $('#tab_bar li:nth-child(1) a').click(function(event){//Fire when Current hit clicks
+                event.preventDefault();
+                $(this).addClass('running');
+                $('#tab_bar li:nth-child(2) a,#tab_bar li:nth-child(3) a').removeClass('running');
+                $('#current').fadeIn(500);
+                $('#favorite,#all_time').hide();
+            });
+            $('#tab_bar li:nth-child(2) a').click(function(event){//Fire when All time clicks
+                event.preventDefault();
+                $(this).addClass('running');
+                $('#tab_bar li:nth-child(1) a,#tab_bar li:nth-child(3) a').removeClass('running');
+                $('#favorite').fadeIn(500);
+                $('#current,#all_time').hide();
+            });
+            $('#tab_bar li:nth-child(3) a').click(function(event){//Fire when Favorite clicks
+                event.preventDefault();
+                $(this).addClass('running');
+                $('#tab_bar li:nth-child(1) a,#tab_bar li:nth-child(2) a').removeClass('running');
+                $('#all_time').fadeIn(500);
+                $('#favorite,#current').hide();
+            });
+        });
+    </script>
+</head>
+
+<body>
+<div id="tab_system">
+    <ul id="tab_bar">
+        <li>
+            <a href="#">Current Hits</a>
+        </li>
+        <li>
+            <a href="#">Our Favourites</a>
+        </li>
+        <li>
+            <a href="#">All Time</a>
+        </li>
+    </ul>
+    <ul id="current" class="tab_list">
+        <li>
+            <a href="http://www.webcoachbd.com">Who behind behind this | About us</a>
+        </li>
+        <li>
+            <a href="http://www.webcoachbd.com">HTML tutorials</a>
+        </li>
+        <li>
+            <a href="http://www.webcoachbd.com">Jquery Tutorials</a>
+        </li>
+        <li>
+            <a href="http://www.webcoachbd.com">Contact us if need</a>
+        </li>
+    </ul>
+    <ul id="favorite" class="tab_list">
+        <li>
+            <a href="http://www.webcoachbd.com"></a>
+        </li>
+        <li>
+            <a href="http://www.webcoachbd.com">this is our favorite post</a>
+        </li>
+        <li>
+            <a href="http://www.webcoachbd.com">Short Sale Info</a>
+        </li>
+        <li>
+            <a href="http://www.webcoachbd.com">Testimonials</a>
+        </li>
+        <li>
+            <a href="http://www.webcoachbd.com">Contact</a>
+        </li>
+    </ul>
+    <ul id="all_time" class="tab_list">
+        <li>
+            <a href="http://www.webcoachbd.com">Mortgage Forgiveness Debt Relief Act</a>
+        </li>
+        <li>
+            <a href="http://www.webcoachbd.com">5 Reasons to Hire Us</a>
+        </li>
+        <li>
+            <a href="http://www.webcoachbd.com">this is our favorite post</a>
+        </li>
+        <li>
+            <a href="http://www.webcoachbd.com">this is our fav post 2</a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

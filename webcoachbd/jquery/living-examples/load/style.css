@@ -1,0 +1,28 @@
+#container{
+	width:800px;
+	margin:0 auto;
+	padding:10px;
+	position:relative;
+}
+.loader{
+	position:absolute;
+	left:50%;
+	top:50%;
+}
+#content_pane{
+	width:500px;
+	margin:0 auto;
+}
+#content_pane a{
+	text-decoration:none;
+	background:#333;
+	padding:5px;
+	margin:0 5px;
+	color:#fff;
+}
+#content_pane a:hover{
+	background:#222;
+}
+#content_pane a:active{
+	background:#000;
+}

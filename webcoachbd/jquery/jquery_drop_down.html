@@ -1,0 +1,46 @@
+<!doctype html>
+
+<head>
+
+    <title>Webcoachbd!</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+    <script src="assets/jquery-2.2.3.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){
+            $('#menu li').hover(function(){
+                $(this).find('ul').stop(true,true).slideDown(200);
+            },function(){
+                $(this).find('ul').stop(true,true).slideUp(200);
+            });
+            $('#menu li').hover(function(){
+                if($(this).children('ul').length > 0){
+                    $(this).addClass('rem_radius');
+                }
+            }, function(){
+                $(this).removeClass('rem_radius');
+            });
+        });
+
+    </script>
+</head>
+<body>
+<div id="content">
+    <ul id="menu">
+        <li><a href="#">Reference</a>
+            <ul>
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">MySql</a></li>
+                <li><a href="#">CakePHP</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Tutorials</a>
+            <ul>
+                <li><a href="#">HTML tutorials</a></li>
+                <li><a href="#">JQuery drop down menu</a></li>
+            </ul>
+        </li>
+        <li><a href="#">About Us</a></li>
+    </ul>
+</div>
+</body>
+</html>

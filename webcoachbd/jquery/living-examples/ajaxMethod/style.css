@@ -1,0 +1,54 @@
+body{
+	font-family:Verdana;
+	font-size:15px;
+	background:#2F4D63;
+}
+#content{
+	background:#ECFBD8;
+	overflow:hidden;
+	width:700px;
+	margin:0 auto;
+	border:1px solid #ccc;
+	padding:10px;
+	border-radius:8px;
+	box-shadow:0px 0px 3px 0px #CCCCCC;
+}
+.p_id{
+	float:left;
+	margin:20px 0 0 5px;
+}
+.header{
+	float:left;
+	width:700px;
+}
+#content h3{
+	color:#007BD8;
+	float:left;
+}
+.ratings{
+	float:left;
+	width:250px;
+	position:relative;
+}
+.h_id{
+	display:none;
+}
+.ratings a{
+	background:url(images/rating_empty.png) no-repeat;
+	display:block;
+	float:left;
+	width:20px;
+	height:20px;
+	text-indent:-9999px;
+}
+.rating_over{
+	background:url(images/rating.png) no-repeat!important;
+}
+.avg_rate{
+	float:left;
+	width:420px;
+}
+.avg_rate p{
+	margin:0;
+	float:left;
+}

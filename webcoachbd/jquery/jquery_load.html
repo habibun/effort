@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Webcoachbd Ajax load method tutorials</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css"/>
+    <script src="assets/jquery-2.2.3.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){
+            $('#content_pane a').click(function(e){
+                var url = $(this).attr('href');
+                e.preventDefault();
+                $('#container')
+                        .html('<img class="loader" src="/spinner.gif" alt=""/>Loading...')
+                        .load(url,function(response,status,xhr){
+                            if(status == 'error'){
+                                $(this).html(xhr.status+' '+xhr.statusText);
+                            }
+                        });
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="content_pane">
+    <a href="/css-tutorials">Reference</a>
+    <a href="/project-page">Project</a>
+    <a href="/php-framework">Framework</a>
+</div>
+<div id="container">
+</div>
+</body>
+</html>

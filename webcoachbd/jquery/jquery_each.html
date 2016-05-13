@@ -1,0 +1,93 @@
+<!doctype html>
+
+<head>
+
+    <title>Webcoachbd Jquery tutorials!</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+    <script src="assets/jquery-2.2.3.js" type="text/javascript"></script>
+    <script>
+        /*
+         $(document).ready(function(){
+         $('table tr').each(function(i){
+         if(i % 2 == 0){
+         $(this).addClass('even');
+         }else{
+         $(this).addClass('odd');
+         }
+         });
+         });
+         */
+
+        //you can stop iterating in any point
+        $(document).ready(function(){
+            $('table tr').each(function(i){
+                if(i < 5){
+                    if(i % 2 == 0){
+                        $(this).addClass('even');
+                    }else{
+                        $(this).addClass('odd');
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Mail</th>
+        <th>Phone</th>
+        <th>Address</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>Rejoanul Alam</td>
+        <td>rejoan.er AT gmail DOT com</td>
+        <td>123456</td>
+        <td>JU</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Rejoanul Alam</td>
+        <td>rejoan.er AT gmail DOT com</td>
+        <td>123456</td>
+        <td>JU</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Rejoanul Alam</td>
+        <td>rejoan.er AT gmail DOT com</td>
+        <td>123456</td>
+        <td>JU</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Rejoanul Alam</td>
+        <td>rejoan.er AT gmail DOT com</td>
+        <td>123456</td>
+        <td>JU</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Rejoanul Alam</td>
+        <td>rejoan.er AT gmail DOT com</td>
+        <td>123456</td>
+        <td>JU</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Rejoanul Alam</td>
+        <td>rejoan.er AT gmail DOT com</td>
+        <td>123456</td>
+        <td>JU</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</body>
+</html>

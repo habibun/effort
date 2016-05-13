@@ -1,0 +1,18 @@
+body{
+	font-family:Verdana;
+	font-size:13px;
+}
+#content_pane{
+	width:400px;
+	margin:0 auto;
+	overflow:hidden;
+	border:1px solid #ccc;
+	border-radius:5px;
+	padding:10px;
+}
+#content_pane form{
+	
+}
+#content_pane  input{
+	
+}

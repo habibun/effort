@@ -1,0 +1,22 @@
+﻿<html>
+	<head>
+	<title>Webcoachbd jQuery is method tutorial</title>
+	<link rel="stylesheet" href="style.css" type="text/css"/>
+	<script src="../jquery_latest.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#tutorial').click(function(){
+				if($('#webcoachbd').is(':visible')){
+				$('#webcoachbd').hide();
+				}else{
+				$('#webcoachbd').show();
+				};
+			});
+		});
+	</script>
+	</head>
+<body>
+<p id="tutorial">When you click me,a button will toggle</p>
+<input type="submit" id="webcoachbd" value="Submit"/>
+</body>
+</html>

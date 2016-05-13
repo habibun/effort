@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Webcoachbd ToolTip tutorials</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css"/>
+    <script src="assets/jquery-2.2.3.js" type="text/javascript"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.tTip').hover(function (event) {
+                // mouse hover
+                var spanText = $(this).next().html();
+
+                $('<p class="toolTip"></p>')
+                        .text(spanText)
+                        .appendTo('body')
+                        .css('top', (event.pageY - 40) + 'px')
+                        .css('left', (event.pageX + 20) + 'px')
+                        .fadeIn('slow');
+            }, function () {
+                $('.toolTip').remove();
+            }).mousemove(function (event) {
+                // when mouse move
+                $('.toolTip')
+                        .css('top', (event.pageY - 40) + 'px')
+                        .css('left', (event.pageX + 20) + 'px');
+            });
+        });
+
+    </script>
+</head>
+<body>
+<h2>Fill up form and hit submit</h2>
+<div id="form_container">
+    <form id="reg_form" action="" method="post">
+        <label>First Name</label>
+        <input class="tTip" type="text" name="f_name" placeholder="First Name"/>
+        <span>Please Enter your name here.Remember text only</span>
+        <span id="fnameInfo"></span>
+        <label>Last Name</label>
+        <input class="tTip" type="text" name="l_name" placeholder="Last Name"/>
+        <span>Please Enter your Last name here.Remember text only</span>
+        <span id="lnameInfo"></span>
+        <label>Email</label>
+        <input class="tTip" type="text" name="email" placeholder="Email"/>
+        <span>Please Enter your Email here.Remember valid only</span>
+        <span id="mailInfo"></span>
+        <label>Phone Number</label>
+        <input class="tTip" type="text" name="phone" placeholder="Phone"/>
+        <span>Please Enter your Phone number here.Remember numbers only</span>
+        <span id="phoneInfo"></span>
+        <input type="submit" value="Submit"/>
+    </form>
+</div>
+</body>
+</html>
