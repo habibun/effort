@@ -14,10 +14,10 @@ namespace WritingModularCode;
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-//include ("../../common-files/animal_functions.php");
+//include ("../../assets/animal_functions.php");
 //echo animalSpeak("mouse");
 
-//require( "../../common-files/animal_functions.php" );
+//require( "../../assets/animal_functions.php" );
 //echo animalSpeak( "cat" ) . "<br />";
 
 
@@ -30,7 +30,7 @@ ini_set('display_errors', 1);
  * Now, animal_functions.php will be included only once (in mouse.php), therefore the
 animalSpeak() function will be declared only once
  */
-//include_once( "../../common-files/animal_functions.php" );
+//include_once( "../../assets/animal_functions.php" );
 //echo animalSpeak( "mouse" ) ."<br />";
 
 

@@ -16,7 +16,7 @@ $age = "34";
 //Note that the ampersand (&) character needs to be encoded as &amp; inside XHTML markup.
 $queryString = "firstName=$firstName&amp;age=$age";
 
-//echo '<a href="../../common-files/moreinfo.php?'.$queryString.'">find out more info on this page</a>';
+//echo '<a href="../../assets/moreinfo.php?'.$queryString.'">find out more info on this page</a>';
 
 
 /**
@@ -26,7 +26,7 @@ $firstName = "John";
 $homePage = "http://www.example.com";
 $favoriteSport = "Ice Hockey";
 $queryString = "firstName=" .urlencode($firstName). "&amp;homepage=".urlencode($homePage)."&amp;favoriteSport=".urlencode($favoriteSport);
-//echo '<a href="../../common-files/moreinfo.php?' . $queryString . '">find out more info on this page</p>';
+//echo '<a href="../../assets/moreinfo.php?' . $queryString . '">find out more info on this page</p>';
 
 
 /**
@@ -39,7 +39,7 @@ $fields = array(
     $favoriteSport => "Ice Hockey"
 );
 
-//echo '<a href= "../../common-files/moreinfo.php?'.htmlspecialchars(http_build_query($fields)).'">find out more info on this page</p>';
+//echo '<a href= "../../assets/moreinfo.php?'.htmlspecialchars(http_build_query($fields)).'">find out more info on this page</p>';
 
 /**
  * Accessing Data in Query Strings

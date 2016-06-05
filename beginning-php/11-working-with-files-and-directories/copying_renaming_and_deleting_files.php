@@ -12,17 +12,17 @@ ini_set('display_errors', 'On');
 /**
  * copy a file
  */
-//copy($_SERVER["DOCUMENT_ROOT"]."/common-files/copyme.txt",$_SERVER["DOCUMENT_ROOT"]."/common-files/copied.txt");
+//copy($_SERVER["DOCUMENT_ROOT"]."/assets/copyme.txt",$_SERVER["DOCUMENT_ROOT"]."/assets/copied.txt");
 
 /**
  * rename a file
  */
-//rename($_SERVER["DOCUMENT_ROOT"]."/common-files/address.dat",$_SERVER["DOCUMENT_ROOT"]."/common-files/address.backup");
+//rename($_SERVER["DOCUMENT_ROOT"]."/assets/address.dat",$_SERVER["DOCUMENT_ROOT"]."/assets/address.backup");
 
 /**
  * move a file
  */
-//rename($_SERVER["DOCUMENT_ROOT"]."/common-files/move.txt","/home/jony/move.txt");
+//rename($_SERVER["DOCUMENT_ROOT"]."/assets/move.txt","/home/jony/move.txt");
 
 /**
  *  delete a file

@@ -20,7 +20,7 @@ echo $handle;
 //to open a file in binary mode use
 $handle2 = fopen($_SERVER["DOCUMENT_ROOT"] . "/common-files/myFile.txt", "rb");
 
-echo '<a href= "/common-files/myFile.txt">test</a>';
+echo '<a href= "/assets/myFile.txt">test</a>';
 
 // It’s good practice to use some form of error -checking procedure so that if an error occurs
 if (!($handle = fopen($_SERVER["DOCUMENT_ROOT"] . "/common-files/myFile.txt", "r"))) die("Cannot open the file");
