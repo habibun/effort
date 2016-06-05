@@ -53,7 +53,7 @@ function processForm()
     if (isset($_FILES['photo']) and $_FILES['photo']['error'] == UPLOAD_ERR_OK) {
         if ($_FILES['photo']['type'] != 'image/jpeg') {
             echo "<p>JPEG photos only, thanks!</p>";
-        } elseif (!move_uploaded_file($_FILES['photo']['tmp_name'], '/var/www/effort/common-files/' . basename($_FILES['photo']['name']))) {
+        } elseif (!move_uploaded_file($_FILES['photo']['tmp_name'], '/var/www/effort/assets/' . basename($_FILES['photo']['name']))) {
             echo '<p>Sorry, there was a problem uploading that photo.</p>' . $_FILES['photo']['error'];
         } else {
             displayThanks();
