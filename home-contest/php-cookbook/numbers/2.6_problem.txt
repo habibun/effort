@@ -1,1 +1,0 @@
-You want to make the random number generate predictable numbers so you can guar‐antee repeatable behavior.
