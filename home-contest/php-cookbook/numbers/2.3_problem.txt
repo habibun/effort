@@ -1,2 +1,0 @@
-You want to round a floating-point number, either to an integer value or to a set number
-of decimal places.

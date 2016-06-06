@@ -1,2 +1,0 @@
-You need to wrap lines in a string. For example, you want to display text by using <pre>
-and </pre> tags but have it stay within a regularly sized browser window.

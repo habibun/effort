@@ -1,1 +1,0 @@
-You want to apply a piece of code to a range of integers.

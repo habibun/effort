@@ -1,3 +1,0 @@
-You want to parse a string that contains values encoded as a binary structure or encode
-values into a string. For example, you want to store numbers in their binary represen‐
-tation instead of as sequences of ASCII characters.
