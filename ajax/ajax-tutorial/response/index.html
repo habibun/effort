@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /**
+         * The responseText Property
+         */
+        //The responseText property returns the response as a string, and you can use it accordingly:
+        document.getElementById("demo").innerHTML = xhttp.responseText;
+
+        /**
+         * The responseXML Property
+         */
+        //If the response from the server is XML, and you want to parse it as an XML object, use the responseXML property:
+        xmlDoc = xhttp.responseXML;
+        txt = "";
+        x = xmlDoc.getElementsByTagName("ARTIST");
+        for (i = 0; i < x.length; i++) {
+            txt += x[i].childNodes[0].nodeValue + "<br>";
+        }
+        document.getElementById("demo").innerHTML = txt;
+    </script>
+</head>
+<body>
+
+</body>
+</html>
