@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /**
+         * GET Requests
+         */
+        //A simple GET request:
+        xhttp.open("GET", "demo_get.asp", true);
+        xhttp.send();
+
+        //In the example above, you may get a cached result. To avoid this, add a unique ID to the URL:
+        xhttp.open("GET", "demo_get.asp?t=" + Math.random(), true);
+        xhttp.send();
+
+        //If you want to send information with the GET method, add the information to the URL:
+        xhttp.open("GET", "demo_get2.asp?fname=Henry&lname=Ford", true);
+        xhttp.send();
+
+
+        /**
+         * POST Requests
+         */
+        //A simple POST request:
+        xhttp.open("POST", "demo_post.asp", true);
+        xhttp.send();
+
+
+        //To POST data like an HTML form, add an HTTP header with setRequestHeader(). Specify the data you want to send in the send() method:
+        xhttp.open("POST", "ajax_test.asp", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("fname=Henry&lname=Ford");
+
+        /**
+         * The url - A File On a Server
+         */
+        //The url parameter of the open() method, is an address to a file on a server:
+        xhttp.open("GET", "ajax_test.asp", true);
+
+        /**
+         * Asynchronous - True or False?
+         */
+
+        //AJAX stands for Asynchronous JavaScript and XML, and for the XMLHttpRequest object to behave as AJAX, the async parameter of the open() method has to be set to true:
+        xhttp.open("GET", "ajax_test.asp", true);
+
+        /**
+         * Async=true
+         */
+        //When using async=true, specify a function to execute when the response is ready in the onreadystatechange event:
+        xhttp.onreadystatechange = function() {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+                document.getElementById("demo").innerHTML = xhttp.responseText;
+            }
+        };
+        xhttp.open("GET", "ajax_info.txt", true);
+        xhttp.send();
+
+        /**
+         * Async=false
+         */
+        //To use async=false, change the third parameter in the open() method to false:
+        xhttp.open("GET", "ajax_info.txt", false);
+
+        //Note: When you use async=false, do NOT write an onreadystatechange function - just put the code after the send() statement:
+        xhttp.open("GET", "ajax_info.txt", false);
+        xhttp.send();
+        document.getElementById("demo").innerHTML = xhttp.responseText;
+    </script>
+</head>
+<body>
+
+</body>
+</html>

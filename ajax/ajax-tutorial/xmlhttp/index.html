@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //creating a XMLHttpRequest Object
+        var xhr = new XMLHttpRequest();
+
+        //Old versions of Internet Explorer (IE5 and IE6) use an ActiveX Object:
+        var axo = new ActiveXObject();
+
+        //to handle all browsers
+        var xhttp;
+        if (window.XMLHttpRequest) {
+            xhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

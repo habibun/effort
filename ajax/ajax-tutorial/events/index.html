@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /**
+         * The onreadystatechange event
+         */
+        //When readyState is 4 and status is 200, the response is ready:
+        function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    document.getElementById("demo").innerHTML = xhttp.responseText;
+                }
+            };
+            xhttp.open("GET", "ajax_info.txt", true);
+            xhttp.send();
+        }
+
+        /**
+         * Using a Callback Function
+         */
+        //If you have more than one AJAX task on your website, you should create ONE standard function for creating the XMLHttpRequest object, and call this for each AJAX task.
+        function loadDoc2(url, cfunc) {
+            var xhttp;
+            xhttp=new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    cfunc(xhttp);
+                }
+            };
+            xhttp.open("GET", url, true);
+            xhttp.send();
+        }
+
+        function myFunction(xhttp) {
+            document.getElementById("demo").innerHTML = xhttp.responseText;
+        }
+    </script>
+</head>
+<body>
+    <p id="demo">Let AJAX change this text.</p>
+    <button type="button"
+        onclick="loadDoc2('ajax_info.txt', myFunction)">Change Content
+    </button>
+</body>
+</html>
