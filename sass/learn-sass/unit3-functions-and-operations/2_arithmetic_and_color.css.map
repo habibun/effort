@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,KAAM;EACJ,KAAK,EAJC,KAAK;EAKX,UAAU,EAAE,MAAM;EAClB,gBAAgB,EALJ,uBAAsB",
+"sources": ["2_arithmetic_and_color.scss"],
+"names": [],
+"file": "2_arithmetic_and_color.css"
+}

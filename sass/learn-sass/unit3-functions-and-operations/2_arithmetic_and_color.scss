@@ -1,0 +1,8 @@
+$width: 250px;
+$lagoon-blue: fade-out(#62fdca, 0.5);
+
+.math {
+  width: $width;
+  text-align: center;
+  background-color: $lagoon-blue;
+}

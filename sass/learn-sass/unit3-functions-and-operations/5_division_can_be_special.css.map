@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,KAAM;EACJ,KAAK,EAJC,KAAK;EAKX,MAAM,EAAE,UAAQ;EAChB,WAAW,EAAE,UAAQ;EACrB,UAAU,EAAE,MAAM;EAClB,gBAAgB,EAPJ,uBAAsB;EAQlC,KAAK,EAAE,OAAU;EACjB,aAAa,EAAE,SAAS;EACxB,SAAS,EAAE,UAAU",
+"sources": ["5_division_can_be_special.scss"],
+"names": [],
+"file": "5_division_can_be_special.css"
+}

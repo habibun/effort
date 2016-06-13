@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIE,OAAU;EACR,UAAU,EALN,MAAM;;AAIZ,OAAU;EACR,UAAU,EALE,MAAM;;AAIpB,KAAU;EACR,UAAU,EALU,IAAI",
+"sources": ["6_each_loops_in_sass.scss"],
+"names": [],
+"file": "6_each_loops_in_sass.css"
+}
