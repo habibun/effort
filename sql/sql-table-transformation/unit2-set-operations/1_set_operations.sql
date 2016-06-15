@@ -1,0 +1,1 @@
+select * from new_products limit 10;
