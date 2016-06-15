@@ -1,0 +1,1 @@
+SELECT state, 100.0 * sum(CASE WHEN elevation >= 2000 THEN 1 ELSE 0 END) / count(*)  as percentage_high_elevation_airports FROM airports GROUP BY state;

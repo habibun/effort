@@ -1,0 +1,1 @@
+SELECT COUNT(*) FROM flights WHERE arr_time IS NOT NULL and destination = 'ATL';
