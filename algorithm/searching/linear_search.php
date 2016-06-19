@@ -8,18 +8,17 @@
 
 $data = array(45,78,35,90,26,45,32,25,80,100);
 
-echo "Enter which number do you want to search?:";
-$handle = fopen("php://stdin", "r");
-$userInput = fgets($handle);
-
 $n = count($data);
 $loc = 0;
 
-while($data[$loc] != $userInput){
+echo "Enter which number do you want to search?:";
+$handle = fopen("php://stdin", "r");
+$item = fgets($handle);
+
+$data[$n] = $item;
+
+while($data[$loc] != $item){
     $loc++;
-    if($loc == $n){
-        break;
-    }
 }
 
 if($loc < $n)
