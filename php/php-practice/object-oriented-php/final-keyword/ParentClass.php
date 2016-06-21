@@ -6,18 +6,19 @@
  * Date: 6/21/16
  * Time: 11:43 PM
  */
-//class ParentClass
+class ParentClass
     /**
      * Stop inheriting
      */
-    final class ParentClass
-{
-//   public function parent(){
+//    final class ParentClass
 
+{
+   public function parent(){
     /**
      * Prevents child classes from overriding by prefixing the definition with final.
      */
-    public function parent(){
+       
+//  final public function parent(){
         echo "I am a parent class";
     }
 
