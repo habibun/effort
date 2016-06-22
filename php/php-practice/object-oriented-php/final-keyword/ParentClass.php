@@ -17,7 +17,7 @@ class ParentClass
     /**
      * Prevents child classes from overriding by prefixing the definition with final.
      */
-       
+
 //  final public function parent(){
         echo "I am a parent class";
     }
