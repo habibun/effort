@@ -8,28 +8,27 @@
 
 /* Program to implement Insertion Sort Algorithm */
 
-echo "\nEnter the number of elements:";
-$handle = fopen("php://stdin", "r");
-$n = fgets($handle);
+$data = array(2,1,8,5,4);
 
-echo "\nEnter $n integers:";
+$length = count($data);
 
-$a[0] = -32768;
+for ($i = 1; $i<$length; $i++){
 
-for ($i = 1; $i <= $n; $i++) {
-    $a[$i];
-}
+    $j = $i;
 
-for ($k = 2; $k <= $n; $k++) {
-    $temp = $a[$k];
-    $loc = $k - 1;
-    while($temp < $a[$loc]){
-        $a[$loc + 1] = $a[$loc];
-        $loc--;
+    while($data[$j]<$data[$j-1]  && $j>0){
+        $temp = $data[$j];
+        $data[$j] = $data[$j-1];
+        $data[$j-1] = $temp;
+        $j--;
     }
-    $a[$loc + 1] = $temp;
+
+    /*for ($k = 0; $k < $length; $k++){
+        echo $data[$k],"\n";
+    }*/
 }
-echo "\n\nSorted elements are....\n";
-for ($i = 1; $i <= $n; $i++) {
-    echo "\t$a[$i]";
+
+for($i=0;$i<$length; $i++){
+    echo $data[$i];
 }
+
