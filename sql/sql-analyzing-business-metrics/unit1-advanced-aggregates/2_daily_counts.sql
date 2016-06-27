@@ -1,0 +1,1 @@
+select date(ordered_at) from orders order by ordered_at limit 100;
