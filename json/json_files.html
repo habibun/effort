@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*function myFunction(arr) {
+            var out = "";
+            var i;
+            for(i = 0; i<arr.length; i++) {
+                out += '<a href="' + arr[i].url + '">' + arr[i].display + '</a><br>';
+            }
+            document.getElementById("id01").innerHTML = out;
+        }*/
+    </script>
+</head>
+<body>
+    <div id="id01"></div>
+    <script>
+        /**
+         * 1: Create array of objects.
+         */
+        var myArray = [
+            {
+                "display": "JavaScript Tutorial",
+                "url": "http://www.w3schools.com/js/default.asp"
+            },
+            {
+                "display": "HTML Tutorial",
+                "url": "http://www.w3schools.com/html/default.asp"
+            },
+            {
+                "display": "CSS Tutorial",
+                "url": "http://www.w3schools.com/css/default.asp"
+            }
+        ];
+
+        /**
+         * 2: Create Javascript function to display the array.
+         */
+        function myFunction(arr) {
+            var out = "";
+            var i;
+            for(i = 0; i < arr.length; i++) {
+                out += '<a href="' + arr[i].url + '">' + arr[i].display + '</a><br>';
+            }
+            document.getElementById("id01").innerHTML = out;
+        }
+
+        /**
+         * 3: Use an array literal as the argument (instead of the array variable):
+         */
+
+        /**
+         * 4: Put the function call in an external js file
+         */
+
+    </script>
+    <script src="assets/myTutorials.js"></script>
+</body>
+</html>

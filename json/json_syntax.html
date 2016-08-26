@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /**
+         * json object
+         * @type {string}
+         */
+        var jsonObject = '{"firstName": "John", "lastName": "Doe"}';
+
+        //convert
+        var jsObject = JSON.parse(jsonObject);
+//        console.log(jsObject);
+
+        /**
+         * json array
+         * @type {string}
+         */
+        var jsonArray = '{"employees":[{"firstName":"John", "lastName":"Doe"},{"firstName":"Anna", "lastName":"Smith"},{"firstName":"Peter","lastName":"Jones"}]}';
+
+        //convert
+        var js = JSON.parse(jsonArray);
+//        console.log(js);
+
+        /**
+         * JSON Uses JavaScript Syntax
+         */
+        //With JavaScript you can create an array of objects and assign data to it, like this:
+        var employees = [
+                    {"firstName": "John", "lastName": "Doe"},
+                    {"firstName": "Anna", "lastName": "Smith"},
+                    {"firstName": "Peter", "lastName": "Jones"}
+                ];
+
+        //The first entry in the JavaScript object array can be accessed like this:
+
+
+        //return John Doe
+        var result = employees[0].firstName + " " + employees[0].lastName;
+
+        //it can be also access like this:
+        var result2 = employees[0]["firstName"] + " " + employees[0]["lastName"];
+//        console.log(result2);
+
+
+        //Data can be modified like this:
+        var modi = employees[0].firstName = "Gilbert";
+//        console.log(employees[0].firstName);
+
+        //It can also be modified like this:
+        var modi2 = employees[0]["firstName"] = "Gilbert";
+        console.log(employees[0]["firstName"]);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

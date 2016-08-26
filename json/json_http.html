@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<script>
+        var xmlhttp = new XMLHttpRequest();
+        var url = "assets/myTutorials.txt";
+
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                var myArr = JSON.parse(xmlhttp.responseText);
+                myFunction(myArr);
+            }
+        };
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+
+        function myFunction(arr) {
+            var out = "";
+            var i;
+            for(i = 0; i < arr.length; i++) {
+                out += '<a href="' + arr[i].url + '">' +
+                        arr[i].display + '</a><br>';
+            }
+            document.getElementById("id01").innerHTML = out;
+        }
+    </script>-->
+</head>
+<body>
+    <div id="id01"></div>
+    <script>
+        /**
+         * 1: Create an array of objects
+         */
+        var myArray = [
+            {
+                "display": "JavaScript Tutorial",
+                "url": "http://www.w3schools.com/js/default.asp"
+            },
+            {
+                "display": "HTML Tutorial",
+                "url": "http://www.w3schools.com/html/default.asp"
+            },
+            {
+                "display": "CSS Tutorial",
+                "url": "http://www.w3schools.com/css/default.asp"
+            }
+        ];
+
+        /**
+         * 2: Create a javascript function to display the array
+         */
+
+        function myFunction(arr) {
+            var out = "";
+            var i;
+
+            for (i = 0; i < arr.length; i++) {
+                out += '<a href="'+arr[i].url + '">' + arr[i].display +'</a><br>';
+            }
+            document.getElementById("id01").innerHTML = out;
+        }
+
+        /**
+         * 3: Create a text file myTutorials.txt
+         */
+
+        /**
+         * 4: Read the text file with an XMLHTTPRequest
+         */
+        var xmlhttp = new XMLHttpRequest();
+        var url = "assets/myTutorials.txt";
+
+        xmlhttp.onreadystatechange = function () {
+            if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+                var myArr = JSON.parse(xmlhttp.responseText);
+                console.log(myArr);
+                myFunction(myArr);
+            }
+        };
+        xmlhttp.open('GET', url, true);
+        xmlhttp.send();
+    </script>
+</body>
+</html>
