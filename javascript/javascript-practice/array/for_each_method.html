@@ -1,19 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script>
-        //The forEach() method calls a provided function once for each element in an array, in order.
-        var arr = [4, 9, 16, 25];
-        function myFunction(item, index, arr) {
-//            console.log(item);
-            console.log(arr);
-        }
-        arr.forEach(myFunction);
-    </script>
-</head>
-<body>
+<script src="../assets/jquery-2.1.3.js"></script>
+<script>
+    $(document).ready(function () {
 
-</body>
-</html>
+        $("#getMessage").on("click", function () {
+            $.getJSON("../assets/cats.json", function (json) {
+
+                var html = "";
+                // Only change code below this line.
+
+                json.forEach(function (val) {
+//                    console.log(val);
+
+                    var keys = Object.keys(val);
+//                    console.log(keys);
+
+                    html += "<div class = 'cat'>";
+                    keys.forEach(function (key) {
+                        html += "<strong>" + key + "</strong>: " + val[key] + "<br>";
+                        console.log(key);
+//                        console.log();
+                    });
+                    html += "</div><br>";
+                });
+
+                // Only change code above this line.
+
+                $(".message").html(html);
+
+            });
+        });
+    });
+</script>
+
+<div class="container-fluid">
+    <div class="row text-center">
+        <h2>Cat Photo Finder</h2>
+    </div>
+    <div class="row text-center">
+        <div class="col-xs-12 well message">
+            The message will go here
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-xs-12">
+            <button id="getMessage" class="btn btn-primary">
+                Get Message
+            </button>
+        </div>
+    </div>
+</div>
