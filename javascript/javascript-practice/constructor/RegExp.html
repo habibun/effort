@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RegExp</title>
+    <script>
+        /**
+         * The RegExp constructor creates a regular expression object for matching text with a pattern.
+         */
+
+        //create a RegExp object using literal notation
+        new RegExp(/ab+c/, 'i');
+        /ab+c/i;
+
+        //create a RegExp object using constructor
+        new RegExp('ab+c', 'i');
+
+        //example
+        var re = /(\w+)\s(\w+)/;
+        var str = 'John Smith';
+        var newstr = str.replace(re, '$2, $1');
+        console.log(newstr);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
