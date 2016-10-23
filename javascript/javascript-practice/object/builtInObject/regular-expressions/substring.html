@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Using parenthesized substring matches</title>
+    <script>
+        var str = "John Smith";
+        var re = /(\w+)\s(\w+)/;
+        var newString = str.replace(re, "$2 $1");
+        console.log(newString);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
