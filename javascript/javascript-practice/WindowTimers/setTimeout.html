@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WindowTimers.setTimeout()</title>
+    <script>
+        var timeoutID;
+
+        function delayedAlert(){
+            timeoutID = window.setTimeout(showAlert, 2000);
+        }
+
+        function showAlert() {
+            alert("That was really slow!");
+        }
+
+    </script>
+</head>
+<body>
+    <p>Live Example</p>
+    <button onclick="delayedAlert();">Show an alert box after two seconds</button>
+</body>
+</html>
