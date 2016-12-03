@@ -1,0 +1,54 @@
+<script>
+    /**
+     * Problem
+     *
+     * multiplication number using only addition not using multiply
+     */
+
+//    solve using javascript
+    for(var i = 1; i <= 5; i++) {
+        document.write("starting...." + i + "<br>");
+        for (var j = 1; j <= 5; j++) {
+            sum = i;
+            for (var k = 1; k < j; k++) {
+                sum = sum + i;
+            }
+            document.write(i + "*" + j + " = " + sum + "<br>");
+        }
+    }
+
+
+//    #solve by jyoti using c
+    /*#include<stdio.h>
+    int main(){
+        int i, j,k, sum;
+        for(i=1;i<=10;i++){
+            for(j=1;j<=5;j++){
+                sum = i;
+                for(k=1;k<j;k++){
+                    sum=sum+i;
+                }
+                printf("%dx%d=%d\n",i,j,sum);
+            }
+
+        }
+        return 0;
+    }*/
+
+
+    /*#technique 2
+    #solved by anonymous
+    #include<stdio.h>
+    int main(){
+        int m,n,i;
+        m=0;
+        for(n=1;n<=10;n++){
+            for(i=1;i<=10;i++){
+                m=m+n;
+                printf("%dx%d=%d\n",n,i,m);
+            }
+            m=0;
+        }
+        return 0;
+    }*/
+</script>
