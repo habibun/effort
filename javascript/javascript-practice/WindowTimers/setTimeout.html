@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>WindowTimers.setTimeout()</title>
     <script>
+        /**
+         * Sets a timer which executes a function specified piece of code once after the timer expires
+         */
         var timeoutID;
 
         function delayedAlert(){
@@ -13,6 +16,12 @@
         function showAlert() {
             alert("That was really slow!");
         }
+
+        (function showAlert(){
+            setTimeout(function () {
+                alert("Hello");
+            }, 3000);
+        })();
 
     </script>
 </head>
