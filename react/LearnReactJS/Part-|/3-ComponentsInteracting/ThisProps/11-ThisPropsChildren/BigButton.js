@@ -20,10 +20,14 @@ var BigButton = React.createClass({
 
 
 // Example 2
+/*
 <BigButton>
 <LilButton />
 </BigButton>
+*/
 
 
 // Example 3
+/*
 <BigButton />
+*/
