@@ -10,4 +10,5 @@ the other array is the values.*/
 $a1=array("a","b","c","d");
 $a2=array("Cat","Dog","Horse","Cow");
 print_r(array_combine($a1,$a2));
+//print_r(array_combine($a1, $a1));
 ?>
