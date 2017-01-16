@@ -86,7 +86,7 @@ class Button extends Widget {
     }
 
     render($where) {
-        super($where);
+        // super($where);   //temporary comment
         this.$elem.click(this.onClick.bind(this));
     }
 
