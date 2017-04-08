@@ -7,29 +7,98 @@
 <body>
     <script>
         /**
-         * Arrows are a function shorthand using the => syntax. They are syntactically similar to the related feature in C#, Java 8 and CoffeeScript. They support both statement block bodies as well as expression bodies which return the value of the expression. Unlike functions, arrows share the same lexical this as their surrounding code.
+         * Shorter functions
          */
+        var materials = [
+            'Hydrogen',
+            'Helium',
+            'Lithium',
+            'Beryllium'
+        ];
 
-            // Expression bodies
-        var odds = evens.map(v => v + 1);
-        var nums = evens.map((v, i) => v + i);
-        var pairs = evens.map(v => ({even: v, odd: v + 1}));
-
-        // Statement bodies
-        nums.forEach(v => {
-            if (v % 5 === 0)
-                fives.push(v);
+        var materialsLength1 = materials.map(function(material) {
+            return material.length;
         });
 
-        // Lexical this
-        var bob = {
-            _name: "Bob",
-            _friends: [],
-            printFriends() {
-                this._friends.forEach(f =>
-                    console.log(this._name + " knows " + f));
-            }
+        var materialsLength2 = materials.map((material) => {
+            return material.length;
+        });
+
+        var materialsLength3 = materials.map(material => material.length);
+//        console.log(materialsLength2);
+
+        /**
+         * No binding of this
+         */
+        function Person() {
+            // The Person() constructor defines `this` as an instance of itself.
+            this.age = 0;
+
+            setInterval(function growUp() {
+                // In non-strict mode, the growUp() function defines `this`
+                // as the global object, which is different from the `this`
+                // defined by the Person() constructor.
+                this.age++;
+            }, 1000);
         }
+
+        var p = new Person();
+
+        /* with arrow syntax */
+        function Person(){
+            this.age = 0;
+
+            setInterval(() => {
+                this.age++; // |this| properly refers to the person object
+            }, 1000);
+        }
+
+        var p = new Person();
+
+        /**
+         * Invoked through call or apply
+         */
+        var adder = {
+            base: 1,
+
+            add: function(a) {
+                var f = v => v + this.base;
+                return f(a);
+            },
+
+            addThruCall: function(a) {
+                var f = v => v + this.base;
+                var b = {
+                    base: 2
+                };
+
+                return f.call(b, a);
+            }
+        };
+
+        console.log(adder.add(1));         // This would log to 2
+        console.log(adder.addThruCall(1)); // This would log to 2 still
+
+        /**
+         * No binding of arguments
+         */
+        var arguments = 42;
+        var arr = () => arguments;
+
+        arr(); // 42
+
+        function foo() {
+            var f = (i) => arguments[0] + i; // foo's implicit arguments binding
+            return f(2);
+        }
+
+        foo(1); // 3
+
+        /**
+         * Arrow functions used as methods
+         */
+
+
     </script>
 </body>
 </html>
