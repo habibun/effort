@@ -19,8 +19,8 @@ var [number1, number2] = numbers;
 
 //with object
 var dog = {
-	name: 'shorty',
-	age: 22
+    name: 'shorty',
+    age: 22
 }
 
 var {name: dogName, age: dogAge} = dog;

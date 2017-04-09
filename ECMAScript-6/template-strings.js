@@ -1,6 +1,6 @@
 var name = "jony";
 
-function getName(){
+function getName() {
     return "jony";
 }
 
